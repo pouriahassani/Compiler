@@ -8,7 +8,12 @@
 #include "Lexical_analyzer.h"
 
 class Parser{
-    Parser();
+    public:
+        Parser();
+        void getNextToken();
+    private:
+        Lexical_analyzer lexical_analyzer;       
+
 };
 
 
