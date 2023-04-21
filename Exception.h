@@ -1,9 +1,15 @@
 #ifndef EXCEPTION_H
 #define EXCEPTION_H
-#include <exception>
+
+#include <stdexcept>
 class FileReadException : public std::runtime_error {
 public:
-  FileReadException() : std::runtime_error("File has incomplete line"){};
+  FileReadException();
+};
+
+class StateTypeException : public std::runtime_error {
+public:
+  StateTypeException();
 };
 
 #endif

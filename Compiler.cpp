@@ -3,13 +3,12 @@
 #include "Parser.h"
 #include "NFA.h"
 #include <fstream>
-
+#include "NFA_Simulation.h"
 int main(){
-    std::ifstream file_;
-    file_.open("NFAFile");
-    std::string numberOfStates;
-    std::getline(file_,numberOfStates);
-    NFA nfa{stoi(numberOfStates)};
-    nfa.CreateNFA(file_);
+    NFA nfa{"NFAFile"};
+    nfa.CreateNFA();
+    NFASimulation NFAsimlate{&nfa};
+    bool i{NFAsimlate.Simulation("2342")};
+    std::cout << "Is NFA Accepting: "<<i<<std::endl;
     return 0;
 }
