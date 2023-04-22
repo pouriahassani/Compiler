@@ -7,7 +7,7 @@
 #include "Utils.h"
 
 
-State::State(int stateNumber) { this->stateNumber = stateNumber; }
+State::State(int stateNumber,StateType stateType) : stateNumber(stateNumber), stateType(stateType){};
 
 void State::AddEpsEdge(int nextStateNumber) {
   EpsClosure.insert(nextStateNumber);
@@ -32,21 +32,39 @@ const std::set<int> &State::GetEpsClosure() {
   return EpsClosure;
 }
 
-NFA::NFA(std::string NFAFileName) : NFAFileName(NFAFileName) {
-  std::ifstream NFAFile;
-  NFAFile.open(NFAFileName);
-  std::string S;
-  std::getline(NFAFile,S);
-  S = ltrim(rtrim(S));
-  std::stringstream line(S);
-  std::string numberOfStates;
-  line >> numberOfStates;
-  this->numberOfStates = stoi(numberOfStates);
-  for (int i{0}; i < this->numberOfStates; i++) {
-    State *newState = new State(i);
-    States.push_back(newState);
+NFA::NFA(std::string& symbols) {
+  symbols = ltrim(rtrim(symbols));
+  numberOfStates = 0;
+  std::stringstream symbolsStream{symbols};
+  std::string symbol;
+  State *startState = new State(0, StateType::START);
+  int stateNumbertmp{0};
+  startState->SetStateType(StateType::START);
+  States.push_back(startState);
+
+  State *endState = new State(++stateNumbertmp, StateType::ACCEPTING);
+  endState->SetStateType(StateType::ACCEPTING);
+  States.push_back(endState);
+
+  while(symbolsStream >> symbol) {
+    int leftId{++stateNumbertmp};
+    int rightId{++stateNumbertmp};
+
+    State *leftState = new State(leftId, StateType::TRANSITION);
+    leftState->AddEdge(symbol,rightId);
+    leftState->SetStateType(StateType::TRANSITION);
+    States.push_back(leftState); 
+    States[0]->AddEpsEdge(leftId);
+
+    State *rightState = new State(rightId,StateType::TRANSITION);
+    rightState->SetStateType(StateType::TRANSITION);
+    States.push_back(rightState);
+    States[rightId]->AddEpsEdge(1);    
   }
-  NFAFile.close();
+
+
+  numberOfStates = stateNumbertmp;
+  // PrintNFA();
 }
 
 const void NFA::PrintNFA() {
@@ -70,57 +88,4 @@ const void NFA::PrintNFA() {
 const std::vector<State *> &NFA::GetStates() { return States; }
 const int NFA::GetNumberOfStates(){
     return numberOfStates;
-}
-void NFA::CreateNFA() {
-  std::string edge;
-  std::string currStateNumber;
-  std::string nextStateNumber;
-  std::string isEps;
-  std::string S;
-  std::string StatType;
-  std::ifstream edgesStatesFile;
-  edgesStatesFile.open(NFAFileName);
-  int stateCount{0};
-  std::getline(edgesStatesFile, S);
-  while (stateCount < numberOfStates) {
-    std::string stateNumberFromFile;
-    std::string stateTypeFromFile;
-    std::getline(edgesStatesFile, S);
-    S = ltrim(rtrim(S));
-    // std::cout << stateCount<<' '<<S << std::endl;
-    if (S == "")
-      continue;
-    // std::cout << S<<std::endl;
-    stateCount++;
-    std::stringstream line(S);
-    line >> stateTypeFromFile;
-    line >> stateNumberFromFile;
-    int stateId = stoi(stateNumberFromFile);
-    StateType currStateType{AssignStateType(stoi(stateTypeFromFile))};
-    States[stateId]->SetStateType(currStateType);
-  }
-
-  while (std::getline(edgesStatesFile, S)) {
-    S = ltrim(rtrim(S));
-    // std::cout << S << std::endl;
-    if (S == "")
-      continue;
-
-    std::stringstream line(S);
-    line >> isEps;
-    line >> currStateNumber;
-    line >> nextStateNumber;
-
-    if (stoi(isEps) == 0) {
-      if (!(line >> edge))
-        throw FileReadException{};
-    }
-
-    if (stoi(isEps) == 0)
-      States[stoi(currStateNumber)]->AddEdge(edge, stoi(nextStateNumber));
-    else
-      States[stoi(currStateNumber)]->AddEpsEdge(stoi(nextStateNumber));
-  }
-//   PrintNFA();
-  edgesStatesFile.close();
-}
+};

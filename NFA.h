@@ -7,7 +7,7 @@
 #include <vector>
 #include <set>
 #include "Utils.h"
-
+#include "NFAFileCreate.h"
 
 // In class NFA there are methods and data member defining the functionality of
 // the NFA representation of the regular expressions. The method can simulate
@@ -18,7 +18,7 @@
 
 class State {
 public:
-  State(int state_number);
+  State(int state_number, StateType stateType);
   void AddEpsEdge(int nextState);
   void AddEdge(std::string edge, int nextState);
   const int getStateNumber();
@@ -36,8 +36,7 @@ private:
 
 class NFA {
 public:
-  NFA(std::string NFAFile);
-  void CreateNFA();
+  NFA(std::string& symbols);
   const std::vector<State *>& GetStates();
   const void PrintNFA();
   const int GetNumberOfStates();
@@ -48,6 +47,7 @@ private:
   std::vector<State *> States;
   int numberOfStates;
   std::string NFAFileName;
+  friend class RegularExpressionOperations;
 };
 
 #endif
