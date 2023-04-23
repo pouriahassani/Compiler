@@ -2,8 +2,8 @@
 
 all:Compiler
 
-Compiler:Compiler.o Lexical_analyzer.o Parser.o NFA.o Utils.o Exception.o NFA_Simulation.o 
-	g++ -o Compiler Compiler.o Lexical_analyzer.o Parser.o NFA.o Utils.o Exception.o NFA_Simulation.o
+Compiler:Compiler.o Lexical_analyzer.o Parser.o NFA.o Utils.o Exception.o NFA_Simulation.o RegularExpressionOperations.o
+	g++ -o Compiler Compiler.o Lexical_analyzer.o Parser.o NFA.o Utils.o Exception.o NFA_Simulation.o RegularExpressionOperations.o
 Compiler.o: Compiler.cpp
 	g++ -c Compiler.cpp
 
@@ -25,8 +25,8 @@ Utils.o: Utils.cpp
 NFA_Simulation.o: NFA_Simulation.cpp
 	g++ -c -g NFA_Simulation.cpp
 
-# NFAFileCreate.o: NFAFileCreate.cpp
-# 	g++ -c NFAFileCreate.cpp
+RegularExpressionOperations.o: RegularExpressionOperations.cpp
+	g++ -c -g RegularExpressionOperations.cpp
 
 clean:
 	rm -rf *.o Compiler

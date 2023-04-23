@@ -7,7 +7,7 @@
 #include <vector>
 #include <set>
 #include "Utils.h"
-#include "NFAFileCreate.h"
+
 
 // In class NFA there are methods and data member defining the functionality of
 // the NFA representation of the regular expressions. The method can simulate
@@ -26,6 +26,12 @@ public:
   const std::set<int> &GetEpsClosure();
   const StateType& GetStateType();
   void SetStateType(StateType stateType);
+  void SetStateNumber(int stateNumber);
+  void setEpsClosure(int newEps);
+
+  void IncrementStateNumbers(int base);
+  void IncrementEpsClosureStateNumbers(int base);
+  void IncrementNonEpsClosureStateNumbers(int base);
 
 private:
   int stateNumber;
@@ -36,11 +42,11 @@ private:
 
 class NFA {
 public:
-  NFA(std::string& symbols);
+  NFA(std::string& symbols , bool isSingleSymbol = true);
   const std::vector<State *>& GetStates();
   const void PrintNFA();
   const int GetNumberOfStates();
-
+  void IncrementStateNumbers(int base);
 
 
 private:
