@@ -12,6 +12,7 @@ class RegularExpressionOperations{
         NFA* ConcatOperation(NFA& leftNFA, NFA& rightNFA);
         NFA* IterationOperation(NFA& originalNFA);
         NFA* PlusOperation(NFA& originalNFA);
+        NFA* oneInstance(NFA& originalNFA);
     private:
         std::vector<char>symbols;
         std::vector<std::string>lines;

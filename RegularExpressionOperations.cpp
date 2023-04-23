@@ -168,3 +168,18 @@ NFA* RegularExpressionOperations::PlusOperation(NFA& originalNFA){
     NFA* returnNFA  = new NFA{*ConcatOperation(originalNFA,*IterationOperation(originalNFA))};
     return returnNFA;
 }
+
+NFA* RegularExpressionOperations::oneInstance(NFA& originalNFA){
+    int NFAEndId;
+    int NFAStartId;
+    for(int i{0};i<originalNFA.States.size();i++){
+        if(originalNFA.States[i]->GetStateType() == StateType::START)
+            NFAStartId = i;
+        if(originalNFA.States[i]->GetStateType() == StateType::ACCEPTING)
+            NFAEndId = i;
+    }
+
+    originalNFA.States[NFAStartId]->AddEpsEdge(NFAEndId);
+
+    return &originalNFA;
+}
