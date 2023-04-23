@@ -3,27 +3,20 @@
 
 #include <string>
 #include <bits/stdc++.h>
+#include "Exception.h"
+
 using namespace std;
-string ltrim(const string &str) {
-    string s(str);
+string ltrim(const string &str);
 
-    s.erase(
-        s.begin(),
-        find_if(s.begin(), s.end(), not1(ptr_fun<int, int>(isspace)))
-    );
+string rtrim(const string &str);
 
-    return s;
-}
+enum class StateType{
+    START=-1,
+    TRANSITION,
+    ACCEPTING
+};
 
-string rtrim(const string &str) {
-    string s(str);
+StateType AssignStateType(int value);
 
-    s.erase(
-        find_if(s.rbegin(), s.rend(), not1(ptr_fun<int, int>(isspace))).base(),
-        s.end()
-    );
-
-    return s;
-}
 
 #endif
