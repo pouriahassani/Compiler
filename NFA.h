@@ -19,6 +19,7 @@
 class State {
 public:
   State(int state_number, StateType stateType);
+  State(State &stateObject);
   void AddEpsEdge(int nextState);
   void AddEdge(std::string edge, int nextState);
   const int getStateNumber();
@@ -43,6 +44,7 @@ private:
 class NFA {
 public:
   NFA(std::string& symbols , bool isSingleSymbol = true);
+  NFA(NFA& NFAObject);
   const std::vector<State *>& GetStates();
   const void PrintNFA();
   const int GetNumberOfStates();

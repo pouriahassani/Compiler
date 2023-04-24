@@ -10,13 +10,13 @@ RegularExpressionOperations::RegularExpressionOperations(){
     }
 };
 
-NFA* RegularExpressionOperations::UnionsOperation(NFA& leftNFA, NFA& rightNFA){
+NFA* RegularExpressionOperations::UnionsOperation(NFA leftNFA,NFA rightNFA){
     int leftNFAStartId;
     int leftNFAEndId;
     int rightNFAStartId;
     int rightNFAEndId;
-
     int incrementRightStateNoms = leftNFA.States.size()+2;
+    leftNFA.PrintNFA();
 
     for(auto currState = rightNFA.States.begin() ; currState != rightNFA.States.end() ; currState++){
         (*currState)->IncrementStateNumbers(incrementRightStateNoms);
@@ -42,7 +42,8 @@ NFA* RegularExpressionOperations::UnionsOperation(NFA& leftNFA, NFA& rightNFA){
         if(rightNFA.States[i]->GetStateType() == StateType::ACCEPTING)
             rightNFAEndId = i;
     }
-
+    std::cout <<"ls: "<< leftNFAStartId <<" le:"<<leftNFAEndId << " RS:"<<rightNFAStartId<<" RE: "<<rightNFAEndId<<std::endl; 
+    leftNFA.PrintNFA();
     leftNFA.States[leftNFAStartId]->SetStateType(StateType::TRANSITION);
     leftNFA.States[leftNFAEndId]->SetStateType(StateType::TRANSITION);
 
@@ -73,12 +74,11 @@ NFA* RegularExpressionOperations::UnionsOperation(NFA& leftNFA, NFA& rightNFA){
     return returnNFA;
 }
 
-NFA* RegularExpressionOperations::ConcatOperation(NFA& leftNFA, NFA& rightNFA){
+NFA* RegularExpressionOperations::ConcatOperation(NFA leftNFA,NFA rightNFA){
     int leftNFAStartId;
     int leftNFAEndId;
     int rightNFAStartId;
     int rightNFAEndId;
-
     int incrementRightStateNoms = leftNFA.States.size() - 1;
 
     for(auto currState = rightNFA.States.begin() ; currState != rightNFA.States.end() ; currState++){
@@ -120,14 +120,13 @@ NFA* RegularExpressionOperations::ConcatOperation(NFA& leftNFA, NFA& rightNFA){
         returnNFA->States.push_back(rightNFA.States[i]);
     }
 
-       returnNFA->PrintNFA();
+    returnNFA->PrintNFA();
     return returnNFA;
 }
 
-NFA* RegularExpressionOperations::IterationOperation(NFA& originalNFA){
+NFA* RegularExpressionOperations::IterationOperation(NFA originalNFA){
     int NFAStartId;
     int NFAEndId;
-
     for(auto currState = originalNFA.States.begin() ; currState != originalNFA.States.end() ; currState++){
         (*currState)->IncrementStateNumbers(2);
         (*currState)->IncrementNonEpsClosureStateNumbers(2);
@@ -160,16 +159,16 @@ NFA* RegularExpressionOperations::IterationOperation(NFA& originalNFA){
 
     originalNFA.PrintNFA();
     // rightNFA.PrintNFA();
-
-    return &originalNFA;
+    NFA* returnNFA = new NFA{originalNFA};
+    return returnNFA;
 }
 
-NFA* RegularExpressionOperations::PlusOperation(NFA& originalNFA){
+NFA* RegularExpressionOperations::PlusOperation(NFA originalNFA){
     NFA* returnNFA  = new NFA{*ConcatOperation(originalNFA,*IterationOperation(originalNFA))};
     return returnNFA;
 }
 
-NFA* RegularExpressionOperations::oneInstance(NFA& originalNFA){
+NFA* RegularExpressionOperations::oneInstance(NFA originalNFA){
     int NFAEndId;
     int NFAStartId;
     for(int i{0};i<originalNFA.States.size();i++){
@@ -180,6 +179,7 @@ NFA* RegularExpressionOperations::oneInstance(NFA& originalNFA){
     }
 
     originalNFA.States[NFAStartId]->AddEpsEdge(NFAEndId);
-
-    return &originalNFA;
+    originalNFA.PrintNFA();
+    NFA* returnNFA = new NFA{originalNFA};
+    return returnNFA;
 }

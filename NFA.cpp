@@ -8,6 +8,18 @@
 
 State::State(int stateNumber,StateType stateType) : stateNumber(stateNumber), stateType(stateType){};
 
+State::State(State &stateObject){
+  this->stateNumber = stateObject.stateNumber;
+  for(auto i : stateObject.GetnonEpsClosure()){
+    for(auto j:i.second)
+      this->AddEdge(i.first,j);
+  }
+  for(auto i : stateObject.GetEpsClosure()){
+    this->AddEpsEdge(i);
+}
+  this->stateType =stateObject.stateType;
+}
+
 void State::AddEpsEdge(int nextStateNumber) {
   EpsClosure.insert(nextStateNumber);
 }
@@ -62,6 +74,14 @@ const std::unordered_map<std::string, std::set<int>> &
 
 const std::set<int> &State::GetEpsClosure() {
   return EpsClosure;
+}
+
+NFA::NFA(NFA& NFAObject){
+  for(auto i : NFAObject.States){
+    State* newState = new State{*i};
+    this->States.push_back(newState);
+  }
+    this->numberOfStates =  NFAObject.numberOfStates;
 }
 
 NFA::NFA(std::string& symbols,bool isSingleSymbol) {
