@@ -6,4 +6,4 @@
 
   StateTypeException::StateTypeException() : std::runtime_error("Not a valid state"){};
 
-
+  InvalidSyntax::InvalidSyntax() : std::runtime_error("Invalid syntax error"){};

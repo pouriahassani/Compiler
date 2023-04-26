@@ -1,0 +1,5597 @@
+
+********
+Start union********
+
+********
+end union********
+
+*** Not matching in union***
+
+********
+Start PlusOperation********
+
+********
+Start IterationOperation********
+
+********
+Last line of IterationOperation********
+
+********
+end IterationOperation********
+
+*** Not matching in IterationOperation***
+
+********
+7
+Start ConcatOperation********
+
+********
+end ConcatOperation********
+
+*** Not matching in ConcatOperation***
+6: 1Accepting
+7: 9TRANSITION
+8: 10TRANSITION
+9: 11TRANSITION
+10: 12TRANSITION
+11: 13TRANSITION
+12: 14TRANSITION
+
+********
+end PlusOperation********
+
+*** Not matching in PlusOperation***
+6: 1Accepting
+7: 9TRANSITION
+8: 10TRANSITION
+9: 11TRANSITION
+10: 12TRANSITION
+11: 13TRANSITION
+12: 14TRANSITION
+
+********
+Start union********
+
+********
+end union********
+
+*** Not matching in union***
+8: 3TRANSITION
+9: 11TRANSITION
+10: 12TRANSITION
+11: 13TRANSITION
+12: 14TRANSITION
+13: 15TRANSITION
+14: 16TRANSITION
+
+********
+Start union********
+
+********
+end union********
+
+*** Not matching in union***
+10: 5TRANSITION
+11: 13TRANSITION
+12: 14TRANSITION
+13: 15TRANSITION
+14: 16TRANSITION
+15: 17TRANSITION
+16: 18TRANSITION
+
+********
+Start union********
+
+********
+end union********
+
+*** Not matching in union***
+12: 7TRANSITION
+13: 15TRANSITION
+14: 16TRANSITION
+15: 17TRANSITION
+16: 18TRANSITION
+17: 19TRANSITION
+18: 20TRANSITION
+
+********
+Start union********
+
+********
+end union********
+
+*** Not matching in union***
+14: 9TRANSITION
+15: 17TRANSITION
+16: 18TRANSITION
+17: 19TRANSITION
+18: 20TRANSITION
+19: 21TRANSITION
+20: 22TRANSITION
+
+********
+Start union********
+
+********
+end union********
+
+*** Not matching in union***
+16: 11TRANSITION
+17: 19TRANSITION
+18: 20TRANSITION
+19: 21TRANSITION
+20: 22TRANSITION
+21: 23TRANSITION
+22: 24TRANSITION
+
+********
+Start union********
+
+********
+end union********
+
+*** Not matching in union***
+18: 13TRANSITION
+19: 21TRANSITION
+20: 22TRANSITION
+21: 23TRANSITION
+22: 24TRANSITION
+23: 25TRANSITION
+24: 26TRANSITION
+
+********
+Start union********
+
+********
+end union********
+
+*** Not matching in union***
+20: 15TRANSITION
+21: 23TRANSITION
+22: 24TRANSITION
+23: 25TRANSITION
+24: 26TRANSITION
+25: 27TRANSITION
+26: 28TRANSITION
+
+********
+Start union********
+
+********
+end union********
+
+*** Not matching in union***
+22: 17TRANSITION
+23: 25TRANSITION
+24: 26TRANSITION
+25: 27TRANSITION
+26: 28TRANSITION
+27: 29TRANSITION
+28: 30TRANSITION
+
+********
+Start union********
+
+********
+end union********
+
+*** Not matching in union***
+24: 19TRANSITION
+25: 27TRANSITION
+26: 28TRANSITION
+27: 29TRANSITION
+28: 30TRANSITION
+29: 31TRANSITION
+30: 32TRANSITION
+
+********
+Start union********
+
+********
+end union********
+
+*** Not matching in union***
+26: 21TRANSITION
+27: 29TRANSITION
+28: 30TRANSITION
+29: 31TRANSITION
+30: 32TRANSITION
+31: 33TRANSITION
+32: 34TRANSITION
+
+********
+Start union********
+
+********
+end union********
+
+*** Not matching in union***
+28: 23TRANSITION
+29: 31TRANSITION
+30: 32TRANSITION
+31: 33TRANSITION
+32: 34TRANSITION
+33: 35TRANSITION
+34: 36TRANSITION
+
+********
+Start union********
+
+********
+end union********
+
+*** Not matching in union***
+30: 25TRANSITION
+31: 33TRANSITION
+32: 34TRANSITION
+33: 35TRANSITION
+34: 36TRANSITION
+35: 37TRANSITION
+36: 38TRANSITION
+
+********
+Start union********
+
+********
+end union********
+
+*** Not matching in union***
+32: 27TRANSITION
+33: 35TRANSITION
+34: 36TRANSITION
+35: 37TRANSITION
+36: 38TRANSITION
+37: 39TRANSITION
+38: 40TRANSITION
+
+********
+Start union********
+
+********
+end union********
+
+*** Not matching in union***
+34: 29TRANSITION
+35: 37TRANSITION
+36: 38TRANSITION
+37: 39TRANSITION
+38: 40TRANSITION
+39: 41TRANSITION
+40: 42TRANSITION
+
+********
+Start union********
+
+********
+end union********
+
+*** Not matching in union***
+36: 31TRANSITION
+37: 39TRANSITION
+38: 40TRANSITION
+39: 41TRANSITION
+40: 42TRANSITION
+41: 43TRANSITION
+42: 44TRANSITION
+*******
+
+ Digits
+*******
+
+UNFADotDigits
+
+********
+3
+Start ConcatOperation********
+
+********
+end ConcatOperation********
+
+*** Not matching in ConcatOperation***
+2: 1Accepting
+3: 5TRANSITION
+4: 6TRANSITION
+5: 7TRANSITION
+6: 8TRANSITION
+7: 9TRANSITION
+8: 10TRANSITION
+9: 11TRANSITION
+10: 12TRANSITION
+11: 13TRANSITION
+12: 14TRANSITION
+13: 15TRANSITION
+14: 16TRANSITION
+15: 17TRANSITION
+16: 18TRANSITION
+17: 19TRANSITION
+18: 20TRANSITION
+19: 21TRANSITION
+20: 22TRANSITION
+21: 23TRANSITION
+22: 24TRANSITION
+23: 25TRANSITION
+24: 26TRANSITION
+25: 27TRANSITION
+26: 28TRANSITION
+27: 29TRANSITION
+28: 30TRANSITION
+29: 31TRANSITION
+30: 32TRANSITION
+31: 33TRANSITION
+32: 34TRANSITION
+33: 35TRANSITION
+34: 36TRANSITION
+35: 37TRANSITION
+36: 38TRANSITION
+37: 34TRANSITION
+38: 42TRANSITION
+39: 43TRANSITION
+40: 44TRANSITION
+41: 45TRANSITION
+42: 46TRANSITION
+43: 47TRANSITION
+44: 46TRANSITION
+45: 47TRANSITION
+46: 48TRANSITION
+47: 49TRANSITION
+48: 50TRANSITION
+49: 51TRANSITION
+50: 52TRANSITION
+51: 53TRANSITION
+52: 54TRANSITION
+53: 55TRANSITION
+54: 56TRANSITION
+55: 57TRANSITION
+56: 58TRANSITION
+57: 59TRANSITION
+58: 60TRANSITION
+59: 61TRANSITION
+60: 62TRANSITION
+61: 63TRANSITION
+62: 64TRANSITION
+63: 65TRANSITION
+64: 66TRANSITION
+65: 67TRANSITION
+66: 68TRANSITION
+67: 69TRANSITION
+68: 70TRANSITION
+69: 71TRANSITION
+70: 72TRANSITION
+71: 73TRANSITION
+72: 74TRANSITION
+73: 75TRANSITION
+*******
+
+ Digits
+*******
+
+OInsDotDigits
+
+********start oneInstance********
+
+********
+end oneInstance********
+
+*** Not matching in oneInstance***
+2: 1Accepting
+3: 5TRANSITION
+4: 6TRANSITION
+5: 7TRANSITION
+6: 8TRANSITION
+7: 9TRANSITION
+8: 10TRANSITION
+9: 11TRANSITION
+10: 12TRANSITION
+11: 13TRANSITION
+12: 14TRANSITION
+13: 15TRANSITION
+14: 16TRANSITION
+15: 17TRANSITION
+16: 18TRANSITION
+17: 19TRANSITION
+18: 20TRANSITION
+19: 21TRANSITION
+20: 22TRANSITION
+21: 23TRANSITION
+22: 24TRANSITION
+23: 25TRANSITION
+24: 26TRANSITION
+25: 27TRANSITION
+26: 28TRANSITION
+27: 29TRANSITION
+28: 30TRANSITION
+29: 31TRANSITION
+30: 32TRANSITION
+31: 33TRANSITION
+32: 34TRANSITION
+33: 35TRANSITION
+34: 36TRANSITION
+35: 37TRANSITION
+36: 38TRANSITION
+37: 34TRANSITION
+38: 42TRANSITION
+39: 43TRANSITION
+40: 44TRANSITION
+41: 45TRANSITION
+42: 46TRANSITION
+43: 47TRANSITION
+44: 46TRANSITION
+45: 47TRANSITION
+46: 48TRANSITION
+47: 49TRANSITION
+48: 50TRANSITION
+49: 51TRANSITION
+50: 52TRANSITION
+51: 53TRANSITION
+52: 54TRANSITION
+53: 55TRANSITION
+54: 56TRANSITION
+55: 57TRANSITION
+56: 58TRANSITION
+57: 59TRANSITION
+58: 60TRANSITION
+59: 61TRANSITION
+60: 62TRANSITION
+61: 63TRANSITION
+62: 64TRANSITION
+63: 65TRANSITION
+64: 66TRANSITION
+65: 67TRANSITION
+66: 68TRANSITION
+67: 69TRANSITION
+68: 70TRANSITION
+69: 71TRANSITION
+70: 72TRANSITION
+71: 73TRANSITION
+72: 74TRANSITION
+73: 75TRANSITION
+*******
+
+ InsDotDigits
+*******
+
+DDDC
+
+********
+74
+Start ConcatOperation********
+
+********
+end ConcatOperation********
+
+*** Not matching in ConcatOperation***
+36: 31TRANSITION
+37: 39TRANSITION
+38: 40TRANSITION
+39: 41TRANSITION
+40: 42TRANSITION
+41: 43TRANSITION
+42: 44TRANSITION
+73: 75TRANSITION
+74: 1Accepting
+75: 79TRANSITION
+76: 80TRANSITION
+77: 81TRANSITION
+78: 82TRANSITION
+79: 83TRANSITION
+80: 84TRANSITION
+81: 85TRANSITION
+82: 86TRANSITION
+83: 87TRANSITION
+84: 88TRANSITION
+85: 89TRANSITION
+86: 90TRANSITION
+87: 91TRANSITION
+88: 92TRANSITION
+89: 93TRANSITION
+90: 94TRANSITION
+91: 95TRANSITION
+92: 96TRANSITION
+93: 97TRANSITION
+94: 98TRANSITION
+95: 99TRANSITION
+96: 100TRANSITION
+97: 101TRANSITION
+98: 102TRANSITION
+99: 103TRANSITION
+100: 104TRANSITION
+101: 105TRANSITION
+102: 106TRANSITION
+103: 107TRANSITION
+104: 108TRANSITION
+105: 109TRANSITION
+106: 110TRANSITION
+107: 111TRANSITION
+108: 112TRANSITION
+109: 108TRANSITION
+110: 116TRANSITION
+111: 117TRANSITION
+112: 118TRANSITION
+113: 119TRANSITION
+114: 120TRANSITION
+115: 121TRANSITION
+116: 120TRANSITION
+117: 121TRANSITION
+118: 122TRANSITION
+119: 123TRANSITION
+120: 124TRANSITION
+121: 125TRANSITION
+122: 126TRANSITION
+123: 127TRANSITION
+124: 128TRANSITION
+125: 129TRANSITION
+126: 130TRANSITION
+127: 131TRANSITION
+128: 132TRANSITION
+129: 133TRANSITION
+130: 134TRANSITION
+131: 135TRANSITION
+132: 136TRANSITION
+133: 137TRANSITION
+134: 138TRANSITION
+135: 139TRANSITION
+136: 140TRANSITION
+137: 141TRANSITION
+138: 142TRANSITION
+139: 143TRANSITION
+140: 144TRANSITION
+141: 145TRANSITION
+142: 146TRANSITION
+143: 147TRANSITION
+144: 148TRANSITION
+145: 149TRANSITION
+*******
+
+PNNFA
+
+********
+Start union********
+
+********
+end union********
+
+*** Not matching in union***
+*******
+
+PNoneINFA
+
+********start oneInstance********
+
+********
+end oneInstance********
+
+*** Not matching in oneInstance***
+*******
+
+EPNOneINFA
+
+********
+3
+Start ConcatOperation********
+
+********
+end ConcatOperation********
+
+*** Not matching in ConcatOperation***
+2: 1Accepting
+3: 5TRANSITION
+4: 6TRANSITION
+5: 7TRANSITION
+6: 8TRANSITION
+*******
+
+EPNOneIDNFA
+
+********
+8
+Start ConcatOperation********
+
+********
+end ConcatOperation********
+
+*** Not matching in ConcatOperation***
+2: 1TRANSITION
+3: 5TRANSITION
+4: 6TRANSITION
+5: 7TRANSITION
+6: 8TRANSITION
+7: 1Accepting
+8: 10TRANSITION
+9: 11TRANSITION
+10: 12TRANSITION
+11: 13TRANSITION
+12: 14TRANSITION
+13: 15TRANSITION
+14: 16TRANSITION
+15: 17TRANSITION
+16: 18TRANSITION
+17: 19TRANSITION
+18: 20TRANSITION
+19: 21TRANSITION
+20: 22TRANSITION
+21: 23TRANSITION
+22: 24TRANSITION
+23: 25TRANSITION
+24: 26TRANSITION
+25: 27TRANSITION
+26: 28TRANSITION
+27: 29TRANSITION
+28: 30TRANSITION
+29: 31TRANSITION
+30: 32TRANSITION
+31: 33TRANSITION
+32: 34TRANSITION
+33: 35TRANSITION
+34: 36TRANSITION
+35: 37TRANSITION
+36: 38TRANSITION
+37: 39TRANSITION
+38: 40TRANSITION
+39: 41TRANSITION
+40: 42TRANSITION
+41: 43TRANSITION
+42: 39TRANSITION
+43: 47TRANSITION
+44: 48TRANSITION
+45: 49TRANSITION
+46: 50TRANSITION
+47: 51TRANSITION
+48: 52TRANSITION
+49: 51TRANSITION
+50: 52TRANSITION
+51: 53TRANSITION
+52: 54TRANSITION
+53: 55TRANSITION
+54: 56TRANSITION
+55: 57TRANSITION
+56: 58TRANSITION
+57: 59TRANSITION
+58: 60TRANSITION
+59: 61TRANSITION
+60: 62TRANSITION
+61: 63TRANSITION
+62: 64TRANSITION
+63: 65TRANSITION
+64: 66TRANSITION
+65: 67TRANSITION
+66: 68TRANSITION
+67: 69TRANSITION
+68: 70TRANSITION
+69: 71TRANSITION
+70: 72TRANSITION
+71: 73TRANSITION
+72: 74TRANSITION
+73: 75TRANSITION
+74: 76TRANSITION
+75: 77TRANSITION
+76: 78TRANSITION
+77: 79TRANSITION
+78: 80TRANSITION
+*******
+
+EPNOneIDOneINFA
+
+********start oneInstance********
+
+********
+end oneInstance********
+
+*** Not matching in oneInstance***
+2: 1TRANSITION
+3: 5TRANSITION
+4: 6TRANSITION
+5: 7TRANSITION
+6: 8TRANSITION
+7: 1Accepting
+8: 10TRANSITION
+9: 11TRANSITION
+10: 12TRANSITION
+11: 13TRANSITION
+12: 14TRANSITION
+13: 15TRANSITION
+14: 16TRANSITION
+15: 17TRANSITION
+16: 18TRANSITION
+17: 19TRANSITION
+18: 20TRANSITION
+19: 21TRANSITION
+20: 22TRANSITION
+21: 23TRANSITION
+22: 24TRANSITION
+23: 25TRANSITION
+24: 26TRANSITION
+25: 27TRANSITION
+26: 28TRANSITION
+27: 29TRANSITION
+28: 30TRANSITION
+29: 31TRANSITION
+30: 32TRANSITION
+31: 33TRANSITION
+32: 34TRANSITION
+33: 35TRANSITION
+34: 36TRANSITION
+35: 37TRANSITION
+36: 38TRANSITION
+37: 39TRANSITION
+38: 40TRANSITION
+39: 41TRANSITION
+40: 42TRANSITION
+41: 43TRANSITION
+42: 39TRANSITION
+43: 47TRANSITION
+44: 48TRANSITION
+45: 49TRANSITION
+46: 50TRANSITION
+47: 51TRANSITION
+48: 52TRANSITION
+49: 51TRANSITION
+50: 52TRANSITION
+51: 53TRANSITION
+52: 54TRANSITION
+53: 55TRANSITION
+54: 56TRANSITION
+55: 57TRANSITION
+56: 58TRANSITION
+57: 59TRANSITION
+58: 60TRANSITION
+59: 61TRANSITION
+60: 62TRANSITION
+61: 63TRANSITION
+62: 64TRANSITION
+63: 65TRANSITION
+64: 66TRANSITION
+65: 67TRANSITION
+66: 68TRANSITION
+67: 69TRANSITION
+68: 70TRANSITION
+69: 71TRANSITION
+70: 72TRANSITION
+71: 73TRANSITION
+72: 74TRANSITION
+73: 75TRANSITION
+74: 76TRANSITION
+75: 77TRANSITION
+76: 78TRANSITION
+77: 79TRANSITION
+78: 80TRANSITION
+*******
+
+numbers
+
+********
+147
+Start ConcatOperation********
+
+********
+end ConcatOperation********
+
+*** Not matching in ConcatOperation***
+36: 31TRANSITION
+37: 39TRANSITION
+38: 40TRANSITION
+39: 41TRANSITION
+40: 42TRANSITION
+41: 43TRANSITION
+42: 44TRANSITION
+73: 75TRANSITION
+74: 1TRANSITION
+75: 79TRANSITION
+76: 80TRANSITION
+77: 81TRANSITION
+78: 82TRANSITION
+79: 83TRANSITION
+80: 84TRANSITION
+81: 85TRANSITION
+82: 86TRANSITION
+83: 87TRANSITION
+84: 88TRANSITION
+85: 89TRANSITION
+86: 90TRANSITION
+87: 91TRANSITION
+88: 92TRANSITION
+89: 93TRANSITION
+90: 94TRANSITION
+91: 95TRANSITION
+92: 96TRANSITION
+93: 97TRANSITION
+94: 98TRANSITION
+95: 99TRANSITION
+96: 100TRANSITION
+97: 101TRANSITION
+98: 102TRANSITION
+99: 103TRANSITION
+100: 104TRANSITION
+101: 105TRANSITION
+102: 106TRANSITION
+103: 107TRANSITION
+104: 108TRANSITION
+105: 109TRANSITION
+106: 110TRANSITION
+107: 111TRANSITION
+108: 112TRANSITION
+109: 108TRANSITION
+110: 116TRANSITION
+111: 117TRANSITION
+112: 118TRANSITION
+113: 119TRANSITION
+114: 120TRANSITION
+115: 121TRANSITION
+116: 120TRANSITION
+117: 121TRANSITION
+118: 122TRANSITION
+119: 123TRANSITION
+120: 124TRANSITION
+121: 125TRANSITION
+122: 126TRANSITION
+123: 127TRANSITION
+124: 128TRANSITION
+125: 129TRANSITION
+126: 130TRANSITION
+127: 131TRANSITION
+128: 132TRANSITION
+129: 133TRANSITION
+130: 134TRANSITION
+131: 135TRANSITION
+132: 136TRANSITION
+133: 137TRANSITION
+134: 138TRANSITION
+135: 139TRANSITION
+136: 140TRANSITION
+137: 141TRANSITION
+138: 142TRANSITION
+139: 143TRANSITION
+140: 144TRANSITION
+141: 145TRANSITION
+142: 146TRANSITION
+143: 147TRANSITION
+144: 148TRANSITION
+145: 149TRANSITION
+146: 148TRANSITION
+147: 148TRANSITION
+148: 152TRANSITION
+149: 153TRANSITION
+150: 154TRANSITION
+151: 155TRANSITION
+152: 1Accepting
+153: 157TRANSITION
+154: 158TRANSITION
+155: 159TRANSITION
+156: 160TRANSITION
+157: 161TRANSITION
+158: 162TRANSITION
+159: 163TRANSITION
+160: 164TRANSITION
+161: 165TRANSITION
+162: 166TRANSITION
+163: 167TRANSITION
+164: 168TRANSITION
+165: 169TRANSITION
+166: 170TRANSITION
+167: 171TRANSITION
+168: 172TRANSITION
+169: 173TRANSITION
+170: 174TRANSITION
+171: 175TRANSITION
+172: 176TRANSITION
+173: 177TRANSITION
+174: 178TRANSITION
+175: 179TRANSITION
+176: 180TRANSITION
+177: 181TRANSITION
+178: 182TRANSITION
+179: 183TRANSITION
+180: 184TRANSITION
+181: 185TRANSITION
+182: 186TRANSITION
+183: 187TRANSITION
+184: 188TRANSITION
+185: 189TRANSITION
+186: 190TRANSITION
+187: 186TRANSITION
+188: 194TRANSITION
+189: 195TRANSITION
+190: 196TRANSITION
+191: 197TRANSITION
+192: 198TRANSITION
+193: 199TRANSITION
+194: 198TRANSITION
+195: 199TRANSITION
+196: 200TRANSITION
+197: 201TRANSITION
+198: 202TRANSITION
+199: 203TRANSITION
+200: 204TRANSITION
+201: 205TRANSITION
+202: 206TRANSITION
+203: 207TRANSITION
+204: 208TRANSITION
+205: 209TRANSITION
+206: 210TRANSITION
+207: 211TRANSITION
+208: 212TRANSITION
+209: 213TRANSITION
+210: 214TRANSITION
+211: 215TRANSITION
+212: 216TRANSITION
+213: 217TRANSITION
+214: 218TRANSITION
+215: 219TRANSITION
+216: 220TRANSITION
+217: 221TRANSITION
+218: 222TRANSITION
+219: 223TRANSITION
+220: 224TRANSITION
+221: 225TRANSITION
+222: 226TRANSITION
+223: 227TRANSITION
+*******
+
+*******
+
+********
+Start union********
+
+********
+end union********
+
+*** Not matching in union***
+
+********
+Start union********
+
+********
+end union********
+
+*** Not matching in union***
+
+********
+Start union********
+
+********
+end union********
+
+*** Not matching in union***
+
+********
+Start union********
+
+********
+end union********
+
+*** Not matching in union***
+
+********
+Start union********
+
+********
+end union********
+
+*** Not matching in union***
+
+********
+Start union********
+
+********
+end union********
+
+*** Not matching in union***
+
+********
+Start union********
+
+********
+end union********
+
+*** Not matching in union***
+
+********
+Start union********
+
+********
+end union********
+
+*** Not matching in union***
+
+********
+Start union********
+
+********
+end union********
+
+*** Not matching in union***
+
+********
+Start union********
+
+********
+end union********
+
+*** Not matching in union***
+
+********
+Start union********
+
+********
+end union********
+
+*** Not matching in union***
+
+********
+Start union********
+
+********
+end union********
+
+*** Not matching in union***
+
+********
+Start union********
+
+********
+end union********
+
+*** Not matching in union***
+
+********
+Start union********
+
+********
+end union********
+
+*** Not matching in union***
+
+********
+Start union********
+
+********
+end union********
+
+*** Not matching in union***
+
+********
+Start union********
+
+********
+end union********
+
+*** Not matching in union***
+
+********
+Start union********
+
+********
+end union********
+
+*** Not matching in union***
+
+********
+Start union********
+
+********
+end union********
+
+*** Not matching in union***
+
+********
+Start union********
+
+********
+end union********
+
+*** Not matching in union***
+
+********
+Start union********
+
+********
+end union********
+
+*** Not matching in union***
+
+********
+Start union********
+
+********
+end union********
+
+*** Not matching in union***
+
+********
+Start union********
+
+********
+end union********
+
+*** Not matching in union***
+
+********
+Start union********
+
+********
+end union********
+
+*** Not matching in union***
+
+********
+Start union********
+
+********
+end union********
+
+*** Not matching in union***
+
+********
+Start union********
+
+********
+end union********
+
+*** Not matching in union***
+
+********
+Start union********
+
+********
+end union********
+
+*** Not matching in union***
+
+********
+Start union********
+
+********
+end union********
+
+*** Not matching in union***
+
+********
+Start union********
+
+********
+end union********
+
+*** Not matching in union***
+
+********
+Start union********
+
+********
+end union********
+
+*** Not matching in union***
+
+********
+Start union********
+
+********
+end union********
+
+*** Not matching in union***
+
+********
+Start union********
+
+********
+end union********
+
+*** Not matching in union***
+
+********
+Start union********
+
+********
+end union********
+
+*** Not matching in union***
+
+********
+Start union********
+
+********
+end union********
+
+*** Not matching in union***
+
+********
+Start union********
+
+********
+end union********
+
+*** Not matching in union***
+
+********
+Start union********
+
+********
+end union********
+
+*** Not matching in union***
+
+********
+Start union********
+
+********
+end union********
+
+*** Not matching in union***
+
+********
+Start union********
+
+********
+end union********
+
+*** Not matching in union***
+
+********
+Start union********
+
+********
+end union********
+
+*** Not matching in union***
+
+********
+Start union********
+
+********
+end union********
+
+*** Not matching in union***
+
+********
+Start union********
+
+********
+end union********
+
+*** Not matching in union***
+
+********
+Start union********
+
+********
+end union********
+
+*** Not matching in union***
+
+********
+Start union********
+
+********
+end union********
+
+*** Not matching in union***
+
+********
+Start union********
+
+********
+end union********
+
+*** Not matching in union***
+
+********
+Start union********
+
+********
+end union********
+
+*** Not matching in union***
+
+********
+Start union********
+
+********
+end union********
+
+*** Not matching in union***
+
+********
+Start union********
+
+********
+end union********
+
+*** Not matching in union***
+
+********
+Start union********
+
+********
+end union********
+
+*** Not matching in union***
+
+********
+Start union********
+
+********
+end union********
+
+*** Not matching in union***
+
+********
+Start union********
+
+********
+end union********
+
+*** Not matching in union***
+
+********
+Start union********
+
+********
+end union********
+
+*** Not matching in union***
+
+********
+Start union********
+
+********
+end union********
+
+*** Not matching in union***
+
+********
+Start union********
+
+********
+end union********
+
+*** Not matching in union***
+
+********
+Start union********
+
+********
+end union********
+
+*** Not matching in union***
+
+********
+Start union********
+
+********
+end union********
+
+*** Not matching in union***
+
+********
+Start union********
+
+********
+end union********
+
+*** Not matching in union***
+
+********
+Start union********
+
+********
+end union********
+
+*** Not matching in union***
+
+********
+Start union********
+
+********
+end union********
+
+*** Not matching in union***
+
+********
+Start union********
+
+********
+end union********
+
+*** Not matching in union***
+
+********
+Start union********
+
+********
+end union********
+
+*** Not matching in union***
+
+********
+Start union********
+
+********
+end union********
+
+*** Not matching in union***
+
+********
+Start union********
+
+********
+end union********
+
+*** Not matching in union***
+
+********
+Start union********
+
+********
+end union********
+
+*** Not matching in union***
+
+********
+Start union********
+
+********
+end union********
+
+*** Not matching in union***
+
+********
+Start union********
+
+********
+end union********
+
+*** Not matching in union***
+
+********
+Start union********
+
+********
+end union********
+
+*** Not matching in union***
+
+********
+Start union********
+
+********
+end union********
+
+*** Not matching in union***
+
+********
+Start union********
+
+********
+end union********
+
+*** Not matching in union***
+
+********
+Start union********
+
+********
+end union********
+
+*** Not matching in union***
+
+********
+Start union********
+
+********
+end union********
+
+*** Not matching in union***
+
+********
+Start union********
+
+********
+end union********
+
+*** Not matching in union***
+
+********
+Start union********
+
+********
+end union********
+
+*** Not matching in union***
+
+********
+Start union********
+
+********
+end union********
+
+*** Not matching in union***
+
+********
+Start union********
+
+********
+end union********
+
+*** Not matching in union***
+
+********
+Start union********
+
+********
+end union********
+
+*** Not matching in union***
+
+********
+Start union********
+
+********
+end union********
+
+*** Not matching in union***
+
+********
+Start union********
+
+********
+end union********
+
+*** Not matching in union***
+
+********
+Start union********
+
+********
+end union********
+
+*** Not matching in union***
+
+********
+Start union********
+
+********
+end union********
+
+*** Not matching in union***
+
+********
+Start union********
+
+********
+end union********
+
+*** Not matching in union***
+
+********
+Start union********
+
+********
+end union********
+
+*** Not matching in union***
+
+********
+Start union********
+
+********
+end union********
+
+*** Not matching in union***
+
+********
+Start union********
+
+********
+end union********
+
+*** Not matching in union***
+
+********
+Start union********
+
+********
+end union********
+
+*** Not matching in union***
+
+********
+Start union********
+
+********
+end union********
+
+*** Not matching in union***
+
+********
+Start union********
+
+********
+end union********
+
+*** Not matching in union***
+
+********
+Start union********
+
+********
+end union********
+
+*** Not matching in union***
+
+********
+Start union********
+
+********
+end union********
+
+*** Not matching in union***
+
+********
+Start union********
+
+********
+end union********
+
+*** Not matching in union***
+
+********
+Start union********
+
+********
+end union********
+
+*** Not matching in union***
+
+********
+Start union********
+
+********
+end union********
+
+*** Not matching in union***
+
+********
+Start union********
+
+********
+end union********
+
+*** Not matching in union***
+
+********
+Start union********
+
+********
+end union********
+
+*** Not matching in union***
+
+********
+Start union********
+
+********
+end union********
+
+*** Not matching in union***
+
+********
+Start union********
+
+********
+end union********
+
+*** Not matching in union***
+
+********
+Start union********
+
+********
+end union********
+
+*** Not matching in union***
+
+********
+Start union********
+
+********
+end union********
+
+*** Not matching in union***
+
+********
+Start union********
+
+********
+end union********
+
+*** Not matching in union***
+
+********
+Start union********
+
+********
+end union********
+
+*** Not matching in union***
+
+********
+Start union********
+
+********
+end union********
+
+*** Not matching in union***
+
+********
+Start union********
+
+********
+end union********
+
+*** Not matching in union***
+
+********
+Start union********
+
+********
+end union********
+
+*** Not matching in union***
+440: 435TRANSITION
+441: 443TRANSITION
+442: 444TRANSITION
+443: 445TRANSITION
+444: 446TRANSITION
+445: 447TRANSITION
+446: 448TRANSITION
+
+********
+Start IterationOperation********
+
+********
+Last line of IterationOperation********
+
+********
+end IterationOperation********
+
+*** Not matching in IterationOperation***
+442: 437TRANSITION
+443: 445TRANSITION
+444: 446TRANSITION
+445: 447TRANSITION
+446: 448TRANSITION
+447: 449TRANSITION
+448: 450TRANSITION
+
+********
+403
+Start ConcatOperation********
+
+********
+end ConcatOperation********
+
+*** Not matching in ConcatOperation***
+402: 1Accepting
+403: 405TRANSITION
+404: 406TRANSITION
+405: 407TRANSITION
+406: 408TRANSITION
+407: 409TRANSITION
+408: 410TRANSITION
+409: 411TRANSITION
+410: 412TRANSITION
+411: 413TRANSITION
+412: 414TRANSITION
+413: 415TRANSITION
+414: 416TRANSITION
+415: 417TRANSITION
+416: 418TRANSITION
+417: 419TRANSITION
+418: 420TRANSITION
+419: 421TRANSITION
+420: 422TRANSITION
+421: 423TRANSITION
+422: 424TRANSITION
+423: 425TRANSITION
+424: 426TRANSITION
+425: 427TRANSITION
+426: 428TRANSITION
+427: 429TRANSITION
+428: 430TRANSITION
+429: 431TRANSITION
+430: 432TRANSITION
+431: 433TRANSITION
+432: 434TRANSITION
+433: 435TRANSITION
+434: 436TRANSITION
+435: 437TRANSITION
+436: 438TRANSITION
+437: 439TRANSITION
+438: 440TRANSITION
+439: 441TRANSITION
+440: 442TRANSITION
+441: 443TRANSITION
+442: 444TRANSITION
+443: 445TRANSITION
+444: 446TRANSITION
+445: 447TRANSITION
+446: 448TRANSITION
+447: 449TRANSITION
+448: 450TRANSITION
+449: 451TRANSITION
+450: 452TRANSITION
+451: 453TRANSITION
+452: 454TRANSITION
+453: 455TRANSITION
+454: 456TRANSITION
+455: 457TRANSITION
+456: 458TRANSITION
+457: 459TRANSITION
+458: 460TRANSITION
+459: 461TRANSITION
+460: 462TRANSITION
+461: 463TRANSITION
+462: 464TRANSITION
+463: 465TRANSITION
+464: 466TRANSITION
+465: 467TRANSITION
+466: 468TRANSITION
+467: 469TRANSITION
+468: 470TRANSITION
+469: 471TRANSITION
+470: 472TRANSITION
+471: 473TRANSITION
+472: 474TRANSITION
+473: 475TRANSITION
+474: 476TRANSITION
+475: 477TRANSITION
+476: 478TRANSITION
+477: 479TRANSITION
+478: 480TRANSITION
+479: 481TRANSITION
+480: 482TRANSITION
+481: 483TRANSITION
+482: 484TRANSITION
+483: 485TRANSITION
+484: 486TRANSITION
+485: 487TRANSITION
+486: 488TRANSITION
+487: 489TRANSITION
+488: 490TRANSITION
+489: 491TRANSITION
+490: 492TRANSITION
+491: 493TRANSITION
+492: 494TRANSITION
+493: 495TRANSITION
+494: 496TRANSITION
+495: 497TRANSITION
+496: 498TRANSITION
+497: 499TRANSITION
+498: 500TRANSITION
+499: 501TRANSITION
+500: 502TRANSITION
+501: 503TRANSITION
+502: 504TRANSITION
+503: 505TRANSITION
+504: 506TRANSITION
+505: 507TRANSITION
+506: 508TRANSITION
+507: 509TRANSITION
+508: 510TRANSITION
+509: 511TRANSITION
+510: 512TRANSITION
+511: 513TRANSITION
+512: 514TRANSITION
+513: 515TRANSITION
+514: 516TRANSITION
+515: 517TRANSITION
+516: 518TRANSITION
+517: 519TRANSITION
+518: 520TRANSITION
+519: 521TRANSITION
+520: 522TRANSITION
+521: 523TRANSITION
+522: 524TRANSITION
+523: 525TRANSITION
+524: 526TRANSITION
+525: 527TRANSITION
+526: 528TRANSITION
+527: 529TRANSITION
+528: 530TRANSITION
+529: 531TRANSITION
+530: 532TRANSITION
+531: 533TRANSITION
+532: 534TRANSITION
+533: 535TRANSITION
+534: 536TRANSITION
+535: 537TRANSITION
+536: 538TRANSITION
+537: 539TRANSITION
+538: 540TRANSITION
+539: 541TRANSITION
+540: 542TRANSITION
+541: 543TRANSITION
+542: 544TRANSITION
+543: 545TRANSITION
+544: 546TRANSITION
+545: 547TRANSITION
+546: 548TRANSITION
+547: 549TRANSITION
+548: 550TRANSITION
+549: 551TRANSITION
+550: 552TRANSITION
+551: 553TRANSITION
+552: 554TRANSITION
+553: 555TRANSITION
+554: 556TRANSITION
+555: 557TRANSITION
+556: 558TRANSITION
+557: 559TRANSITION
+558: 560TRANSITION
+559: 561TRANSITION
+560: 562TRANSITION
+561: 563TRANSITION
+562: 564TRANSITION
+563: 565TRANSITION
+564: 566TRANSITION
+565: 567TRANSITION
+566: 568TRANSITION
+567: 569TRANSITION
+568: 570TRANSITION
+569: 571TRANSITION
+570: 572TRANSITION
+571: 573TRANSITION
+572: 574TRANSITION
+573: 575TRANSITION
+574: 576TRANSITION
+575: 577TRANSITION
+576: 578TRANSITION
+577: 579TRANSITION
+578: 580TRANSITION
+579: 581TRANSITION
+580: 582TRANSITION
+581: 583TRANSITION
+582: 584TRANSITION
+583: 585TRANSITION
+584: 586TRANSITION
+585: 587TRANSITION
+586: 588TRANSITION
+587: 589TRANSITION
+588: 590TRANSITION
+589: 591TRANSITION
+590: 592TRANSITION
+591: 593TRANSITION
+592: 594TRANSITION
+593: 595TRANSITION
+594: 596TRANSITION
+595: 597TRANSITION
+596: 598TRANSITION
+597: 599TRANSITION
+598: 600TRANSITION
+599: 601TRANSITION
+600: 602TRANSITION
+601: 603TRANSITION
+602: 604TRANSITION
+603: 605TRANSITION
+604: 606TRANSITION
+605: 607TRANSITION
+606: 608TRANSITION
+607: 609TRANSITION
+608: 610TRANSITION
+609: 611TRANSITION
+610: 612TRANSITION
+611: 613TRANSITION
+612: 614TRANSITION
+613: 615TRANSITION
+614: 616TRANSITION
+615: 617TRANSITION
+616: 618TRANSITION
+617: 619TRANSITION
+618: 620TRANSITION
+619: 621TRANSITION
+620: 622TRANSITION
+621: 623TRANSITION
+622: 624TRANSITION
+623: 625TRANSITION
+624: 626TRANSITION
+625: 627TRANSITION
+626: 628TRANSITION
+627: 629TRANSITION
+628: 630TRANSITION
+629: 631TRANSITION
+630: 632TRANSITION
+631: 633TRANSITION
+632: 634TRANSITION
+633: 635TRANSITION
+634: 636TRANSITION
+635: 637TRANSITION
+636: 638TRANSITION
+637: 639TRANSITION
+638: 640TRANSITION
+639: 641TRANSITION
+640: 642TRANSITION
+641: 643TRANSITION
+642: 644TRANSITION
+643: 645TRANSITION
+644: 646TRANSITION
+645: 647TRANSITION
+646: 648TRANSITION
+647: 649TRANSITION
+648: 650TRANSITION
+649: 651TRANSITION
+650: 652TRANSITION
+651: 653TRANSITION
+652: 654TRANSITION
+653: 655TRANSITION
+654: 656TRANSITION
+655: 657TRANSITION
+656: 658TRANSITION
+657: 659TRANSITION
+658: 660TRANSITION
+659: 661TRANSITION
+660: 662TRANSITION
+661: 663TRANSITION
+662: 664TRANSITION
+663: 665TRANSITION
+664: 666TRANSITION
+665: 667TRANSITION
+666: 668TRANSITION
+667: 669TRANSITION
+668: 670TRANSITION
+669: 671TRANSITION
+670: 672TRANSITION
+671: 673TRANSITION
+672: 674TRANSITION
+673: 675TRANSITION
+674: 676TRANSITION
+675: 677TRANSITION
+676: 678TRANSITION
+677: 679TRANSITION
+678: 680TRANSITION
+679: 681TRANSITION
+680: 682TRANSITION
+681: 683TRANSITION
+682: 684TRANSITION
+683: 685TRANSITION
+684: 686TRANSITION
+685: 687TRANSITION
+686: 688TRANSITION
+687: 689TRANSITION
+688: 690TRANSITION
+689: 691TRANSITION
+690: 692TRANSITION
+691: 693TRANSITION
+692: 694TRANSITION
+693: 695TRANSITION
+694: 696TRANSITION
+695: 697TRANSITION
+696: 698TRANSITION
+697: 699TRANSITION
+698: 700TRANSITION
+699: 701TRANSITION
+700: 702TRANSITION
+701: 703TRANSITION
+702: 704TRANSITION
+703: 705TRANSITION
+704: 706TRANSITION
+705: 707TRANSITION
+706: 708TRANSITION
+707: 709TRANSITION
+708: 710TRANSITION
+709: 711TRANSITION
+710: 712TRANSITION
+711: 713TRANSITION
+712: 714TRANSITION
+713: 715TRANSITION
+714: 716TRANSITION
+715: 717TRANSITION
+716: 718TRANSITION
+717: 719TRANSITION
+718: 720TRANSITION
+719: 721TRANSITION
+720: 722TRANSITION
+721: 723TRANSITION
+722: 724TRANSITION
+723: 725TRANSITION
+724: 726TRANSITION
+725: 727TRANSITION
+726: 728TRANSITION
+727: 729TRANSITION
+728: 730TRANSITION
+729: 731TRANSITION
+730: 732TRANSITION
+731: 733TRANSITION
+732: 734TRANSITION
+733: 735TRANSITION
+734: 736TRANSITION
+735: 737TRANSITION
+736: 738TRANSITION
+737: 739TRANSITION
+738: 740TRANSITION
+739: 741TRANSITION
+740: 742TRANSITION
+741: 743TRANSITION
+742: 744TRANSITION
+743: 745TRANSITION
+744: 746TRANSITION
+745: 747TRANSITION
+746: 748TRANSITION
+747: 749TRANSITION
+748: 750TRANSITION
+749: 751TRANSITION
+750: 752TRANSITION
+751: 753TRANSITION
+752: 754TRANSITION
+753: 755TRANSITION
+754: 756TRANSITION
+755: 757TRANSITION
+756: 758TRANSITION
+757: 759TRANSITION
+758: 760TRANSITION
+759: 761TRANSITION
+760: 762TRANSITION
+761: 763TRANSITION
+762: 764TRANSITION
+763: 765TRANSITION
+764: 766TRANSITION
+765: 767TRANSITION
+766: 768TRANSITION
+767: 769TRANSITION
+768: 770TRANSITION
+769: 771TRANSITION
+770: 772TRANSITION
+771: 773TRANSITION
+772: 774TRANSITION
+773: 775TRANSITION
+774: 776TRANSITION
+775: 777TRANSITION
+776: 778TRANSITION
+777: 779TRANSITION
+778: 780TRANSITION
+779: 781TRANSITION
+780: 782TRANSITION
+781: 783TRANSITION
+782: 784TRANSITION
+783: 785TRANSITION
+784: 786TRANSITION
+785: 787TRANSITION
+786: 788TRANSITION
+787: 789TRANSITION
+788: 790TRANSITION
+789: 791TRANSITION
+790: 792TRANSITION
+791: 793TRANSITION
+792: 794TRANSITION
+793: 795TRANSITION
+794: 796TRANSITION
+795: 797TRANSITION
+796: 798TRANSITION
+797: 799TRANSITION
+798: 800TRANSITION
+799: 801TRANSITION
+800: 802TRANSITION
+801: 803TRANSITION
+802: 804TRANSITION
+803: 805TRANSITION
+804: 806TRANSITION
+805: 807TRANSITION
+806: 808TRANSITION
+807: 809TRANSITION
+808: 810TRANSITION
+809: 811TRANSITION
+810: 812TRANSITION
+811: 813TRANSITION
+812: 814TRANSITION
+813: 815TRANSITION
+814: 816TRANSITION
+815: 817TRANSITION
+816: 818TRANSITION
+817: 819TRANSITION
+818: 820TRANSITION
+819: 821TRANSITION
+820: 822TRANSITION
+821: 823TRANSITION
+822: 824TRANSITION
+823: 825TRANSITION
+824: 826TRANSITION
+825: 827TRANSITION
+826: 828TRANSITION
+827: 829TRANSITION
+828: 830TRANSITION
+829: 831TRANSITION
+830: 832TRANSITION
+831: 833TRANSITION
+832: 834TRANSITION
+833: 835TRANSITION
+834: 836TRANSITION
+835: 837TRANSITION
+836: 838TRANSITION
+837: 839TRANSITION
+838: 840TRANSITION
+839: 841TRANSITION
+840: 842TRANSITION
+841: 843TRANSITION
+842: 844TRANSITION
+843: 840TRANSITION
+844: 848TRANSITION
+845: 849TRANSITION
+846: 850TRANSITION
+847: 851TRANSITION
+848: 852TRANSITION
+849: 853TRANSITION
+850: 852TRANSITION
+851: 853TRANSITION
+852: 854TRANSITION
+853: 855TRANSITION
+854: 856TRANSITION
+855: 857TRANSITION
+856: 858TRANSITION
+857: 859TRANSITION
+858: 860TRANSITION
+859: 861TRANSITION
+860: 862TRANSITION
+861: 863TRANSITION
+862: 864TRANSITION
+863: 865TRANSITION
+864: 866TRANSITION
+865: 867TRANSITION
+866: 868TRANSITION
+867: 869TRANSITION
+868: 870TRANSITION
+869: 871TRANSITION
+870: 872TRANSITION
+871: 873TRANSITION
+872: 874TRANSITION
+873: 875TRANSITION
+874: 876TRANSITION
+875: 877TRANSITION
+876: 878TRANSITION
+877: 879TRANSITION
+878: 880TRANSITION
+879: 881TRANSITION
+
+id test: 0
+
+********
+3
+Start ConcatOperation********
+
+********
+end ConcatOperation********
+
+*** Not matching in ConcatOperation***
+2: 1Accepting
+
+********
+3
+Start ConcatOperation********
+
+********
+end ConcatOperation********
+
+*** Not matching in ConcatOperation***
+2: 1Accepting
+
+********
+4
+Start ConcatOperation********
+
+********
+end ConcatOperation********
+
+*** Not matching in ConcatOperation***
+2: 1TRANSITION
+3: 1Accepting
+
+********
+5
+Start ConcatOperation********
+
+********
+end ConcatOperation********
+
+*** Not matching in ConcatOperation***
+2: 1TRANSITION
+3: 1TRANSITION
+4: 1Accepting
+
+********
+3
+Start ConcatOperation********
+
+********
+end ConcatOperation********
+
+*** Not matching in ConcatOperation***
+2: 1Accepting
+
+********
+4
+Start ConcatOperation********
+
+********
+end ConcatOperation********
+
+*** Not matching in ConcatOperation***
+2: 1TRANSITION
+3: 1Accepting
+
+********
+Start union********
+
+********
+end union********
+
+*** Not matching in union***
+
+********
+Start union********
+
+********
+end union********
+
+*** Not matching in union***
+
+********
+Start PlusOperation********
+
+********
+Start IterationOperation********
+
+********
+Last line of IterationOperation********
+
+********
+end IterationOperation********
+
+*** Not matching in IterationOperation***
+
+********
+11
+Start ConcatOperation********
+
+********
+end ConcatOperation********
+
+*** Not matching in ConcatOperation***
+10: 1Accepting
+11: 13TRANSITION
+12: 14TRANSITION
+13: 15TRANSITION
+14: 16TRANSITION
+15: 17TRANSITION
+16: 18TRANSITION
+17: 19TRANSITION
+18: 20TRANSITION
+19: 21TRANSITION
+20: 22TRANSITION
+
+********
+end PlusOperation********
+
+*** Not matching in PlusOperation***
+10: 1Accepting
+11: 13TRANSITION
+12: 14TRANSITION
+13: 15TRANSITION
+14: 16TRANSITION
+15: 17TRANSITION
+16: 18TRANSITION
+17: 19TRANSITION
+18: 20TRANSITION
+19: 21TRANSITION
+20: 22TRANSITION
+Vector size2
+0: START
+epsilon edges:0
+
+non epsilon edges:
+0 ==(==> 1 
+
+1: ACCEPTING
+epsilon edges:0
+
+non epsilon edges:
+
+
+NUMBER
+start state is: 0
+End state is: 1
+ID
+start state is: 0
+End state is: 1
+IF
+start state is: 0
+End state is: 1
+ELSE
+start state is: 0
+End state is: 1
+INT
+start state is: 0
+End state is: 1
+WS
+start state is: 0
+End state is: 1
+LP
+start state is: 0
+End state is: 1
+RP
+start state is: 0
+End state is: 1
+EQ
+start state is: 0
+End state is: 1
+LT
+start state is: 0
+End state is: 1
+GT
+start state is: 0
+End state is: 1
+if(i>2)
+NFA type: NUMBER
+longst NFA: 0
+
+
+if(i>2)
+NFA type: ID
+longst NFA: 0
+
+
+if(i>2)
+NFA type: IF
+longst NFA: 0
+
+
+if(i>2)
+NFA type: ELSE
+longst NFA: 0
+
+
+if(i>2)
+NFA type: INT
+longst NFA: 0
+
+
+if(i>2)
+NFA type: WS
+longst NFA: 0
+
+
+if(i>2)
+NFA type: LP
+longst NFA: 0
+
+
+if(i>2)
+NFA type: RP
+longst NFA: 0
+
+
+if(i>2)
+NFA type: EQ
+longst NFA: 0
+
+
+if(i>2)
+NFA type: LT
+longst NFA: 0
+
+
+if(i>2)
+NFA type: GT
+longst NFA: 0
+
+
+Invalid syntax error
+x
+NFA type: NUMBER
+longst NFA: 0
+
+
+x
+NFA type: ID
+longst NFA: 0
+
+
+x
+NFA type: IF
+longst NFA: 0
+
+
+x
+NFA type: ELSE
+longst NFA: 0
+
+
+x
+NFA type: INT
+longst NFA: 0
+
+
+x
+NFA type: WS
+longst NFA: 0
+
+
+x
+NFA type: LP
+longst NFA: 0
+
+
+x
+NFA type: RP
+longst NFA: 0
+
+
+x
+NFA type: EQ
+longst NFA: 0
+
+
+x
+NFA type: LT
+longst NFA: 0
+
+
+x
+NFA type: GT
+longst NFA: 0
+
+
+Invalid syntax error
+=
+NFA type: NUMBER
+longst NFA: 0
+
+
+=
+NFA type: ID
+longst NFA: 0
+
+
+=
+NFA type: IF
+longst NFA: 0
+
+
+=
+NFA type: ELSE
+longst NFA: 0
+
+
+=
+NFA type: INT
+longst NFA: 0
+
+
+=
+NFA type: WS
+longst NFA: 0
+
+
+=
+NFA type: LP
+longst NFA: 0
+
+
+=
+NFA type: RP
+longst NFA: 0
+
+
+
+
+The current charachter is: =
+The following NFA has accepting state: 
+EQ
+=
+NFA type: EQ
+longst NFA: 1
+
+
+=
+NFA type: LT
+longst NFA: 0
+
+
+=
+NFA type: GT
+longst NFA: 0
+
+
+0
+NFA type: NUMBER
+longst NFA: 0
+
+
+0
+NFA type: ID
+longst NFA: 0
+
+
+0
+NFA type: IF
+longst NFA: 0
+
+
+0
+NFA type: ELSE
+longst NFA: 0
+
+
+0
+NFA type: INT
+longst NFA: 0
+
+
+0
+NFA type: WS
+longst NFA: 0
+
+
+0
+NFA type: LP
+longst NFA: 0
+
+
+0
+NFA type: RP
+longst NFA: 0
+
+
+0
+NFA type: EQ
+longst NFA: 0
+
+
+0
+NFA type: LT
+longst NFA: 0
+
+
+0
+NFA type: GT
+longst NFA: 0
+
+
+Invalid syntax error
+else
+NFA type: NUMBER
+longst NFA: 0
+
+
+else
+NFA type: ID
+longst NFA: 0
+
+
+else
+NFA type: IF
+longst NFA: 0
+
+
+else
+NFA type: ELSE
+longst NFA: 0
+
+
+else
+NFA type: INT
+longst NFA: 0
+
+
+else
+NFA type: WS
+longst NFA: 0
+
+
+else
+NFA type: LP
+longst NFA: 0
+
+
+else
+NFA type: RP
+longst NFA: 0
+
+
+else
+NFA type: EQ
+longst NFA: 0
+
+
+else
+NFA type: LT
+longst NFA: 0
+
+
+else
+NFA type: GT
+longst NFA: 0
+
+
+Invalid syntax error
+
+********
+Start union********
+
+********
+end union********
+
+*** Not matching in union***
+
+********
+Start PlusOperation********
+
+********
+Start IterationOperation********
+
+********
+Last line of IterationOperation********
+
+********
+end IterationOperation********
+
+*** Not matching in IterationOperation***
+
+********
+7
+Start ConcatOperation********
+
+********
+end ConcatOperation********
+
+*** Not matching in ConcatOperation***
+1: 9TRANSITION
+2: 1TRANSITION
+3: 2TRANSITION
+4: 3TRANSITION
+5: 4TRANSITION
+6: 5TRANSITION
+7: 1Accepting
+8: 10TRANSITION
+9: 11TRANSITION
+10: 12TRANSITION
+11: 13TRANSITION
+12: 14TRANSITION
+
+********
+end PlusOperation********
+
+*** Not matching in PlusOperation***
+1: 9TRANSITION
+2: 1TRANSITION
+3: 2TRANSITION
+4: 3TRANSITION
+5: 4TRANSITION
+6: 5TRANSITION
+7: 1Accepting
+8: 10TRANSITION
+9: 11TRANSITION
+10: 12TRANSITION
+11: 13TRANSITION
+12: 14TRANSITION
+
+********
+Start union********
+
+********
+end union********
+
+*** Not matching in union***
+3: 11TRANSITION
+4: 3TRANSITION
+5: 4TRANSITION
+6: 5TRANSITION
+7: 6TRANSITION
+8: 7TRANSITION
+9: 3TRANSITION
+10: 12TRANSITION
+11: 13TRANSITION
+12: 14TRANSITION
+13: 15TRANSITION
+14: 16TRANSITION
+
+********
+Start union********
+
+********
+end union********
+
+*** Not matching in union***
+5: 13TRANSITION
+6: 5TRANSITION
+7: 6TRANSITION
+8: 7TRANSITION
+9: 8TRANSITION
+10: 9TRANSITION
+11: 5TRANSITION
+12: 14TRANSITION
+13: 15TRANSITION
+14: 16TRANSITION
+15: 17TRANSITION
+16: 18TRANSITION
+
+********
+Start union********
+
+********
+end union********
+
+*** Not matching in union***
+7: 15TRANSITION
+8: 7TRANSITION
+9: 8TRANSITION
+10: 9TRANSITION
+11: 10TRANSITION
+12: 11TRANSITION
+13: 7TRANSITION
+14: 16TRANSITION
+15: 17TRANSITION
+16: 18TRANSITION
+17: 19TRANSITION
+18: 20TRANSITION
+
+********
+Start union********
+
+********
+end union********
+
+*** Not matching in union***
+9: 17TRANSITION
+10: 9TRANSITION
+11: 10TRANSITION
+12: 11TRANSITION
+13: 12TRANSITION
+14: 13TRANSITION
+15: 9TRANSITION
+16: 18TRANSITION
+17: 19TRANSITION
+18: 20TRANSITION
+19: 21TRANSITION
+20: 22TRANSITION
+
+********
+Start union********
+
+********
+end union********
+
+*** Not matching in union***
+11: 19TRANSITION
+12: 11TRANSITION
+13: 12TRANSITION
+14: 13TRANSITION
+15: 14TRANSITION
+16: 15TRANSITION
+17: 11TRANSITION
+18: 20TRANSITION
+19: 21TRANSITION
+20: 22TRANSITION
+21: 23TRANSITION
+22: 24TRANSITION
+
+********
+Start union********
+
+********
+end union********
+
+*** Not matching in union***
+13: 21TRANSITION
+14: 13TRANSITION
+15: 14TRANSITION
+16: 15TRANSITION
+17: 16TRANSITION
+18: 17TRANSITION
+19: 13TRANSITION
+20: 22TRANSITION
+21: 23TRANSITION
+22: 24TRANSITION
+23: 25TRANSITION
+24: 26TRANSITION
+
+********
+Start union********
+
+********
+end union********
+
+*** Not matching in union***
+15: 23TRANSITION
+16: 15TRANSITION
+17: 16TRANSITION
+18: 17TRANSITION
+19: 18TRANSITION
+20: 19TRANSITION
+21: 15TRANSITION
+22: 24TRANSITION
+23: 25TRANSITION
+24: 26TRANSITION
+25: 27TRANSITION
+26: 28TRANSITION
+
+********
+Start union********
+
+********
+end union********
+
+*** Not matching in union***
+17: 25TRANSITION
+18: 17TRANSITION
+19: 18TRANSITION
+20: 19TRANSITION
+21: 20TRANSITION
+22: 21TRANSITION
+23: 17TRANSITION
+24: 26TRANSITION
+25: 27TRANSITION
+26: 28TRANSITION
+27: 29TRANSITION
+28: 30TRANSITION
+
+********
+Start union********
+
+********
+end union********
+
+*** Not matching in union***
+19: 27TRANSITION
+20: 19TRANSITION
+21: 20TRANSITION
+22: 21TRANSITION
+23: 22TRANSITION
+24: 23TRANSITION
+25: 19TRANSITION
+26: 28TRANSITION
+27: 29TRANSITION
+28: 30TRANSITION
+29: 31TRANSITION
+30: 32TRANSITION
+
+********
+Start union********
+
+********
+end union********
+
+*** Not matching in union***
+21: 29TRANSITION
+22: 21TRANSITION
+23: 22TRANSITION
+24: 23TRANSITION
+25: 24TRANSITION
+26: 25TRANSITION
+27: 21TRANSITION
+28: 30TRANSITION
+29: 31TRANSITION
+30: 32TRANSITION
+31: 33TRANSITION
+32: 34TRANSITION
+
+********
+Start union********
+
+********
+end union********
+
+*** Not matching in union***
+23: 31TRANSITION
+24: 23TRANSITION
+25: 24TRANSITION
+26: 25TRANSITION
+27: 26TRANSITION
+28: 27TRANSITION
+29: 23TRANSITION
+30: 32TRANSITION
+31: 33TRANSITION
+32: 34TRANSITION
+33: 35TRANSITION
+34: 36TRANSITION
+
+********
+Start union********
+
+********
+end union********
+
+*** Not matching in union***
+25: 33TRANSITION
+26: 25TRANSITION
+27: 26TRANSITION
+28: 27TRANSITION
+29: 28TRANSITION
+30: 29TRANSITION
+31: 25TRANSITION
+32: 34TRANSITION
+33: 35TRANSITION
+34: 36TRANSITION
+35: 37TRANSITION
+36: 38TRANSITION
+
+********
+Start union********
+
+********
+end union********
+
+*** Not matching in union***
+27: 35TRANSITION
+28: 27TRANSITION
+29: 28TRANSITION
+30: 29TRANSITION
+31: 30TRANSITION
+32: 31TRANSITION
+33: 27TRANSITION
+34: 36TRANSITION
+35: 37TRANSITION
+36: 38TRANSITION
+37: 39TRANSITION
+38: 40TRANSITION
+
+********
+Start union********
+
+********
+end union********
+
+*** Not matching in union***
+29: 37TRANSITION
+30: 29TRANSITION
+31: 30TRANSITION
+32: 31TRANSITION
+33: 32TRANSITION
+34: 33TRANSITION
+35: 29TRANSITION
+36: 38TRANSITION
+37: 39TRANSITION
+38: 40TRANSITION
+39: 41TRANSITION
+40: 42TRANSITION
+
+********
+Start union********
+
+********
+end union********
+
+*** Not matching in union***
+31: 39TRANSITION
+32: 31TRANSITION
+33: 32TRANSITION
+34: 33TRANSITION
+35: 34TRANSITION
+36: 35TRANSITION
+37: 31TRANSITION
+38: 40TRANSITION
+39: 41TRANSITION
+40: 42TRANSITION
+41: 43TRANSITION
+42: 44TRANSITION
+*******
+
+ Digits
+*******
+
+UNFADotDigits
+
+********
+3
+Start ConcatOperation********
+
+********
+end ConcatOperation********
+
+*** Not matching in ConcatOperation***
+1: 5TRANSITION
+2: 1TRANSITION
+3: 1Accepting
+4: 6TRANSITION
+5: 7TRANSITION
+6: 8TRANSITION
+7: 9TRANSITION
+8: 10TRANSITION
+9: 11TRANSITION
+10: 12TRANSITION
+11: 13TRANSITION
+12: 14TRANSITION
+13: 15TRANSITION
+14: 16TRANSITION
+15: 17TRANSITION
+16: 18TRANSITION
+17: 19TRANSITION
+18: 20TRANSITION
+19: 21TRANSITION
+20: 22TRANSITION
+21: 23TRANSITION
+22: 24TRANSITION
+23: 25TRANSITION
+24: 26TRANSITION
+25: 27TRANSITION
+26: 28TRANSITION
+27: 29TRANSITION
+28: 30TRANSITION
+29: 31TRANSITION
+30: 32TRANSITION
+31: 33TRANSITION
+32: 42TRANSITION
+33: 34TRANSITION
+34: 35TRANSITION
+35: 36TRANSITION
+36: 37TRANSITION
+37: 38TRANSITION
+38: 34TRANSITION
+39: 43TRANSITION
+40: 44TRANSITION
+41: 45TRANSITION
+42: 46TRANSITION
+43: 47TRANSITION
+44: 46TRANSITION
+45: 47TRANSITION
+46: 48TRANSITION
+47: 49TRANSITION
+48: 50TRANSITION
+49: 51TRANSITION
+50: 52TRANSITION
+51: 53TRANSITION
+52: 54TRANSITION
+53: 55TRANSITION
+54: 56TRANSITION
+55: 57TRANSITION
+56: 58TRANSITION
+57: 59TRANSITION
+58: 60TRANSITION
+59: 61TRANSITION
+60: 62TRANSITION
+61: 63TRANSITION
+62: 64TRANSITION
+63: 65TRANSITION
+64: 66TRANSITION
+65: 67TRANSITION
+66: 68TRANSITION
+67: 69TRANSITION
+68: 70TRANSITION
+69: 71TRANSITION
+70: 72TRANSITION
+71: 73TRANSITION
+72: 74TRANSITION
+73: 75TRANSITION
+*******
+
+ Digits
+*******
+
+OInsDotDigits
+
+********start oneInstance********
+
+********
+end oneInstance********
+
+*** Not matching in oneInstance***
+1: 5TRANSITION
+2: 1TRANSITION
+3: 1Accepting
+4: 6TRANSITION
+5: 7TRANSITION
+6: 8TRANSITION
+7: 9TRANSITION
+8: 10TRANSITION
+9: 11TRANSITION
+10: 12TRANSITION
+11: 13TRANSITION
+12: 14TRANSITION
+13: 15TRANSITION
+14: 16TRANSITION
+15: 17TRANSITION
+16: 18TRANSITION
+17: 19TRANSITION
+18: 20TRANSITION
+19: 21TRANSITION
+20: 22TRANSITION
+21: 23TRANSITION
+22: 24TRANSITION
+23: 25TRANSITION
+24: 26TRANSITION
+25: 27TRANSITION
+26: 28TRANSITION
+27: 29TRANSITION
+28: 30TRANSITION
+29: 31TRANSITION
+30: 32TRANSITION
+31: 33TRANSITION
+32: 42TRANSITION
+33: 34TRANSITION
+34: 35TRANSITION
+35: 36TRANSITION
+36: 37TRANSITION
+37: 38TRANSITION
+38: 34TRANSITION
+39: 43TRANSITION
+40: 44TRANSITION
+41: 45TRANSITION
+42: 46TRANSITION
+43: 47TRANSITION
+44: 46TRANSITION
+45: 47TRANSITION
+46: 48TRANSITION
+47: 49TRANSITION
+48: 50TRANSITION
+49: 51TRANSITION
+50: 52TRANSITION
+51: 53TRANSITION
+52: 54TRANSITION
+53: 55TRANSITION
+54: 56TRANSITION
+55: 57TRANSITION
+56: 58TRANSITION
+57: 59TRANSITION
+58: 60TRANSITION
+59: 61TRANSITION
+60: 62TRANSITION
+61: 63TRANSITION
+62: 64TRANSITION
+63: 65TRANSITION
+64: 66TRANSITION
+65: 67TRANSITION
+66: 68TRANSITION
+67: 69TRANSITION
+68: 70TRANSITION
+69: 71TRANSITION
+70: 72TRANSITION
+71: 73TRANSITION
+72: 74TRANSITION
+73: 75TRANSITION
+*******
+
+ InsDotDigits
+*******
+
+DDDC
+
+********
+74
+Start ConcatOperation********
+
+********
+end ConcatOperation********
+
+*** Not matching in ConcatOperation***
+1: 80TRANSITION
+2: 1TRANSITION
+3: 2TRANSITION
+4: 3TRANSITION
+5: 4TRANSITION
+6: 5TRANSITION
+7: 6TRANSITION
+8: 7TRANSITION
+9: 8TRANSITION
+10: 9TRANSITION
+11: 10TRANSITION
+12: 11TRANSITION
+13: 12TRANSITION
+14: 13TRANSITION
+15: 14TRANSITION
+16: 15TRANSITION
+17: 16TRANSITION
+18: 17TRANSITION
+19: 18TRANSITION
+20: 19TRANSITION
+21: 20TRANSITION
+22: 21TRANSITION
+23: 22TRANSITION
+24: 23TRANSITION
+25: 24TRANSITION
+26: 25TRANSITION
+27: 26TRANSITION
+28: 27TRANSITION
+29: 28TRANSITION
+30: 29TRANSITION
+31: 30TRANSITION
+32: 39TRANSITION
+33: 31TRANSITION
+34: 32TRANSITION
+35: 33TRANSITION
+36: 34TRANSITION
+37: 35TRANSITION
+38: 31TRANSITION
+39: 40TRANSITION
+40: 41TRANSITION
+41: 42TRANSITION
+42: 43TRANSITION
+43: 44TRANSITION
+44: 43TRANSITION
+45: 44TRANSITION
+46: 45TRANSITION
+47: 46TRANSITION
+48: 47TRANSITION
+49: 48TRANSITION
+50: 49TRANSITION
+51: 50TRANSITION
+52: 51TRANSITION
+53: 52TRANSITION
+54: 53TRANSITION
+55: 54TRANSITION
+56: 55TRANSITION
+57: 56TRANSITION
+58: 57TRANSITION
+59: 58TRANSITION
+60: 59TRANSITION
+61: 60TRANSITION
+62: 61TRANSITION
+63: 62TRANSITION
+64: 63TRANSITION
+65: 64TRANSITION
+66: 65TRANSITION
+67: 66TRANSITION
+68: 67TRANSITION
+69: 68TRANSITION
+70: 69TRANSITION
+71: 70TRANSITION
+72: 71TRANSITION
+73: 72TRANSITION
+74: 79TRANSITION
+76: 1Accepting
+77: 81TRANSITION
+78: 82TRANSITION
+79: 83TRANSITION
+80: 84TRANSITION
+81: 85TRANSITION
+82: 86TRANSITION
+83: 87TRANSITION
+84: 88TRANSITION
+85: 89TRANSITION
+86: 90TRANSITION
+87: 91TRANSITION
+88: 92TRANSITION
+89: 93TRANSITION
+90: 94TRANSITION
+91: 95TRANSITION
+92: 96TRANSITION
+93: 97TRANSITION
+94: 98TRANSITION
+95: 99TRANSITION
+96: 100TRANSITION
+97: 101TRANSITION
+98: 102TRANSITION
+99: 103TRANSITION
+100: 104TRANSITION
+101: 105TRANSITION
+102: 106TRANSITION
+103: 107TRANSITION
+104: 116TRANSITION
+105: 108TRANSITION
+106: 109TRANSITION
+107: 110TRANSITION
+108: 111TRANSITION
+109: 112TRANSITION
+110: 108TRANSITION
+111: 117TRANSITION
+112: 118TRANSITION
+113: 119TRANSITION
+114: 120TRANSITION
+115: 121TRANSITION
+116: 120TRANSITION
+117: 121TRANSITION
+118: 122TRANSITION
+119: 123TRANSITION
+120: 124TRANSITION
+121: 125TRANSITION
+122: 126TRANSITION
+123: 127TRANSITION
+124: 128TRANSITION
+125: 129TRANSITION
+126: 130TRANSITION
+127: 131TRANSITION
+128: 132TRANSITION
+129: 133TRANSITION
+130: 134TRANSITION
+131: 135TRANSITION
+132: 136TRANSITION
+133: 137TRANSITION
+134: 138TRANSITION
+135: 139TRANSITION
+136: 140TRANSITION
+137: 141TRANSITION
+138: 142TRANSITION
+139: 143TRANSITION
+140: 144TRANSITION
+141: 145TRANSITION
+142: 146TRANSITION
+143: 147TRANSITION
+144: 148TRANSITION
+145: 149TRANSITION
+*******
+
+PNNFA
+
+********
+Start union********
+
+********
+end union********
+
+*** Not matching in union***
+*******
+
+PNoneINFA
+
+********start oneInstance********
+
+********
+end oneInstance********
+
+*** Not matching in oneInstance***
+*******
+
+EPNOneINFA
+
+********
+3
+Start ConcatOperation********
+
+********
+end ConcatOperation********
+
+*** Not matching in ConcatOperation***
+1: 5TRANSITION
+2: 1TRANSITION
+3: 1Accepting
+4: 6TRANSITION
+5: 7TRANSITION
+6: 8TRANSITION
+*******
+
+EPNOneIDNFA
+
+********
+8
+Start ConcatOperation********
+
+********
+end ConcatOperation********
+
+*** Not matching in ConcatOperation***
+1: 10TRANSITION
+2: 5TRANSITION
+3: 1TRANSITION
+4: 1TRANSITION
+5: 6TRANSITION
+6: 7TRANSITION
+7: 8TRANSITION
+8: 1Accepting
+9: 11TRANSITION
+10: 12TRANSITION
+11: 13TRANSITION
+12: 14TRANSITION
+13: 15TRANSITION
+14: 16TRANSITION
+15: 17TRANSITION
+16: 18TRANSITION
+17: 19TRANSITION
+18: 20TRANSITION
+19: 21TRANSITION
+20: 22TRANSITION
+21: 23TRANSITION
+22: 24TRANSITION
+23: 25TRANSITION
+24: 26TRANSITION
+25: 27TRANSITION
+26: 28TRANSITION
+27: 29TRANSITION
+28: 30TRANSITION
+29: 31TRANSITION
+30: 32TRANSITION
+31: 33TRANSITION
+32: 34TRANSITION
+33: 35TRANSITION
+34: 36TRANSITION
+35: 37TRANSITION
+36: 38TRANSITION
+37: 47TRANSITION
+38: 39TRANSITION
+39: 40TRANSITION
+40: 41TRANSITION
+41: 42TRANSITION
+42: 43TRANSITION
+43: 39TRANSITION
+44: 48TRANSITION
+45: 49TRANSITION
+46: 50TRANSITION
+47: 51TRANSITION
+48: 52TRANSITION
+49: 51TRANSITION
+50: 52TRANSITION
+51: 53TRANSITION
+52: 54TRANSITION
+53: 55TRANSITION
+54: 56TRANSITION
+55: 57TRANSITION
+56: 58TRANSITION
+57: 59TRANSITION
+58: 60TRANSITION
+59: 61TRANSITION
+60: 62TRANSITION
+61: 63TRANSITION
+62: 64TRANSITION
+63: 65TRANSITION
+64: 66TRANSITION
+65: 67TRANSITION
+66: 68TRANSITION
+67: 69TRANSITION
+68: 70TRANSITION
+69: 71TRANSITION
+70: 72TRANSITION
+71: 73TRANSITION
+72: 74TRANSITION
+73: 75TRANSITION
+74: 76TRANSITION
+75: 77TRANSITION
+76: 78TRANSITION
+77: 79TRANSITION
+78: 80TRANSITION
+*******
+
+EPNOneIDOneINFA
+
+********start oneInstance********
+
+********
+end oneInstance********
+
+*** Not matching in oneInstance***
+1: 10TRANSITION
+2: 5TRANSITION
+3: 1TRANSITION
+4: 1TRANSITION
+5: 6TRANSITION
+6: 7TRANSITION
+7: 8TRANSITION
+8: 1Accepting
+9: 11TRANSITION
+10: 12TRANSITION
+11: 13TRANSITION
+12: 14TRANSITION
+13: 15TRANSITION
+14: 16TRANSITION
+15: 17TRANSITION
+16: 18TRANSITION
+17: 19TRANSITION
+18: 20TRANSITION
+19: 21TRANSITION
+20: 22TRANSITION
+21: 23TRANSITION
+22: 24TRANSITION
+23: 25TRANSITION
+24: 26TRANSITION
+25: 27TRANSITION
+26: 28TRANSITION
+27: 29TRANSITION
+28: 30TRANSITION
+29: 31TRANSITION
+30: 32TRANSITION
+31: 33TRANSITION
+32: 34TRANSITION
+33: 35TRANSITION
+34: 36TRANSITION
+35: 37TRANSITION
+36: 38TRANSITION
+37: 47TRANSITION
+38: 39TRANSITION
+39: 40TRANSITION
+40: 41TRANSITION
+41: 42TRANSITION
+42: 43TRANSITION
+43: 39TRANSITION
+44: 48TRANSITION
+45: 49TRANSITION
+46: 50TRANSITION
+47: 51TRANSITION
+48: 52TRANSITION
+49: 51TRANSITION
+50: 52TRANSITION
+51: 53TRANSITION
+52: 54TRANSITION
+53: 55TRANSITION
+54: 56TRANSITION
+55: 57TRANSITION
+56: 58TRANSITION
+57: 59TRANSITION
+58: 60TRANSITION
+59: 61TRANSITION
+60: 62TRANSITION
+61: 63TRANSITION
+62: 64TRANSITION
+63: 65TRANSITION
+64: 66TRANSITION
+65: 67TRANSITION
+66: 68TRANSITION
+67: 69TRANSITION
+68: 70TRANSITION
+69: 71TRANSITION
+70: 72TRANSITION
+71: 73TRANSITION
+72: 74TRANSITION
+73: 75TRANSITION
+74: 76TRANSITION
+75: 77TRANSITION
+76: 78TRANSITION
+77: 79TRANSITION
+78: 80TRANSITION
+*******
+
+numbers
+
+********
+147
+Start ConcatOperation********
+
+********
+end ConcatOperation********
+
+*** Not matching in ConcatOperation***
+1: 158TRANSITION
+2: 80TRANSITION
+3: 1TRANSITION
+4: 2TRANSITION
+5: 3TRANSITION
+6: 4TRANSITION
+7: 5TRANSITION
+8: 6TRANSITION
+9: 7TRANSITION
+10: 8TRANSITION
+11: 9TRANSITION
+12: 10TRANSITION
+13: 11TRANSITION
+14: 12TRANSITION
+15: 13TRANSITION
+16: 14TRANSITION
+17: 15TRANSITION
+18: 16TRANSITION
+19: 17TRANSITION
+20: 18TRANSITION
+21: 19TRANSITION
+22: 20TRANSITION
+23: 21TRANSITION
+24: 22TRANSITION
+25: 23TRANSITION
+26: 24TRANSITION
+27: 25TRANSITION
+28: 26TRANSITION
+29: 27TRANSITION
+30: 28TRANSITION
+31: 29TRANSITION
+32: 30TRANSITION
+33: 39TRANSITION
+34: 31TRANSITION
+35: 32TRANSITION
+36: 33TRANSITION
+37: 34TRANSITION
+38: 35TRANSITION
+39: 31TRANSITION
+45: 43TRANSITION
+46: 44TRANSITION
+47: 45TRANSITION
+48: 46TRANSITION
+49: 47TRANSITION
+50: 48TRANSITION
+51: 49TRANSITION
+52: 50TRANSITION
+53: 51TRANSITION
+54: 52TRANSITION
+55: 53TRANSITION
+56: 54TRANSITION
+57: 55TRANSITION
+58: 56TRANSITION
+59: 57TRANSITION
+60: 58TRANSITION
+61: 59TRANSITION
+62: 60TRANSITION
+63: 61TRANSITION
+64: 62TRANSITION
+65: 63TRANSITION
+66: 64TRANSITION
+67: 65TRANSITION
+68: 66TRANSITION
+69: 67TRANSITION
+70: 68TRANSITION
+71: 69TRANSITION
+72: 70TRANSITION
+73: 71TRANSITION
+74: 72TRANSITION
+75: 79TRANSITION
+76: 75TRANSITION
+77: 1TRANSITION
+78: 81TRANSITION
+79: 82TRANSITION
+80: 83TRANSITION
+81: 84TRANSITION
+82: 85TRANSITION
+83: 86TRANSITION
+84: 87TRANSITION
+85: 88TRANSITION
+86: 89TRANSITION
+87: 90TRANSITION
+88: 91TRANSITION
+89: 92TRANSITION
+90: 93TRANSITION
+91: 94TRANSITION
+92: 95TRANSITION
+93: 96TRANSITION
+94: 97TRANSITION
+95: 98TRANSITION
+96: 99TRANSITION
+97: 100TRANSITION
+98: 101TRANSITION
+99: 102TRANSITION
+100: 103TRANSITION
+101: 104TRANSITION
+102: 105TRANSITION
+103: 106TRANSITION
+104: 107TRANSITION
+105: 116TRANSITION
+106: 108TRANSITION
+107: 109TRANSITION
+108: 110TRANSITION
+109: 111TRANSITION
+110: 112TRANSITION
+111: 108TRANSITION
+112: 117TRANSITION
+113: 118TRANSITION
+114: 119TRANSITION
+115: 120TRANSITION
+116: 121TRANSITION
+117: 120TRANSITION
+118: 121TRANSITION
+119: 122TRANSITION
+120: 123TRANSITION
+121: 124TRANSITION
+122: 125TRANSITION
+123: 126TRANSITION
+124: 127TRANSITION
+125: 128TRANSITION
+126: 129TRANSITION
+127: 130TRANSITION
+128: 131TRANSITION
+129: 132TRANSITION
+130: 133TRANSITION
+131: 134TRANSITION
+132: 135TRANSITION
+133: 136TRANSITION
+134: 137TRANSITION
+135: 138TRANSITION
+136: 139TRANSITION
+137: 140TRANSITION
+138: 141TRANSITION
+139: 142TRANSITION
+140: 143TRANSITION
+141: 144TRANSITION
+142: 145TRANSITION
+143: 146TRANSITION
+144: 147TRANSITION
+145: 148TRANSITION
+146: 149TRANSITION
+147: 157TRANSITION
+148: 152TRANSITION
+149: 148TRANSITION
+150: 148TRANSITION
+151: 153TRANSITION
+152: 154TRANSITION
+153: 155TRANSITION
+154: 1Accepting
+155: 159TRANSITION
+156: 160TRANSITION
+157: 161TRANSITION
+158: 162TRANSITION
+159: 163TRANSITION
+160: 164TRANSITION
+161: 165TRANSITION
+162: 166TRANSITION
+163: 167TRANSITION
+164: 168TRANSITION
+165: 169TRANSITION
+166: 170TRANSITION
+167: 171TRANSITION
+168: 172TRANSITION
+169: 173TRANSITION
+170: 174TRANSITION
+171: 175TRANSITION
+172: 176TRANSITION
+173: 177TRANSITION
+174: 178TRANSITION
+175: 179TRANSITION
+176: 180TRANSITION
+177: 181TRANSITION
+178: 182TRANSITION
+179: 183TRANSITION
+180: 184TRANSITION
+181: 185TRANSITION
+182: 194TRANSITION
+183: 186TRANSITION
+184: 187TRANSITION
+185: 188TRANSITION
+186: 189TRANSITION
+187: 190TRANSITION
+188: 186TRANSITION
+189: 195TRANSITION
+190: 196TRANSITION
+191: 197TRANSITION
+192: 198TRANSITION
+193: 199TRANSITION
+194: 198TRANSITION
+195: 199TRANSITION
+196: 200TRANSITION
+197: 201TRANSITION
+198: 202TRANSITION
+199: 203TRANSITION
+200: 204TRANSITION
+201: 205TRANSITION
+202: 206TRANSITION
+203: 207TRANSITION
+204: 208TRANSITION
+205: 209TRANSITION
+206: 210TRANSITION
+207: 211TRANSITION
+208: 212TRANSITION
+209: 213TRANSITION
+210: 214TRANSITION
+211: 215TRANSITION
+212: 216TRANSITION
+213: 217TRANSITION
+214: 218TRANSITION
+215: 219TRANSITION
+216: 220TRANSITION
+217: 221TRANSITION
+218: 222TRANSITION
+219: 223TRANSITION
+220: 224TRANSITION
+221: 225TRANSITION
+222: 226TRANSITION
+223: 227TRANSITION
+*******
+
+*******
+
+********
+Start union********
+
+********
+end union********
+
+*** Not matching in union***
+
+********
+Start union********
+
+********
+end union********
+
+*** Not matching in union***
+
+********
+Start union********
+
+********
+end union********
+
+*** Not matching in union***
+
+********
+Start union********
+
+********
+end union********
+
+*** Not matching in union***
+
+********
+Start union********
+
+********
+end union********
+
+*** Not matching in union***
+
+********
+Start union********
+
+********
+end union********
+
+*** Not matching in union***
+
+********
+Start union********
+
+********
+end union********
+
+*** Not matching in union***
+
+********
+Start union********
+
+********
+end union********
+
+*** Not matching in union***
+
+********
+Start union********
+
+********
+end union********
+
+*** Not matching in union***
+
+********
+Start union********
+
+********
+end union********
+
+*** Not matching in union***
+
+********
+Start union********
+
+********
+end union********
+
+*** Not matching in union***
+
+********
+Start union********
+
+********
+end union********
+
+*** Not matching in union***
+
+********
+Start union********
+
+********
+end union********
+
+*** Not matching in union***
+
+********
+Start union********
+
+********
+end union********
+
+*** Not matching in union***
+
+********
+Start union********
+
+********
+end union********
+
+*** Not matching in union***
+
+********
+Start union********
+
+********
+end union********
+
+*** Not matching in union***
+
+********
+Start union********
+
+********
+end union********
+
+*** Not matching in union***
+
+********
+Start union********
+
+********
+end union********
+
+*** Not matching in union***
+
+********
+Start union********
+
+********
+end union********
+
+*** Not matching in union***
+
+********
+Start union********
+
+********
+end union********
+
+*** Not matching in union***
+
+********
+Start union********
+
+********
+end union********
+
+*** Not matching in union***
+
+********
+Start union********
+
+********
+end union********
+
+*** Not matching in union***
+
+********
+Start union********
+
+********
+end union********
+
+*** Not matching in union***
+
+********
+Start union********
+
+********
+end union********
+
+*** Not matching in union***
+
+********
+Start union********
+
+********
+end union********
+
+*** Not matching in union***
+
+********
+Start union********
+
+********
+end union********
+
+*** Not matching in union***
+
+********
+Start union********
+
+********
+end union********
+
+*** Not matching in union***
+
+********
+Start union********
+
+********
+end union********
+
+*** Not matching in union***
+
+********
+Start union********
+
+********
+end union********
+
+*** Not matching in union***
+
+********
+Start union********
+
+********
+end union********
+
+*** Not matching in union***
+
+********
+Start union********
+
+********
+end union********
+
+*** Not matching in union***
+
+********
+Start union********
+
+********
+end union********
+
+*** Not matching in union***
+
+********
+Start union********
+
+********
+end union********
+
+*** Not matching in union***
+
+********
+Start union********
+
+********
+end union********
+
+*** Not matching in union***
+
+********
+Start union********
+
+********
+end union********
+
+*** Not matching in union***
+
+********
+Start union********
+
+********
+end union********
+
+*** Not matching in union***
+
+********
+Start union********
+
+********
+end union********
+
+*** Not matching in union***
+
+********
+Start union********
+
+********
+end union********
+
+*** Not matching in union***
+
+********
+Start union********
+
+********
+end union********
+
+*** Not matching in union***
+
+********
+Start union********
+
+********
+end union********
+
+*** Not matching in union***
+
+********
+Start union********
+
+********
+end union********
+
+*** Not matching in union***
+
+********
+Start union********
+
+********
+end union********
+
+*** Not matching in union***
+
+********
+Start union********
+
+********
+end union********
+
+*** Not matching in union***
+
+********
+Start union********
+
+********
+end union********
+
+*** Not matching in union***
+
+********
+Start union********
+
+********
+end union********
+
+*** Not matching in union***
+
+********
+Start union********
+
+********
+end union********
+
+*** Not matching in union***
+
+********
+Start union********
+
+********
+end union********
+
+*** Not matching in union***
+
+********
+Start union********
+
+********
+end union********
+
+*** Not matching in union***
+
+********
+Start union********
+
+********
+end union********
+
+*** Not matching in union***
+
+********
+Start union********
+
+********
+end union********
+
+*** Not matching in union***
+
+********
+Start union********
+
+********
+end union********
+
+*** Not matching in union***
+
+********
+Start union********
+
+********
+end union********
+
+*** Not matching in union***
+
+********
+Start union********
+
+********
+end union********
+
+*** Not matching in union***
+
+********
+Start union********
+
+********
+end union********
+
+*** Not matching in union***
+
+********
+Start union********
+
+********
+end union********
+
+*** Not matching in union***
+
+********
+Start union********
+
+********
+end union********
+
+*** Not matching in union***
+
+********
+Start union********
+
+********
+end union********
+
+*** Not matching in union***
+
+********
+Start union********
+
+********
+end union********
+
+*** Not matching in union***
+
+********
+Start union********
+
+********
+end union********
+
+*** Not matching in union***
+
+********
+Start union********
+
+********
+end union********
+
+*** Not matching in union***
+
+********
+Start union********
+
+********
+end union********
+
+*** Not matching in union***
+
+********
+Start union********
+
+********
+end union********
+
+*** Not matching in union***
+
+********
+Start union********
+
+********
+end union********
+
+*** Not matching in union***
+
+********
+Start union********
+
+********
+end union********
+
+*** Not matching in union***
+
+********
+Start union********
+
+********
+end union********
+
+*** Not matching in union***
+
+********
+Start union********
+
+********
+end union********
+
+*** Not matching in union***
+
+********
+Start union********
+
+********
+end union********
+
+*** Not matching in union***
+
+********
+Start union********
+
+********
+end union********
+
+*** Not matching in union***
+
+********
+Start union********
+
+********
+end union********
+
+*** Not matching in union***
+
+********
+Start union********
+
+********
+end union********
+
+*** Not matching in union***
+
+********
+Start union********
+
+********
+end union********
+
+*** Not matching in union***
+
+********
+Start union********
+
+********
+end union********
+
+*** Not matching in union***
+
+********
+Start union********
+
+********
+end union********
+
+*** Not matching in union***
+
+********
+Start union********
+
+********
+end union********
+
+*** Not matching in union***
+
+********
+Start union********
+
+********
+end union********
+
+*** Not matching in union***
+
+********
+Start union********
+
+********
+end union********
+
+*** Not matching in union***
+
+********
+Start union********
+
+********
+end union********
+
+*** Not matching in union***
+
+********
+Start union********
+
+********
+end union********
+
+*** Not matching in union***
+
+********
+Start union********
+
+********
+end union********
+
+*** Not matching in union***
+
+********
+Start union********
+
+********
+end union********
+
+*** Not matching in union***
+
+********
+Start union********
+
+********
+end union********
+
+*** Not matching in union***
+
+********
+Start union********
+
+********
+end union********
+
+*** Not matching in union***
+
+********
+Start union********
+
+********
+end union********
+
+*** Not matching in union***
+
+********
+Start union********
+
+********
+end union********
+
+*** Not matching in union***
+
+********
+Start union********
+
+********
+end union********
+
+*** Not matching in union***
+
+********
+Start union********
+
+********
+end union********
+
+*** Not matching in union***
+
+********
+Start union********
+
+********
+end union********
+
+*** Not matching in union***
+
+********
+Start union********
+
+********
+end union********
+
+*** Not matching in union***
+
+********
+Start union********
+
+********
+end union********
+
+*** Not matching in union***
+
+********
+Start union********
+
+********
+end union********
+
+*** Not matching in union***
+
+********
+Start union********
+
+********
+end union********
+
+*** Not matching in union***
+
+********
+Start union********
+
+********
+end union********
+
+*** Not matching in union***
+
+********
+Start union********
+
+********
+end union********
+
+*** Not matching in union***
+
+********
+Start union********
+
+********
+end union********
+
+*** Not matching in union***
+
+********
+Start union********
+
+********
+end union********
+
+*** Not matching in union***
+
+********
+Start union********
+
+********
+end union********
+
+*** Not matching in union***
+
+********
+Start union********
+
+********
+end union********
+
+*** Not matching in union***
+
+********
+Start union********
+
+********
+end union********
+
+*** Not matching in union***
+
+********
+Start union********
+
+********
+end union********
+
+*** Not matching in union***
+
+********
+Start union********
+
+********
+end union********
+
+*** Not matching in union***
+
+********
+Start union********
+
+********
+end union********
+
+*** Not matching in union***
+435: 443TRANSITION
+436: 435TRANSITION
+437: 436TRANSITION
+438: 437TRANSITION
+439: 438TRANSITION
+440: 439TRANSITION
+441: 435TRANSITION
+442: 444TRANSITION
+443: 445TRANSITION
+444: 446TRANSITION
+445: 447TRANSITION
+446: 448TRANSITION
+
+********
+Start IterationOperation********
+
+********
+Last line of IterationOperation********
+
+********
+end IterationOperation********
+
+*** Not matching in IterationOperation***
+437: 445TRANSITION
+438: 437TRANSITION
+439: 438TRANSITION
+440: 439TRANSITION
+441: 440TRANSITION
+442: 441TRANSITION
+443: 437TRANSITION
+444: 446TRANSITION
+445: 447TRANSITION
+446: 448TRANSITION
+447: 449TRANSITION
+448: 450TRANSITION
+
+********
+403
+Start ConcatOperation********
+
+********
+end ConcatOperation********
+
+*** Not matching in ConcatOperation***
+1: 405TRANSITION
+2: 1TRANSITION
+3: 2TRANSITION
+4: 3TRANSITION
+5: 4TRANSITION
+6: 5TRANSITION
+7: 6TRANSITION
+8: 7TRANSITION
+9: 8TRANSITION
+10: 9TRANSITION
+11: 10TRANSITION
+12: 11TRANSITION
+13: 12TRANSITION
+14: 13TRANSITION
+15: 14TRANSITION
+16: 15TRANSITION
+17: 16TRANSITION
+18: 17TRANSITION
+19: 18TRANSITION
+20: 19TRANSITION
+21: 20TRANSITION
+22: 21TRANSITION
+23: 22TRANSITION
+24: 23TRANSITION
+25: 24TRANSITION
+26: 25TRANSITION
+27: 26TRANSITION
+28: 27TRANSITION
+29: 28TRANSITION
+30: 29TRANSITION
+31: 30TRANSITION
+32: 31TRANSITION
+33: 32TRANSITION
+34: 33TRANSITION
+35: 34TRANSITION
+36: 35TRANSITION
+37: 36TRANSITION
+38: 37TRANSITION
+39: 38TRANSITION
+40: 39TRANSITION
+41: 40TRANSITION
+42: 41TRANSITION
+43: 42TRANSITION
+44: 43TRANSITION
+45: 44TRANSITION
+46: 45TRANSITION
+47: 46TRANSITION
+48: 47TRANSITION
+49: 48TRANSITION
+50: 49TRANSITION
+51: 50TRANSITION
+52: 51TRANSITION
+53: 52TRANSITION
+54: 53TRANSITION
+55: 54TRANSITION
+56: 55TRANSITION
+57: 56TRANSITION
+58: 57TRANSITION
+59: 58TRANSITION
+60: 59TRANSITION
+61: 60TRANSITION
+62: 61TRANSITION
+63: 62TRANSITION
+64: 63TRANSITION
+65: 64TRANSITION
+66: 65TRANSITION
+67: 66TRANSITION
+68: 67TRANSITION
+69: 68TRANSITION
+70: 69TRANSITION
+71: 70TRANSITION
+72: 71TRANSITION
+73: 72TRANSITION
+74: 73TRANSITION
+75: 74TRANSITION
+76: 75TRANSITION
+77: 76TRANSITION
+78: 77TRANSITION
+79: 78TRANSITION
+80: 79TRANSITION
+81: 80TRANSITION
+82: 81TRANSITION
+83: 82TRANSITION
+84: 83TRANSITION
+85: 84TRANSITION
+86: 85TRANSITION
+87: 86TRANSITION
+88: 87TRANSITION
+89: 88TRANSITION
+90: 89TRANSITION
+91: 90TRANSITION
+92: 91TRANSITION
+93: 92TRANSITION
+94: 93TRANSITION
+95: 94TRANSITION
+96: 95TRANSITION
+97: 96TRANSITION
+98: 97TRANSITION
+99: 98TRANSITION
+100: 99TRANSITION
+101: 100TRANSITION
+102: 101TRANSITION
+103: 102TRANSITION
+104: 103TRANSITION
+105: 104TRANSITION
+106: 105TRANSITION
+107: 106TRANSITION
+108: 107TRANSITION
+109: 108TRANSITION
+110: 109TRANSITION
+111: 110TRANSITION
+112: 111TRANSITION
+113: 112TRANSITION
+114: 113TRANSITION
+115: 114TRANSITION
+116: 115TRANSITION
+117: 116TRANSITION
+118: 117TRANSITION
+119: 118TRANSITION
+120: 119TRANSITION
+121: 120TRANSITION
+122: 121TRANSITION
+123: 122TRANSITION
+124: 123TRANSITION
+125: 124TRANSITION
+126: 125TRANSITION
+127: 126TRANSITION
+128: 127TRANSITION
+129: 128TRANSITION
+130: 129TRANSITION
+131: 130TRANSITION
+132: 131TRANSITION
+133: 132TRANSITION
+134: 133TRANSITION
+135: 134TRANSITION
+136: 135TRANSITION
+137: 136TRANSITION
+138: 137TRANSITION
+139: 138TRANSITION
+140: 139TRANSITION
+141: 140TRANSITION
+142: 141TRANSITION
+143: 142TRANSITION
+144: 143TRANSITION
+145: 144TRANSITION
+146: 145TRANSITION
+147: 146TRANSITION
+148: 147TRANSITION
+149: 148TRANSITION
+150: 149TRANSITION
+151: 150TRANSITION
+152: 151TRANSITION
+153: 152TRANSITION
+154: 153TRANSITION
+155: 154TRANSITION
+156: 155TRANSITION
+157: 156TRANSITION
+158: 157TRANSITION
+159: 158TRANSITION
+160: 159TRANSITION
+161: 160TRANSITION
+162: 161TRANSITION
+163: 162TRANSITION
+164: 163TRANSITION
+165: 164TRANSITION
+166: 165TRANSITION
+167: 166TRANSITION
+168: 167TRANSITION
+169: 168TRANSITION
+170: 169TRANSITION
+171: 170TRANSITION
+172: 171TRANSITION
+173: 172TRANSITION
+174: 173TRANSITION
+175: 174TRANSITION
+176: 175TRANSITION
+177: 176TRANSITION
+178: 177TRANSITION
+179: 178TRANSITION
+180: 179TRANSITION
+181: 180TRANSITION
+182: 181TRANSITION
+183: 182TRANSITION
+184: 183TRANSITION
+185: 184TRANSITION
+186: 185TRANSITION
+187: 186TRANSITION
+188: 187TRANSITION
+189: 188TRANSITION
+190: 189TRANSITION
+191: 190TRANSITION
+192: 191TRANSITION
+193: 192TRANSITION
+194: 193TRANSITION
+195: 194TRANSITION
+196: 195TRANSITION
+197: 196TRANSITION
+198: 197TRANSITION
+199: 198TRANSITION
+200: 199TRANSITION
+201: 200TRANSITION
+202: 201TRANSITION
+203: 202TRANSITION
+204: 203TRANSITION
+205: 204TRANSITION
+206: 205TRANSITION
+207: 206TRANSITION
+208: 207TRANSITION
+209: 208TRANSITION
+210: 209TRANSITION
+211: 210TRANSITION
+212: 211TRANSITION
+213: 212TRANSITION
+214: 213TRANSITION
+215: 214TRANSITION
+216: 215TRANSITION
+217: 216TRANSITION
+218: 217TRANSITION
+219: 218TRANSITION
+220: 219TRANSITION
+221: 220TRANSITION
+222: 221TRANSITION
+223: 222TRANSITION
+224: 223TRANSITION
+225: 224TRANSITION
+226: 225TRANSITION
+227: 226TRANSITION
+228: 227TRANSITION
+229: 228TRANSITION
+230: 229TRANSITION
+231: 230TRANSITION
+232: 231TRANSITION
+233: 232TRANSITION
+234: 233TRANSITION
+235: 234TRANSITION
+236: 235TRANSITION
+237: 236TRANSITION
+238: 237TRANSITION
+239: 238TRANSITION
+240: 239TRANSITION
+241: 240TRANSITION
+242: 241TRANSITION
+243: 242TRANSITION
+244: 243TRANSITION
+245: 244TRANSITION
+246: 245TRANSITION
+247: 246TRANSITION
+248: 247TRANSITION
+249: 248TRANSITION
+250: 249TRANSITION
+251: 250TRANSITION
+252: 251TRANSITION
+253: 252TRANSITION
+254: 253TRANSITION
+255: 254TRANSITION
+256: 255TRANSITION
+257: 256TRANSITION
+258: 257TRANSITION
+259: 258TRANSITION
+260: 259TRANSITION
+261: 260TRANSITION
+262: 261TRANSITION
+263: 262TRANSITION
+264: 263TRANSITION
+265: 264TRANSITION
+266: 265TRANSITION
+267: 266TRANSITION
+268: 267TRANSITION
+269: 268TRANSITION
+270: 269TRANSITION
+271: 270TRANSITION
+272: 271TRANSITION
+273: 272TRANSITION
+274: 273TRANSITION
+275: 274TRANSITION
+276: 275TRANSITION
+277: 276TRANSITION
+278: 277TRANSITION
+279: 278TRANSITION
+280: 279TRANSITION
+281: 280TRANSITION
+282: 281TRANSITION
+283: 282TRANSITION
+284: 283TRANSITION
+285: 284TRANSITION
+286: 285TRANSITION
+287: 286TRANSITION
+288: 287TRANSITION
+289: 288TRANSITION
+290: 289TRANSITION
+291: 290TRANSITION
+292: 291TRANSITION
+293: 292TRANSITION
+294: 293TRANSITION
+295: 294TRANSITION
+296: 295TRANSITION
+297: 296TRANSITION
+298: 297TRANSITION
+299: 298TRANSITION
+300: 299TRANSITION
+301: 300TRANSITION
+302: 301TRANSITION
+303: 302TRANSITION
+304: 303TRANSITION
+305: 304TRANSITION
+306: 305TRANSITION
+307: 306TRANSITION
+308: 307TRANSITION
+309: 308TRANSITION
+310: 309TRANSITION
+311: 310TRANSITION
+312: 311TRANSITION
+313: 312TRANSITION
+314: 313TRANSITION
+315: 314TRANSITION
+316: 315TRANSITION
+317: 316TRANSITION
+318: 317TRANSITION
+319: 318TRANSITION
+320: 319TRANSITION
+321: 320TRANSITION
+322: 321TRANSITION
+323: 322TRANSITION
+324: 323TRANSITION
+325: 324TRANSITION
+326: 325TRANSITION
+327: 326TRANSITION
+328: 327TRANSITION
+329: 328TRANSITION
+330: 329TRANSITION
+331: 330TRANSITION
+332: 331TRANSITION
+333: 332TRANSITION
+334: 333TRANSITION
+335: 334TRANSITION
+336: 335TRANSITION
+337: 336TRANSITION
+338: 337TRANSITION
+339: 338TRANSITION
+340: 339TRANSITION
+341: 340TRANSITION
+342: 341TRANSITION
+343: 342TRANSITION
+344: 343TRANSITION
+345: 344TRANSITION
+346: 345TRANSITION
+347: 346TRANSITION
+348: 347TRANSITION
+349: 348TRANSITION
+350: 349TRANSITION
+351: 350TRANSITION
+352: 351TRANSITION
+353: 352TRANSITION
+354: 353TRANSITION
+355: 354TRANSITION
+356: 355TRANSITION
+357: 356TRANSITION
+358: 357TRANSITION
+359: 358TRANSITION
+360: 359TRANSITION
+361: 360TRANSITION
+362: 361TRANSITION
+363: 362TRANSITION
+364: 363TRANSITION
+365: 364TRANSITION
+366: 365TRANSITION
+367: 366TRANSITION
+368: 367TRANSITION
+369: 368TRANSITION
+370: 369TRANSITION
+371: 370TRANSITION
+372: 371TRANSITION
+373: 372TRANSITION
+374: 373TRANSITION
+375: 374TRANSITION
+376: 375TRANSITION
+377: 376TRANSITION
+378: 377TRANSITION
+379: 378TRANSITION
+380: 379TRANSITION
+381: 380TRANSITION
+382: 381TRANSITION
+383: 382TRANSITION
+384: 383TRANSITION
+385: 384TRANSITION
+386: 385TRANSITION
+387: 386TRANSITION
+388: 387TRANSITION
+389: 388TRANSITION
+390: 389TRANSITION
+391: 390TRANSITION
+392: 391TRANSITION
+393: 392TRANSITION
+394: 393TRANSITION
+395: 394TRANSITION
+396: 395TRANSITION
+397: 396TRANSITION
+398: 397TRANSITION
+399: 398TRANSITION
+400: 399TRANSITION
+401: 400TRANSITION
+402: 401TRANSITION
+403: 1Accepting
+404: 406TRANSITION
+405: 407TRANSITION
+406: 408TRANSITION
+407: 409TRANSITION
+408: 410TRANSITION
+409: 411TRANSITION
+410: 412TRANSITION
+411: 413TRANSITION
+412: 414TRANSITION
+413: 415TRANSITION
+414: 416TRANSITION
+415: 417TRANSITION
+416: 418TRANSITION
+417: 419TRANSITION
+418: 420TRANSITION
+419: 421TRANSITION
+420: 422TRANSITION
+421: 423TRANSITION
+422: 424TRANSITION
+423: 425TRANSITION
+424: 426TRANSITION
+425: 427TRANSITION
+426: 428TRANSITION
+427: 429TRANSITION
+428: 430TRANSITION
+429: 431TRANSITION
+430: 432TRANSITION
+431: 433TRANSITION
+432: 434TRANSITION
+433: 435TRANSITION
+434: 436TRANSITION
+435: 437TRANSITION
+436: 438TRANSITION
+437: 439TRANSITION
+438: 440TRANSITION
+439: 441TRANSITION
+440: 442TRANSITION
+441: 443TRANSITION
+442: 444TRANSITION
+443: 445TRANSITION
+444: 446TRANSITION
+445: 447TRANSITION
+446: 448TRANSITION
+447: 449TRANSITION
+448: 450TRANSITION
+449: 451TRANSITION
+450: 452TRANSITION
+451: 453TRANSITION
+452: 454TRANSITION
+453: 455TRANSITION
+454: 456TRANSITION
+455: 457TRANSITION
+456: 458TRANSITION
+457: 459TRANSITION
+458: 460TRANSITION
+459: 461TRANSITION
+460: 462TRANSITION
+461: 463TRANSITION
+462: 464TRANSITION
+463: 465TRANSITION
+464: 466TRANSITION
+465: 467TRANSITION
+466: 468TRANSITION
+467: 469TRANSITION
+468: 470TRANSITION
+469: 471TRANSITION
+470: 472TRANSITION
+471: 473TRANSITION
+472: 474TRANSITION
+473: 475TRANSITION
+474: 476TRANSITION
+475: 477TRANSITION
+476: 478TRANSITION
+477: 479TRANSITION
+478: 480TRANSITION
+479: 481TRANSITION
+480: 482TRANSITION
+481: 483TRANSITION
+482: 484TRANSITION
+483: 485TRANSITION
+484: 486TRANSITION
+485: 487TRANSITION
+486: 488TRANSITION
+487: 489TRANSITION
+488: 490TRANSITION
+489: 491TRANSITION
+490: 492TRANSITION
+491: 493TRANSITION
+492: 494TRANSITION
+493: 495TRANSITION
+494: 496TRANSITION
+495: 497TRANSITION
+496: 498TRANSITION
+497: 499TRANSITION
+498: 500TRANSITION
+499: 501TRANSITION
+500: 502TRANSITION
+501: 503TRANSITION
+502: 504TRANSITION
+503: 505TRANSITION
+504: 506TRANSITION
+505: 507TRANSITION
+506: 508TRANSITION
+507: 509TRANSITION
+508: 510TRANSITION
+509: 511TRANSITION
+510: 512TRANSITION
+511: 513TRANSITION
+512: 514TRANSITION
+513: 515TRANSITION
+514: 516TRANSITION
+515: 517TRANSITION
+516: 518TRANSITION
+517: 519TRANSITION
+518: 520TRANSITION
+519: 521TRANSITION
+520: 522TRANSITION
+521: 523TRANSITION
+522: 524TRANSITION
+523: 525TRANSITION
+524: 526TRANSITION
+525: 527TRANSITION
+526: 528TRANSITION
+527: 529TRANSITION
+528: 530TRANSITION
+529: 531TRANSITION
+530: 532TRANSITION
+531: 533TRANSITION
+532: 534TRANSITION
+533: 535TRANSITION
+534: 536TRANSITION
+535: 537TRANSITION
+536: 538TRANSITION
+537: 539TRANSITION
+538: 540TRANSITION
+539: 541TRANSITION
+540: 542TRANSITION
+541: 543TRANSITION
+542: 544TRANSITION
+543: 545TRANSITION
+544: 546TRANSITION
+545: 547TRANSITION
+546: 548TRANSITION
+547: 549TRANSITION
+548: 550TRANSITION
+549: 551TRANSITION
+550: 552TRANSITION
+551: 553TRANSITION
+552: 554TRANSITION
+553: 555TRANSITION
+554: 556TRANSITION
+555: 557TRANSITION
+556: 558TRANSITION
+557: 559TRANSITION
+558: 560TRANSITION
+559: 561TRANSITION
+560: 562TRANSITION
+561: 563TRANSITION
+562: 564TRANSITION
+563: 565TRANSITION
+564: 566TRANSITION
+565: 567TRANSITION
+566: 568TRANSITION
+567: 569TRANSITION
+568: 570TRANSITION
+569: 571TRANSITION
+570: 572TRANSITION
+571: 573TRANSITION
+572: 574TRANSITION
+573: 575TRANSITION
+574: 576TRANSITION
+575: 577TRANSITION
+576: 578TRANSITION
+577: 579TRANSITION
+578: 580TRANSITION
+579: 581TRANSITION
+580: 582TRANSITION
+581: 583TRANSITION
+582: 584TRANSITION
+583: 585TRANSITION
+584: 586TRANSITION
+585: 587TRANSITION
+586: 588TRANSITION
+587: 589TRANSITION
+588: 590TRANSITION
+589: 591TRANSITION
+590: 592TRANSITION
+591: 593TRANSITION
+592: 594TRANSITION
+593: 595TRANSITION
+594: 596TRANSITION
+595: 597TRANSITION
+596: 598TRANSITION
+597: 599TRANSITION
+598: 600TRANSITION
+599: 601TRANSITION
+600: 602TRANSITION
+601: 603TRANSITION
+602: 604TRANSITION
+603: 605TRANSITION
+604: 606TRANSITION
+605: 607TRANSITION
+606: 608TRANSITION
+607: 609TRANSITION
+608: 610TRANSITION
+609: 611TRANSITION
+610: 612TRANSITION
+611: 613TRANSITION
+612: 614TRANSITION
+613: 615TRANSITION
+614: 616TRANSITION
+615: 617TRANSITION
+616: 618TRANSITION
+617: 619TRANSITION
+618: 620TRANSITION
+619: 621TRANSITION
+620: 622TRANSITION
+621: 623TRANSITION
+622: 624TRANSITION
+623: 625TRANSITION
+624: 626TRANSITION
+625: 627TRANSITION
+626: 628TRANSITION
+627: 629TRANSITION
+628: 630TRANSITION
+629: 631TRANSITION
+630: 632TRANSITION
+631: 633TRANSITION
+632: 634TRANSITION
+633: 635TRANSITION
+634: 636TRANSITION
+635: 637TRANSITION
+636: 638TRANSITION
+637: 639TRANSITION
+638: 640TRANSITION
+639: 641TRANSITION
+640: 642TRANSITION
+641: 643TRANSITION
+642: 644TRANSITION
+643: 645TRANSITION
+644: 646TRANSITION
+645: 647TRANSITION
+646: 648TRANSITION
+647: 649TRANSITION
+648: 650TRANSITION
+649: 651TRANSITION
+650: 652TRANSITION
+651: 653TRANSITION
+652: 654TRANSITION
+653: 655TRANSITION
+654: 656TRANSITION
+655: 657TRANSITION
+656: 658TRANSITION
+657: 659TRANSITION
+658: 660TRANSITION
+659: 661TRANSITION
+660: 662TRANSITION
+661: 663TRANSITION
+662: 664TRANSITION
+663: 665TRANSITION
+664: 666TRANSITION
+665: 667TRANSITION
+666: 668TRANSITION
+667: 669TRANSITION
+668: 670TRANSITION
+669: 671TRANSITION
+670: 672TRANSITION
+671: 673TRANSITION
+672: 674TRANSITION
+673: 675TRANSITION
+674: 676TRANSITION
+675: 677TRANSITION
+676: 678TRANSITION
+677: 679TRANSITION
+678: 680TRANSITION
+679: 681TRANSITION
+680: 682TRANSITION
+681: 683TRANSITION
+682: 684TRANSITION
+683: 685TRANSITION
+684: 686TRANSITION
+685: 687TRANSITION
+686: 688TRANSITION
+687: 689TRANSITION
+688: 690TRANSITION
+689: 691TRANSITION
+690: 692TRANSITION
+691: 693TRANSITION
+692: 694TRANSITION
+693: 695TRANSITION
+694: 696TRANSITION
+695: 697TRANSITION
+696: 698TRANSITION
+697: 699TRANSITION
+698: 700TRANSITION
+699: 701TRANSITION
+700: 702TRANSITION
+701: 703TRANSITION
+702: 704TRANSITION
+703: 705TRANSITION
+704: 706TRANSITION
+705: 707TRANSITION
+706: 708TRANSITION
+707: 709TRANSITION
+708: 710TRANSITION
+709: 711TRANSITION
+710: 712TRANSITION
+711: 713TRANSITION
+712: 714TRANSITION
+713: 715TRANSITION
+714: 716TRANSITION
+715: 717TRANSITION
+716: 718TRANSITION
+717: 719TRANSITION
+718: 720TRANSITION
+719: 721TRANSITION
+720: 722TRANSITION
+721: 723TRANSITION
+722: 724TRANSITION
+723: 725TRANSITION
+724: 726TRANSITION
+725: 727TRANSITION
+726: 728TRANSITION
+727: 729TRANSITION
+728: 730TRANSITION
+729: 731TRANSITION
+730: 732TRANSITION
+731: 733TRANSITION
+732: 734TRANSITION
+733: 735TRANSITION
+734: 736TRANSITION
+735: 737TRANSITION
+736: 738TRANSITION
+737: 739TRANSITION
+738: 740TRANSITION
+739: 741TRANSITION
+740: 742TRANSITION
+741: 743TRANSITION
+742: 744TRANSITION
+743: 745TRANSITION
+744: 746TRANSITION
+745: 747TRANSITION
+746: 748TRANSITION
+747: 749TRANSITION
+748: 750TRANSITION
+749: 751TRANSITION
+750: 752TRANSITION
+751: 753TRANSITION
+752: 754TRANSITION
+753: 755TRANSITION
+754: 756TRANSITION
+755: 757TRANSITION
+756: 758TRANSITION
+757: 759TRANSITION
+758: 760TRANSITION
+759: 761TRANSITION
+760: 762TRANSITION
+761: 763TRANSITION
+762: 764TRANSITION
+763: 765TRANSITION
+764: 766TRANSITION
+765: 767TRANSITION
+766: 768TRANSITION
+767: 769TRANSITION
+768: 770TRANSITION
+769: 771TRANSITION
+770: 772TRANSITION
+771: 773TRANSITION
+772: 774TRANSITION
+773: 775TRANSITION
+774: 776TRANSITION
+775: 777TRANSITION
+776: 778TRANSITION
+777: 779TRANSITION
+778: 780TRANSITION
+779: 781TRANSITION
+780: 782TRANSITION
+781: 783TRANSITION
+782: 784TRANSITION
+783: 785TRANSITION
+784: 786TRANSITION
+785: 787TRANSITION
+786: 788TRANSITION
+787: 789TRANSITION
+788: 790TRANSITION
+789: 791TRANSITION
+790: 792TRANSITION
+791: 793TRANSITION
+792: 794TRANSITION
+793: 795TRANSITION
+794: 796TRANSITION
+795: 797TRANSITION
+796: 798TRANSITION
+797: 799TRANSITION
+798: 800TRANSITION
+799: 801TRANSITION
+800: 802TRANSITION
+801: 803TRANSITION
+802: 804TRANSITION
+803: 805TRANSITION
+804: 806TRANSITION
+805: 807TRANSITION
+806: 808TRANSITION
+807: 809TRANSITION
+808: 810TRANSITION
+809: 811TRANSITION
+810: 812TRANSITION
+811: 813TRANSITION
+812: 814TRANSITION
+813: 815TRANSITION
+814: 816TRANSITION
+815: 817TRANSITION
+816: 818TRANSITION
+817: 819TRANSITION
+818: 820TRANSITION
+819: 821TRANSITION
+820: 822TRANSITION
+821: 823TRANSITION
+822: 824TRANSITION
+823: 825TRANSITION
+824: 826TRANSITION
+825: 827TRANSITION
+826: 828TRANSITION
+827: 829TRANSITION
+828: 830TRANSITION
+829: 831TRANSITION
+830: 832TRANSITION
+831: 833TRANSITION
+832: 834TRANSITION
+833: 835TRANSITION
+834: 836TRANSITION
+835: 837TRANSITION
+836: 838TRANSITION
+837: 839TRANSITION
+838: 848TRANSITION
+839: 840TRANSITION
+840: 841TRANSITION
+841: 842TRANSITION
+842: 843TRANSITION
+843: 844TRANSITION
+844: 840TRANSITION
+845: 849TRANSITION
+846: 850TRANSITION
+847: 851TRANSITION
+848: 852TRANSITION
+849: 853TRANSITION
+850: 852TRANSITION
+851: 853TRANSITION
+852: 854TRANSITION
+853: 855TRANSITION
+854: 856TRANSITION
+855: 857TRANSITION
+856: 858TRANSITION
+857: 859TRANSITION
+858: 860TRANSITION
+859: 861TRANSITION
+860: 862TRANSITION
+861: 863TRANSITION
+862: 864TRANSITION
+863: 865TRANSITION
+864: 866TRANSITION
+865: 867TRANSITION
+866: 868TRANSITION
+867: 869TRANSITION
+868: 870TRANSITION
+869: 871TRANSITION
+870: 872TRANSITION
+871: 873TRANSITION
+872: 874TRANSITION
+873: 875TRANSITION
+874: 876TRANSITION
+875: 877TRANSITION
+876: 878TRANSITION
+877: 879TRANSITION
+878: 880TRANSITION
+879: 881TRANSITION
+
+id test: 0
+
+********
+3
+Start ConcatOperation********
+
+********
+end ConcatOperation********
+
+*** Not matching in ConcatOperation***
+2: 1TRANSITION

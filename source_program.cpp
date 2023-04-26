@@ -1,5 +1,3 @@
-#include <stdio.h>
-int main(){
-    printf("\nkir");
-    return 0;
-}
+if(i>2)
+    x = 0
+else

@@ -10,11 +10,11 @@ State::State(int stateNumber,StateType stateType) : stateNumber(stateNumber), st
 
 State::State(State &stateObject){
   this->stateNumber = stateObject.stateNumber;
-  for(auto i : stateObject.GetnonEpsClosure()){
+  for(const auto& i : stateObject.GetnonEpsClosure()){
     for(auto j:i.second)
       this->AddEdge(i.first,j);
   }
-  for(auto i : stateObject.GetEpsClosure()){
+  for(const auto& i : stateObject.GetEpsClosure()){
     this->AddEpsEdge(i);
 }
   this->stateType =stateObject.stateType;
@@ -76,13 +76,33 @@ const std::set<int> &State::GetEpsClosure() {
   return EpsClosure;
 }
 
+  void State::RemoveEpsClosure(int i){
+    EpsClosure.erase(i);
+  }
+  void State::RemoveNonEpsClosure(std::string edge,int i){
+    if(nonEpsClosure.find(edge) != nonEpsClosure.end()){
+      const auto& itr = nonEpsClosure.find(edge);
+      itr->second.erase(i);
+    }
+      
+
+  }
+
 NFA::NFA(NFA& NFAObject){
   for(auto i : NFAObject.States){
     State* newState = new State{*i};
     this->States.push_back(newState);
+    // std::cout << i->getStateNumber()<<" ";
+    // i->PrintStateType();
   }
     this->numberOfStates =  NFAObject.numberOfStates;
+    // std::cout << "End of NFA cons"<<std::endl;
 }
+
+void NFA::SetNFAPriority(int i){priority = i;}
+
+void NFA::SetNFAType(NFAType typeOfNFA){this->typeOfNFA = typeOfNFA;}
+const NFAType NFA::GetNFAType()const{return typeOfNFA;}
 
 NFA::NFA(std::string& symbols,bool isSingleSymbol) {
   symbols = ltrim(rtrim(symbols));
@@ -125,6 +145,43 @@ NFA::NFA(std::string& symbols,bool isSingleSymbol) {
   // PrintNFA();
 }
 
+void State::PrintStateType(){
+  if(this->GetStateType() == StateType::ACCEPTING)
+    std::cout << "Accepting" << std::endl;
+
+  if(this->GetStateType() == StateType::TRANSITION)
+    std::cout << "TRANSITION" << std::endl;
+
+  if(this->GetStateType() == StateType::START)
+    std::cout << "START" << std::endl;
+}
+
+void NFA::PrintNFAType(){
+  if(typeOfNFA == NFAType::ID)
+    std::cout << "ID" << std::endl;
+    if(typeOfNFA == NFAType::NUMBER)
+    std::cout << "NUMBER" << std::endl;
+      if(typeOfNFA == NFAType::ELSE)
+    std::cout << "ELSE" << std::endl;
+      if(typeOfNFA == NFAType::EQ)
+    std::cout << "EQ"<< std::endl;
+      if(typeOfNFA == NFAType::GT)
+    std::cout << "GT"<< std::endl;
+      if(typeOfNFA == NFAType::IF)
+    std::cout << "IF"<< std::endl;
+      if(typeOfNFA == NFAType::INT)
+    std::cout <<"INT" << std::endl;
+      if(typeOfNFA == NFAType::LP)
+    std::cout << "LP" << std::endl;
+      if(typeOfNFA == NFAType::LT)
+    std::cout << "LT" << std::endl;
+      if(typeOfNFA == NFAType::RP)
+    std::cout << "RP" << std::endl;
+      if(typeOfNFA == NFAType::SC)
+    std::cout << "SC" << std::endl;
+      if(typeOfNFA == NFAType::WS)
+    std::cout << "WS" << std::endl;
+}
 
 const void NFA::PrintNFA() {
   std::cout <<"Vector size"<< States.size()<<std::endl;

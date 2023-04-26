@@ -12,4 +12,10 @@ public:
   StateTypeException();
 };
 
+class InvalidSyntax : public std::runtime_error {
+public:
+  InvalidSyntax();
+};
+
+
 #endif

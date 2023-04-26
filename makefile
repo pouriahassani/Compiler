@@ -8,7 +8,7 @@ Compiler.o: Compiler.cpp
 	g++ -c Compiler.cpp
 
 Lexical_analyzer.o: Lexical_analyzer.cpp
-	g++ -c Lexical_analyzer.cpp
+	g++ -c -g Lexical_analyzer.cpp
 
 Parser.o: Parser.cpp
 	g++ -c Parser.cpp

@@ -10,10 +10,10 @@
 class NFASimulation{
     public:
     NFASimulation(NFA* NFAObject);
-    bool Simulation(std::string line);
+    void Simulation(std::string line , int& lexemeSize);
     std::set<int>& Move(std::set<int>& S, char c); 
     std::set<int>& Eclosure(std::set<int>& S); 
-
+    NFA* GetNFAOBject();
 
     private:
     NFA* NFAObject;

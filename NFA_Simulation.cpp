@@ -11,6 +11,8 @@ NFASimulation::NFASimulation(NFA *NFAObject) : NFAObject(NFAObject) {
   alreadyOn.resize(NFAObject->GetNumberOfStates(), false);
 }
 
+NFA* NFASimulation::GetNFAOBject(){return NFAObject;}
+
 std::set<int> &NFASimulation::Move(std::set<int> &S, char c) {
   std::string C;
   C = std::string(1, c);
@@ -70,16 +72,25 @@ void NFASimulation::addState(int stateNumber) {
   }
 }
 
-bool NFASimulation::Simulation(std::string line) {
+void NFASimulation::Simulation(std::string line,int& lexemeSize) {
   std::set<int> S;
-  S = NFAObject->GetStates().at(0)->GetEpsClosure();
+ 
   auto c = line.begin();
+  lexemeSize = 0;
 
+  for(auto i:NFAObject->GetStates()){
+    if(i->GetStateType() == StateType::START)
+      oldStack.push(i->getStateNumber());
+  }
+  S = NFAObject->GetStates().at(oldStack.top())->GetEpsClosure();
   for (auto i{S.begin()}; i != S.end(); i++)
     oldStack.push(*i);
-
+  int count{0};
   while (*c != '\0') {
+    count++;
     while (!oldStack.empty()) {
+      // std::cout <<"old stack top is: "<<oldStack.top()<<"\t and the state type is: ";
+
         auto mapItr = 
             NFAObject->GetStates()[oldStack.top()]->GetnonEpsClosure().find(std::string(1,*c));
         if(mapItr != NFAObject->GetStates()[oldStack.top()]->GetnonEpsClosure().end()){
@@ -94,10 +105,27 @@ bool NFASimulation::Simulation(std::string line) {
 
     while (!newStack.empty()) {
         oldStack.push(newStack.top());
+        auto k = oldStack.top();
+        StateType temp;
+        // std::cout << "state number on the new Stack: "<<k<<std::endl;
+        for(auto i:NFAObject->GetStates()){
+          if(i->getStateNumber() == k){
+              temp = i->GetStateType();
+              std::cout << "\n\nThe current charachter is: "<< *c<<"\nThe following NFA has accepting state: " <<std::endl;
+              NFAObject->PrintNFAType();
+          }
+            
+        }
+        
+        if (temp == StateType::ACCEPTING){
+            lexemeSize = count >= lexemeSize ? count : lexemeSize;
+            
+        }
         alreadyOn[newStack.top()] = false;
         newStack.pop();
     }
     c++;
+    
   }
 
   while (!oldStack.empty()) {
@@ -114,8 +142,7 @@ bool NFASimulation::Simulation(std::string line) {
     if (temp == StateType::TRANSITION)
       str = "TRANSITION";
 
-    if (NFAObject->GetStates().at(k)->GetStateType() == StateType::ACCEPTING)
-      return true;
+    // if (NFAObject->GetStates().at(k)->GetStateType() == StateType::ACCEPTING)
+    //   return true;
   }
-  return false;
 }
