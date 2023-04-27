@@ -4,135 +4,222 @@
 #include <vector>
 #include <algorithm>
 
+
 RegularExpressionOperations::RegularExpressionOperations(){
     for(auto i : symbols){
         this->symbols.push_back(i);
     }
 };
 
-NFA* RegularExpressionOperations::UnionsOperation(NFA& leftNFA, NFA& rightNFA){
+NFA* RegularExpressionOperations::UnionsOperation(NFA leftNFA,NFA rightNFA){
     int leftNFAStartId;
     int leftNFAEndId;
     int rightNFAStartId;
     int rightNFAEndId;
-
+                                                                                                                                      
+ // The example of Union Oepration on two given NFAs                                                                                                                                     
+ //                                                                                                           returnNFA                  
+ //                                                                                                              ||                      
+ //                                                                                                              \/                       
+ //                                                                                                          4 ----- 5                   
+ //                                                                                                        /           \                 
+ //                           left NFA                       right NFA                               2 -->               3               
+ //                              ||                              ||                               /        \           /     \           
+ //                              \/                              \/                             /            6 ----- 7         \         
+ //                          2 ----- 3                       2 ----- 3                        /                                  \       
+ //                        /           \                   /           \                    /                                      \     
+ //                  0 -->               1           0 -->               1     ====>> 0 -->                                         1   
+ //                        \           /                   \           /                    \                                      /     
+ //                          4 ----- 5                       4 ----- 5                        \                                  /       
+ //                                                                                             \           10 ----- 11        /         
+ //                                                                                              \         /           \     /           
+ //                                                                                                  8 -->               9               
+ //                                                                                                        \           /                 
+ //                                                                                                         12 ----- 13                 
     int incrementRightStateNoms = leftNFA.States.size()+2;
-
-    for(auto currState = rightNFA.States.begin() ; currState != rightNFA.States.end() ; currState++){
-        (*currState)->IncrementStateNumbers(incrementRightStateNoms);
-        (*currState)->IncrementNonEpsClosureStateNumbers(incrementRightStateNoms);
-        (*currState)->IncrementEpsClosureStateNumbers(incrementRightStateNoms);
+    NFA* returnNFA = new NFA;
+    for(auto currState = rightNFA.States.cbegin() ; currState != rightNFA.States.cend() ; currState++){
+        State* newState = new State(*currState->second);
+        newState->IncrementStateNumbers(incrementRightStateNoms);
+        newState->IncrementNonEpsClosureStateNumbers(incrementRightStateNoms);
+        newState->IncrementEpsClosureStateNumbers(incrementRightStateNoms);
+        returnNFA->States[newState->GetStateNumber()] = newState;
+        if(newState->GetStateType() == StateType::START)
+            rightNFAStartId = newState->GetStateNumber();
+        if(newState->GetStateType() == StateType::ACCEPTING)
+            rightNFAEndId = newState->GetStateNumber();
     }
 
-    for(auto currState = leftNFA.States.begin() ; currState != leftNFA.States.end() ; currState++){
-        (*currState)->IncrementStateNumbers(2);
-        (*currState)->IncrementNonEpsClosureStateNumbers(2);
-        (*currState)->IncrementEpsClosureStateNumbers(2);
+    for(auto currState = leftNFA.States.cbegin() ; currState != leftNFA.States.cend() ; currState++){
+        State* newState = new State(*currState->second);
+        newState->IncrementStateNumbers(2);
+        newState->IncrementNonEpsClosureStateNumbers(2);
+        newState->IncrementEpsClosureStateNumbers(2);
+        returnNFA->States[newState->GetStateNumber()] = newState;
+        if(newState->GetStateType() == StateType::START)
+            leftNFAStartId = newState->GetStateNumber();
+        if(newState->GetStateType() == StateType::ACCEPTING)
+            leftNFAEndId = newState->GetStateNumber();
     }
 
-    for(int i{0};i<leftNFA.States.size();i++){
-        if(leftNFA.States[i]->GetStateType() == StateType::START)
-            leftNFAStartId = i;
-        if(leftNFA.States[i]->GetStateType() == StateType::ACCEPTING)
-            leftNFAEndId = i;
-    }
-    for(int i{0};i<rightNFA.States.size();i++){
-        if(rightNFA.States[i]->GetStateType() == StateType::START)
-            rightNFAStartId = i;
-        if(rightNFA.States[i]->GetStateType() == StateType::ACCEPTING)
-            rightNFAEndId = i;
-    }
+    returnNFA->States[leftNFAStartId]->SetStateType(StateType::TRANSITION);
+    returnNFA->States[leftNFAEndId]->SetStateType(StateType::TRANSITION);
 
-    leftNFA.States[leftNFAStartId]->SetStateType(StateType::TRANSITION);
-    leftNFA.States[leftNFAEndId]->SetStateType(StateType::TRANSITION);
-
-    rightNFA.States[rightNFAStartId]->SetStateType(StateType::TRANSITION);
-    rightNFA.States[rightNFAEndId]->SetStateType(StateType::TRANSITION);
+    returnNFA->States[rightNFAStartId]->SetStateType(StateType::TRANSITION);
+    returnNFA->States[rightNFAEndId]->SetStateType(StateType::TRANSITION);
 
     State* startState = new State(0,StateType::START); 
     State* endState = new State(1,StateType::ACCEPTING);
 
-    startState->setEpsClosure(leftNFA.States[leftNFAStartId]->getStateNumber());
-    startState->setEpsClosure(rightNFA.States[rightNFAStartId]->getStateNumber());
+    startState->setEpsClosure(returnNFA->States[leftNFAStartId]->GetStateNumber());
+    startState->setEpsClosure(returnNFA->States[rightNFAStartId]->GetStateNumber());
 
-    leftNFA.States[leftNFAEndId]->setEpsClosure(1);
-    rightNFA.States[rightNFAEndId]->setEpsClosure(1);
+    returnNFA->States[leftNFAEndId]->setEpsClosure(1);
+    returnNFA->States[rightNFAEndId]->setEpsClosure(1);
 
-    NFA* returnNFA = new NFA{leftNFA};
+    returnNFA->States[0] = startState;
+    returnNFA->States[1] = endState;
+    
+    return returnNFA;
+}
 
-    for(int i{0} ; i < rightNFA.States.size() ; i++){
-        returnNFA->States.push_back(rightNFA.States[i]);
+NFA* RegularExpressionOperations::ConcatOperation(NFA leftNFA,NFA rightNFA){
+    int leftNFAStartId =0;
+    int leftNFAEndId=1;
+    int rightNFAStartId=0;
+    int rightNFAEndId=1;
+    int incrementRightStateNoms = leftNFA.States.size()-1   ;
+// The example of Concatination Oepration on two given NFAs 
+//  
+//                           left NFA                       right NFA                                     ReturnNFA                
+//                              ||                              ||                                           ||                    
+//                                                              \/                                           \/                    
+//                          2 ----- 3                       2 ----- 3                           2 ----- 3          7 ----- 8       
+//                        /           \                   /           \                       /           \      /           \     
+//                  0 -->               1           0 -->               1    ====>>     0 -->               6-->               1   
+//                        \           /                   \           /                       \           /      \           /     
+//                          4 ----- 5                       4 ----- 5                           4 ----- 5          9 ----- 10      
+//                                                                                                                                 
+                                                                                                                                   
+    NFA* returnNFA = new NFA;
+
+    for(auto currState = rightNFA.States.cbegin() ; currState != rightNFA.States.cend() ; currState++){
+        State* newState = new State(*currState->second);
+        newState->IncrementStateNumbers(incrementRightStateNoms);
+        newState->IncrementNonEpsClosureStateNumbers(incrementRightStateNoms);
+        newState->IncrementEpsClosureStateNumbers(incrementRightStateNoms);
+
+        newState->UpdateEpsFromOldStateNumToNew(incrementRightStateNoms+1, -1);
+        newState->UpdateNonEpsFromOldStateNumToNew(incrementRightStateNoms+1 , -1);
+        newState->UpdateEpsFromOldStateNumToNew(incrementRightStateNoms , -2);
+        newState->UpdateNonEpsFromOldStateNumToNew(incrementRightStateNoms , -2);
+
+        newState->UpdateEpsFromOldStateNumToNew(-1, 1);
+        newState->UpdateNonEpsFromOldStateNumToNew(-1 , 1);
+
+        newState->UpdateEpsFromOldStateNumToNew(-2, incrementRightStateNoms+1);
+        newState->UpdateNonEpsFromOldStateNumToNew(-2, incrementRightStateNoms+1);
+
+        if(newState->GetStateType() == StateType::START){
+            rightNFAStartId = newState->GetStateNumber();  
+            if(incrementRightStateNoms == 1){
+                newState->SetStateNumber(-1);
+                returnNFA->States[-1] = newState;
+                rightNFAStartId = -1;
+                newState->PrintState();
+            }
+        }
+
+        if(newState->GetStateType() == StateType::ACCEPTING){
+            rightNFAEndId = newState->GetStateNumber();
+            newState->SetStateNumber(1);
+        }
+        returnNFA->States[newState->GetStateNumber()] = newState;
     }
 
-    returnNFA->States.push_back(startState);
-    returnNFA->States.push_back(endState);
 
-    returnNFA->PrintNFA();
-    // rightNFA.PrintNFA();
+    State* middleState = new State(*returnNFA->States[rightNFAStartId]);
+
+    returnNFA->States.erase(rightNFAStartId);
+
+
+    for(auto currState = leftNFA.States.cbegin() ; currState != leftNFA.States.cend() ; currState++){
+        State* newState = new State(*currState->second);
+        newState->UpdateEpsFromOldStateNumToNew(1 , incrementRightStateNoms+1);
+        newState->UpdateNonEpsFromOldStateNumToNew(1 , incrementRightStateNoms+1);
+        if(newState->GetStateType() == StateType::START)
+            leftNFAStartId = newState->GetStateNumber();
+        if(newState->GetStateType() == StateType::ACCEPTING){
+            newState->SetStateNumber(incrementRightStateNoms + 1);
+            leftNFAEndId = newState->GetStateNumber();
+        }
+        returnNFA->States[newState->GetStateNumber()] = newState;
+    }
+    for(auto Eps : middleState->GetEpsClosure())
+        returnNFA->States[leftNFAEndId]->AddEpsEdge(Eps);
+
+    for(auto NonEpsPair : middleState->GetnonEpsClosure()){
+        for(auto NonEpsId: NonEpsPair.second)
+            returnNFA->States[leftNFAEndId]->AddEdge(NonEpsPair.first,NonEpsId);
+    }
+
+    for(auto& currState : returnNFA->States){
+        currState.second->SetStateType(StateType::TRANSITION);
+    }
+    returnNFA->States[0]->SetStateType(StateType::START);
+    returnNFA->States[1]->SetStateType(StateType::ACCEPTING);
 
     return returnNFA;
 }
 
-NFA* RegularExpressionOperations::ConcatOperation(NFA& leftNFA, NFA& rightNFA){
-    int leftNFAStartId;
-    int leftNFAEndId;
-    int rightNFAStartId;
-    int rightNFAEndId;
-
-    int incrementRightStateNoms = leftNFA.States.size() - 1;
-
-    for(auto currState = rightNFA.States.begin() ; currState != rightNFA.States.end() ; currState++){
-        (*currState)->IncrementStateNumbers(incrementRightStateNoms);
-        (*currState)->IncrementNonEpsClosureStateNumbers(incrementRightStateNoms);
-        (*currState)->IncrementEpsClosureStateNumbers(incrementRightStateNoms);
-    }
-
-    for(int i{0};i<leftNFA.States.size();i++){
-        if(leftNFA.States[i]->GetStateType() == StateType::START)
-            leftNFAStartId = i;
-        if(leftNFA.States[i]->GetStateType() == StateType::ACCEPTING)
-            leftNFAEndId = i;
-    }
-    for(int i{0};i<rightNFA.States.size();i++){
-        if(rightNFA.States[i]->GetStateType() == StateType::START)
-            rightNFAStartId = i;
-        if(rightNFA.States[i]->GetStateType() == StateType::ACCEPTING)
-            rightNFAEndId = i;
-    }
-
-    leftNFA.States[leftNFAEndId]->SetStateType(StateType::TRANSITION);
-    for(auto i : rightNFA.States[rightNFAStartId]->GetEpsClosure()){
-        leftNFA.States[leftNFAEndId]->AddEpsEdge(i);   
-    }
-
-    for(auto pairNonEpsRight : rightNFA.States[rightNFAStartId]->GetnonEpsClosure()){
-        auto key = pairNonEpsRight.first;
-        for(auto i : pairNonEpsRight.second)
-                leftNFA.States[leftNFAEndId]->AddEdge(key,i);
-    }
-            
-
-    rightNFA.States.erase(rightNFA.States.begin() + rightNFAStartId);
-    // rightNFA.PrintNFA();
-    NFA* returnNFA = new NFA{leftNFA};
-
-    for(int i{0} ; i < rightNFA.States.size() ; i++){
-        returnNFA->States.push_back(rightNFA.States[i]);
-    }
-
-       returnNFA->PrintNFA();
-    return returnNFA;
-}
-
-NFA* RegularExpressionOperations::IterationOperation(NFA& originalNFA){
+NFA* RegularExpressionOperations::IterationOperation(NFA originalNFA){
     int NFAStartId;
     int NFAEndId;
+    NFA* returnNFA = new NFA;
+    int incrementEndID = originalNFA.States.size();
+    for(auto currState = originalNFA.States.cbegin() ; currState != originalNFA.States.cend() ; currState++){
+        State* newState = new State(*currState->second);
+        newState->IncrementStateNumbers(2);
+        newState->IncrementNonEpsClosureStateNumbers(2);
+        newState->IncrementEpsClosureStateNumbers(2);
 
-    for(auto currState = originalNFA.States.begin() ; currState != originalNFA.States.end() ; currState++){
-        (*currState)->IncrementStateNumbers(2);
-        (*currState)->IncrementNonEpsClosureStateNumbers(2);
-        (*currState)->IncrementEpsClosureStateNumbers(2);
+
+        if(newState->GetStateType() == StateType::START)
+            NFAStartId = newState->GetStateNumber();  
+
+        if(newState->GetStateType() == StateType::ACCEPTING){
+            NFAEndId = newState->GetStateNumber();
+        }
+           
+        
+        returnNFA->States[newState->GetStateNumber()] = newState;
     }
+    
+    returnNFA->States[NFAStartId]->SetStateType(StateType::TRANSITION);
+    returnNFA->States[NFAEndId]->SetStateType(StateType::TRANSITION);
+
+    State* startState = new State(0,StateType::START); 
+    State* endState = new State(1,StateType::ACCEPTING);
+
+    startState->setEpsClosure(NFAStartId);
+    startState->setEpsClosure(1);
+    returnNFA->States[NFAEndId]->setEpsClosure(1);
+    returnNFA->States[NFAEndId]->setEpsClosure(NFAStartId);
+
+
+    returnNFA->States[1] = endState;
+    returnNFA->States[0] = startState;
+    return returnNFA;
+}
+
+NFA* RegularExpressionOperations::PlusOperation(NFA originalNFA){
+    NFA* returnNFA = ConcatOperation(originalNFA,*IterationOperation(originalNFA));
+    return returnNFA;
+}
+
+NFA* RegularExpressionOperations::oneInstance(NFA originalNFA){
+    int NFAEndId;
+    int NFAStartId;
 
     for(int i{0};i<originalNFA.States.size();i++){
         if(originalNFA.States[i]->GetStateType() == StateType::START)
@@ -140,31 +227,9 @@ NFA* RegularExpressionOperations::IterationOperation(NFA& originalNFA){
         if(originalNFA.States[i]->GetStateType() == StateType::ACCEPTING)
             NFAEndId = i;
     }
-    std::cout << "NFAStartId: "<<NFAStartId<<std::endl;
-    std::cout << "NFAEndId: "<<NFAEndId<<std::endl;
 
-    originalNFA.States[NFAStartId]->SetStateType(StateType::TRANSITION);
-    originalNFA.States[NFAEndId]->SetStateType(StateType::TRANSITION);
+    originalNFA.States[NFAStartId]->AddEpsEdge(NFAEndId);
+    NFA* returnNFA = new NFA{originalNFA};
 
-    State* startState = new State(0,StateType::START); 
-    State* endState = new State(1,StateType::ACCEPTING);
-
-    startState->setEpsClosure(originalNFA.States[NFAStartId]->getStateNumber());
-    startState->setEpsClosure(1);
-    originalNFA.States[NFAEndId]->setEpsClosure(1);
-    originalNFA.States[NFAEndId]->setEpsClosure(originalNFA.States[NFAStartId]->getStateNumber());
-
-
-    originalNFA.States.push_back(startState);
-    originalNFA.States.push_back(endState);
-
-    originalNFA.PrintNFA();
-    // rightNFA.PrintNFA();
-
-    return &originalNFA;
-}
-
-NFA* RegularExpressionOperations::PlusOperation(NFA& originalNFA){
-    NFA* returnNFA  = new NFA{*ConcatOperation(originalNFA,*IterationOperation(originalNFA))};
     return returnNFA;
 }
