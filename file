@@ -1,0 +1,799 @@
+
+********
+Start PlusOperation********
+
+********
+Start IterationOperation********
+
+********
+ end IterationOperation********
+
+********
+21
+Start ConcatOperation********
+
+********
+ end Concatination********
+
+********
+end PlusOperation********
+
+********
+1
+Start ConcatOperation********
+state number: -1: START
+epsilon edges:10
+3, 5, 7, 9, 11, 13, 15, 17, 19, 21, 
+non epsilon edges:
+
+
+
+********
+ end Concatination********
+*******
+
+ Digits
+*******
+
+OInsDotDigits
+
+********start oneInstance********
+
+********
+end oneInstance********
+*******
+
+ InsDotDigits
+*******
+
+DDDC
+
+********
+44
+Start ConcatOperation********
+
+********
+ end Concatination********
+*******
+
+PNNFA
+
+********
+Start union********
+2 3 4 5
+
+********
+end union********
+*******
+
+PNoneINFA
+
+********start oneInstance********
+
+********
+end oneInstance********
+*******
+
+EPNOneINFA
+
+********
+1
+Start ConcatOperation********
+state number: -1: START
+epsilon edges:3
+1, 3, 5, 
+non epsilon edges:
+
+
+
+********
+ end Concatination********
+*******
+
+EPNOneIDNFA
+
+********
+6
+Start ConcatOperation********
+
+********
+ end Concatination********
+*******
+
+EPNOneIDOneINFA
+
+********start oneInstance********
+
+********
+end oneInstance********
+*******
+
+numbers
+
+********
+89
+Start ConcatOperation********
+
+********
+ end Concatination********
+*******
+
+*******
+
+********
+Start union********
+2 3 108 109
+
+********
+end union********
+
+********
+Start IterationOperation********
+
+********
+ end IterationOperation********
+
+********
+105
+Start ConcatOperation********
+
+********
+ end Concatination********
+
+id test: 2
+
+********
+1
+Start ConcatOperation********
+state number: -1: START
+epsilon edges:0
+
+non epsilon edges:
+-1 ==f==> 1 
+
+
+********
+ end Concatination********
+
+********
+1
+Start ConcatOperation********
+state number: -1: START
+epsilon edges:0
+
+non epsilon edges:
+-1 ==l==> 1 
+
+
+********
+ end Concatination********
+
+********
+2
+Start ConcatOperation********
+
+********
+ end Concatination********
+
+********
+3
+Start ConcatOperation********
+
+********
+ end Concatination********
+
+********
+1
+Start ConcatOperation********
+state number: -1: START
+epsilon edges:0
+
+non epsilon edges:
+-1 ==n==> 1 
+
+
+********
+ end Concatination********
+
+********
+2
+Start ConcatOperation********
+
+********
+ end Concatination********
+
+********
+Start union********
+2 3 4 5
+
+********
+end union********
+
+********
+Start union********
+2 3 8 9
+
+********
+end union********
+
+********
+Start PlusOperation********
+
+********
+Start IterationOperation********
+
+********
+ end IterationOperation********
+
+********
+9
+Start ConcatOperation********
+
+********
+ end Concatination********
+
+********
+end PlusOperation********
+if(i>2)
+NFA type: NUMBER
+longst NFA: 0
+
+
+if(i>2)
+NFA type: ID
+longst NFA: 2
+
+
+count: 2lexemeSize: 0
+if(i>2)
+NFA type: IF
+longst NFA: 2
+
+
+if(i>2)
+NFA type: ELSE
+longst NFA: 0
+
+
+if(i>2)
+NFA type: INT
+longst NFA: 0
+
+
+if(i>2)
+NFA type: WS
+longst NFA: 0
+
+
+if(i>2)
+NFA type: LP
+longst NFA: 0
+
+
+if(i>2)
+NFA type: RP
+longst NFA: 0
+
+
+if(i>2)
+NFA type: EQ
+longst NFA: 0
+
+
+if(i>2)
+NFA type: LT
+longst NFA: 0
+
+
+if(i>2)
+NFA type: GT
+longst NFA: 0
+
+
+(i>2)
+NFA type: NUMBER
+longst NFA: 0
+
+
+(i>2)
+NFA type: ID
+longst NFA: 0
+
+
+(i>2)
+NFA type: IF
+longst NFA: 0
+
+
+(i>2)
+NFA type: ELSE
+longst NFA: 0
+
+
+(i>2)
+NFA type: INT
+longst NFA: 0
+
+
+(i>2)
+NFA type: WS
+longst NFA: 0
+
+
+(i>2)
+NFA type: LP
+longst NFA: 1
+
+
+(i>2)
+NFA type: RP
+longst NFA: 0
+
+
+(i>2)
+NFA type: EQ
+longst NFA: 0
+
+
+(i>2)
+NFA type: LT
+longst NFA: 0
+
+
+(i>2)
+NFA type: GT
+longst NFA: 0
+
+
+i>2)
+NFA type: NUMBER
+longst NFA: 0
+
+
+i>2)
+NFA type: ID
+longst NFA: 1
+
+
+i>2)
+NFA type: IF
+longst NFA: 0
+
+
+i>2)
+NFA type: ELSE
+longst NFA: 0
+
+
+i>2)
+NFA type: INT
+longst NFA: 0
+
+
+i>2)
+NFA type: WS
+longst NFA: 0
+
+
+i>2)
+NFA type: LP
+longst NFA: 0
+
+
+i>2)
+NFA type: RP
+longst NFA: 0
+
+
+i>2)
+NFA type: EQ
+longst NFA: 0
+
+
+i>2)
+NFA type: LT
+longst NFA: 0
+
+
+i>2)
+NFA type: GT
+longst NFA: 0
+
+
+>2)
+NFA type: NUMBER
+longst NFA: 0
+
+
+>2)
+NFA type: ID
+longst NFA: 0
+
+
+>2)
+NFA type: IF
+longst NFA: 0
+
+
+>2)
+NFA type: ELSE
+longst NFA: 0
+
+
+>2)
+NFA type: INT
+longst NFA: 0
+
+
+>2)
+NFA type: WS
+longst NFA: 0
+
+
+>2)
+NFA type: LP
+longst NFA: 0
+
+
+>2)
+NFA type: RP
+longst NFA: 0
+
+
+>2)
+NFA type: EQ
+longst NFA: 0
+
+
+>2)
+NFA type: LT
+longst NFA: 0
+
+
+>2)
+NFA type: GT
+longst NFA: 1
+
+
+2)
+NFA type: NUMBER
+longst NFA: 1
+
+
+2)
+NFA type: ID
+longst NFA: 0
+
+
+2)
+NFA type: IF
+longst NFA: 0
+
+
+2)
+NFA type: ELSE
+longst NFA: 0
+
+
+2)
+NFA type: INT
+longst NFA: 0
+
+
+2)
+NFA type: WS
+longst NFA: 0
+
+
+2)
+NFA type: LP
+longst NFA: 0
+
+
+2)
+NFA type: RP
+longst NFA: 0
+
+
+2)
+NFA type: EQ
+longst NFA: 0
+
+
+2)
+NFA type: LT
+longst NFA: 0
+
+
+2)
+NFA type: GT
+longst NFA: 0
+
+
+)
+NFA type: NUMBER
+longst NFA: 0
+
+
+)
+NFA type: ID
+longst NFA: 0
+
+
+)
+NFA type: IF
+longst NFA: 0
+
+
+)
+NFA type: ELSE
+longst NFA: 0
+
+
+)
+NFA type: INT
+longst NFA: 0
+
+
+)
+NFA type: WS
+longst NFA: 0
+
+
+)
+NFA type: LP
+longst NFA: 0
+
+
+)
+NFA type: RP
+longst NFA: 1
+
+
+)
+NFA type: EQ
+longst NFA: 0
+
+
+)
+NFA type: LT
+longst NFA: 0
+
+
+)
+NFA type: GT
+longst NFA: 0
+
+
+x
+NFA type: NUMBER
+longst NFA: 0
+
+
+x
+NFA type: ID
+longst NFA: 1
+
+
+x
+NFA type: IF
+longst NFA: 0
+
+
+x
+NFA type: ELSE
+longst NFA: 0
+
+
+x
+NFA type: INT
+longst NFA: 0
+
+
+x
+NFA type: WS
+longst NFA: 0
+
+
+x
+NFA type: LP
+longst NFA: 0
+
+
+x
+NFA type: RP
+longst NFA: 0
+
+
+x
+NFA type: EQ
+longst NFA: 0
+
+
+x
+NFA type: LT
+longst NFA: 0
+
+
+x
+NFA type: GT
+longst NFA: 0
+
+
+=
+NFA type: NUMBER
+longst NFA: 0
+
+
+=
+NFA type: ID
+longst NFA: 0
+
+
+=
+NFA type: IF
+longst NFA: 0
+
+
+=
+NFA type: ELSE
+longst NFA: 0
+
+
+=
+NFA type: INT
+longst NFA: 0
+
+
+=
+NFA type: WS
+longst NFA: 0
+
+
+=
+NFA type: LP
+longst NFA: 0
+
+
+=
+NFA type: RP
+longst NFA: 0
+
+
+=
+NFA type: EQ
+longst NFA: 1
+
+
+=
+NFA type: LT
+longst NFA: 0
+
+
+=
+NFA type: GT
+longst NFA: 0
+
+
+0
+NFA type: NUMBER
+longst NFA: 1
+
+
+0
+NFA type: ID
+longst NFA: 0
+
+
+0
+NFA type: IF
+longst NFA: 0
+
+
+0
+NFA type: ELSE
+longst NFA: 0
+
+
+0
+NFA type: INT
+longst NFA: 0
+
+
+0
+NFA type: WS
+longst NFA: 0
+
+
+0
+NFA type: LP
+longst NFA: 0
+
+
+0
+NFA type: RP
+longst NFA: 0
+
+
+0
+NFA type: EQ
+longst NFA: 0
+
+
+0
+NFA type: LT
+longst NFA: 0
+
+
+0
+NFA type: GT
+longst NFA: 0
+
+
+else
+NFA type: NUMBER
+longst NFA: 0
+
+
+else
+NFA type: ID
+longst NFA: 4
+
+
+else
+NFA type: IF
+longst NFA: 0
+
+
+else
+NFA type: ELSE
+longst NFA: 4
+
+
+else
+NFA type: INT
+longst NFA: 0
+
+
+else
+NFA type: WS
+longst NFA: 0
+
+
+else
+NFA type: LP
+longst NFA: 0
+
+
+else
+NFA type: RP
+longst NFA: 0
+
+
+else
+NFA type: EQ
+longst NFA: 0
+
+
+else
+NFA type: LT
+longst NFA: 0
+
+
+else
+NFA type: GT
+longst NFA: 0
+
+
+ID: 
+ID: 
+LP
+ID: i
+GT
+NUMBER
+RP
+ID: x
+EQ
+NUMBER
+ID: 
+ID: 

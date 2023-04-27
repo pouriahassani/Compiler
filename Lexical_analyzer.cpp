@@ -10,9 +10,42 @@ Lexical_analyzer::Lexical_analyzer(){
     CreateNFAGraphs();
 };
 
+void Lexical_analyzer::PrintTokenList()const{
+    for(const auto &i:TokenList){
+        NFAType typeOfNFA = i.first;
+        if (typeOfNFA == NFAType::ID){
+            std::cout << "ID: " << i.second.IDvalue <<std::endl;
+        }
+        if (typeOfNFA == NFAType::NUMBER)
+            std::cout << "NUMBER: " << i.second.IDvalue<<std::endl;
+        if (typeOfNFA == NFAType::ELSE)
+            std::cout << "ELSE" << std::endl;
+        if (typeOfNFA == NFAType::EQ)
+            std::cout << "EQ" << std::endl;
+        if (typeOfNFA == NFAType::GT)
+            std::cout << "GT" << std::endl;
+        if (typeOfNFA == NFAType::IF)
+            std::cout << "IF" << std::endl;
+        if (typeOfNFA == NFAType::INT)
+            std::cout << "INT" << std::endl;
+        if (typeOfNFA == NFAType::LP)
+            std::cout << "LP" << std::endl;
+        if (typeOfNFA == NFAType::LT)
+            std::cout << "LT" << std::endl;
+        if (typeOfNFA == NFAType::RP)
+            std::cout << "RP" << std::endl;
+        if (typeOfNFA == NFAType::SC)
+            std::cout << "SC" << std::endl;
+        if (typeOfNFA == NFAType::WS)
+            std::cout << "WS" << std::endl;
+    }
+}
+
+
 void Lexical_analyzer::CreateNFAGraphs(){
     // Numbers token name NFA construction
-    std::string symbols{"2 3 4 5 6 7 8 9"};
+    std::string symbols{"0 1 2 3 4 5 6 7 8 9"};
+    NFA* digit;
     NFA* digits;
     std::string symbolsDot = ".";
     std::string symbolsE = "E";
@@ -37,78 +70,41 @@ void Lexical_analyzer::CreateNFAGraphs(){
     NFA symbol0{s};
     s = std::string(1,'1');
     NFA symbol1{s};
-    digits = REO.PlusOperation(*REO.UnionsOperation(symbol0,symbol1));
-    // std::cout << "*******\n\n Digits"<<std::endl;
-    for(auto i : symbols){
-        std::string s = std::string(1,i);
-        NFA symbol{s};
-        digits = REO.UnionsOperation(*digits,symbol);
-        // digits->PrintNFA();
-    }
-    std::cout << "*******\n\n Digits"<<std::endl;
-    std::cout << "*******\n\nUNFADotDigits"<<std::endl;
-    // dot.PrintNFA();
+    digit = new NFA(symbols,0);
+    digits = REO.PlusOperation(*digit);
     UNFADotDigits = REO.ConcatOperation(dot,*digits);
-    std::cout << "*******\n\n Digits"<<std::endl;
-    std::cout << "*******\n\nOInsDotDigits"<<std::endl;
     OInsDotDigits = REO.oneInstance(*UNFADotDigits);
-
-    std::cout << "*******\n\n InsDotDigits"<<std::endl;
-    // OInsDotDigits->PrintNFA();
-    std::cout << "*******\n\nDDDC"<<std::endl;
     DDDC = REO.ConcatOperation(*digits,*OInsDotDigits);
-
-    std::cout << "*******\n\nPNNFA"<<std::endl;
     PNNFA = REO.UnionsOperation(PNFA,NNFA);
-    std::cout << "*******\n\nPNoneINFA"<<std::endl;
     PNoneINFA = REO.oneInstance(*PNNFA);
-    std::cout << "*******\n\nEPNOneINFA"<<std::endl;
     EPNOneINFA = REO.ConcatOperation(ENFA,*PNoneINFA);
-    std::cout << "*******\n\nEPNOneIDNFA"<<std::endl;
     EPNOneIDNFA = REO.ConcatOperation(*EPNOneINFA,*digits);
-    std::cout << "*******\n\nEPNOneIDOneINFA"<<std::endl;
     EPNOneIDOneINFA = REO.oneInstance(*EPNOneIDNFA);
-    std::cout << "*******\n\nnumbers"<<std::endl;
     numbers = REO.ConcatOperation(*DDDC,*EPNOneIDOneINFA);
-    std::cout << "*******\n\n*******"<<std::endl;
     numbers->SetNFAType(NFAType::NUMBER);
     NFAGraphs.push_back(numbers);
     
 
     // id token name NFA construction
     NFA* id;
+    NFA* letter;
     NFA* letters;
     NFA* LDU;
     NFA* LDUI;
-    std::string letterssymbols{"c d e f g h i j k l m n o p q r s t u v w x y z A B C D E F G H I L K L M N O P Q R S T U V W X Y Z"};
-    s = std::string(1,'a');
-    NFA symbola{s};
-    s = std::string(1,'b');
-    NFA symbolb{s};
-    letters = REO.UnionsOperation(symbola,symbolb);
-    for(auto i : letterssymbols){
-        std::string s = std::string(1,i);
-        NFA symbol{s};
-        letters = REO.UnionsOperation(*letters,symbol);
-    }
-    LDU = REO.UnionsOperation(*letters,*digits);
+    std::string letterssymbols{"a b c d e f g h i j k l m n o p q r s t u v w x y z A B C D E F G H I L K L M N O P Q R S T U V W X Y Z"};
+    letter = new NFA(letterssymbols,0);
+    LDU = REO.UnionsOperation(*letter,*digit);
     LDUI = REO.IterationOperation(*LDU);
-    id = REO.ConcatOperation(*letters,*LDUI);
+    id = REO.ConcatOperation(*letter,*LDUI);
     id->SetNFAType(NFAType::ID);
     NFAGraphs.push_back(id);
-    // id->PrintNFA();
-    NFASimulation NFASIM{id};
-    std::string str{"i"};
-    int lexlesize;
-    NFASIM.Simulation(str,lexlesize);
-    std::cout << "\nid test: "<<lexlesize <<std::endl;
+
     // if token name NFA construction
     s = std::string(1,'i');
     NFA iNFA{s};
     s = std::string(1,'f');
     NFA fNFA{s};
     NFA* ifNFA = REO.ConcatOperation(iNFA,fNFA);
-    ifNFA->SetNFAPriority(1);
     ifNFA->SetNFAType(NFAType::IF);
     NFAGraphs.push_back(ifNFA);
 
@@ -120,7 +116,7 @@ void Lexical_analyzer::CreateNFAGraphs(){
     s = std::string(1,'s');
     NFA sNFA{s};
     NFA* elseNFA = REO.ConcatOperation(*REO.ConcatOperation(*REO.ConcatOperation(eNFA,lNFA),sNFA),eNFA);
-    elseNFA->SetNFAPriority(1);
+    
     elseNFA->SetNFAType(NFAType::ELSE);
     NFAGraphs.push_back(elseNFA);
 
@@ -130,7 +126,7 @@ void Lexical_analyzer::CreateNFAGraphs(){
     s = std::string(1,'t');
     NFA tNFA{s};
     NFA* intNFA = REO.ConcatOperation(*REO.ConcatOperation(iNFA,nNFA),tNFA);
-    intNFA->SetNFAPriority(1);
+    
     intNFA->SetNFAType(NFAType::INT);
     NFAGraphs.push_back(intNFA);
 
@@ -148,46 +144,37 @@ void Lexical_analyzer::CreateNFAGraphs(){
     /// ( token name NFA construction
     s = std::string(1,'(');
     NFA* leftPNFA = new NFA{s};
-    leftPNFA->SetNFAPriority(1);
+    
     leftPNFA->SetNFAType(NFAType::LP);
     NFAGraphs.push_back(leftPNFA);
-    leftPNFA->PrintNFA();
+
     /// ) token name NFA construction
     s = std::string(1,')');
     NFA* rightPNFA = new NFA{s};
-    rightPNFA->SetNFAPriority(1);
+    
     rightPNFA->SetNFAType(NFAType::RP);
     NFAGraphs.push_back(rightPNFA);
 
     /// = token name NFA construction
     s = std::string(1,'=');
     NFA* EQNFA = new NFA{s};
-    EQNFA->SetNFAPriority(1);
+    
     EQNFA->SetNFAType(NFAType::EQ);
     NFAGraphs.push_back(EQNFA);
 
     /// < token name NFA construction
     s = std::string(1,'<');
     NFA* lessNFA = new NFA{s};
-    lessNFA->SetNFAPriority(1);
+    
     lessNFA->SetNFAType(NFAType::LT);
     NFAGraphs.push_back(lessNFA);
 
     /// > token name NFA construction
     s = std::string(1,'>');
     NFA* greatorNFA = new NFA{s};
-    greatorNFA->SetNFAPriority(1);
+    
     greatorNFA->SetNFAType(NFAType::GT);
     NFAGraphs.push_back(greatorNFA);
-    for(auto i:NFAGraphs){
-        i->PrintNFAType();
-        for(auto j : i->GetStates()){
-            if(j->GetStateType() == StateType::START)
-                std::cout << "start state is: " <<j->getStateNumber()<<std::endl;
-            if(j->GetStateType() == StateType::ACCEPTING)
-                std::cout << "End state is: " <<j->getStateNumber()<<std::endl;
-        }
-    }
  }
 
  void Lexical_analyzer::Analyze(std::string fileName){
@@ -196,9 +183,7 @@ void Lexical_analyzer::CreateNFAGraphs(){
             std::string s;
     while(std::getline(fileDcrp,s)){
         std::stringstream SS{s};
-        // std::cout << s<<std::endl;
         while(SS >> line){
-            // std::cout << line<<std::endl;
             try{
                 while(line != "")
                     ExtractTokens();
@@ -221,10 +206,9 @@ void Lexical_analyzer::CreateNFAGraphs(){
         int LongestNFASize = 0;
         NFASimulation* NFASim = new NFASimulation{NFAPtr};
         GetlongestNFAName(NFASim, LongestNFASize);
-        std::cout << line<<"\nNFA type: ";
+
         
         NFAPtr->PrintNFAType();
-        std::cout <<"longst NFA: "<<LongestNFASize <<"\n\n"<<std::endl;
         if(LongestNFASize > 0){
             allValidNFAs.push_back({NFAPtr->GetNFAType(),LongestNFASize});
         }
@@ -258,38 +242,22 @@ void Lexical_analyzer::CreateNFAGraphs(){
 
     else{
         for(auto i : longestTokens){
-            // if(i.first != NFAType::ID){
-                std::pair<NFAType,ReturnTokenAttribute>newToken;
-                ReturnTokenAttribute tAttr;
-                if(allValidNFAs[0].first != NFAType::ID && allValidNFAs[0].first != NFAType::NUMBER)
-                    tAttr.noValue = 1;
-            
-            newToken = std::make_pair(allValidNFAs[0].first,tAttr);
+            std::pair<NFAType,ReturnTokenAttribute>newToken;
+            ReturnTokenAttribute tAttr;
+            tAttr.noValue = 1;
+            if(i.first == NFAType::ID)
+                continue;
+            newToken = std::make_pair(i.first,tAttr);
             TokenList.push_back(newToken);
-            // }
         }
     }
-    // std::cout << "max lenth is :" << maxLenth<< std::endl;
     line = line.substr(maxLenth,std::string::npos);
-    // std::cout << "line is:" << line<< std::endl;
  }
 
 
 void Lexical_analyzer::GetlongestNFAName(NFASimulation *NFASim, int& LongestNFASize){
     std::string str{*lexemeBeginPtr};
-    // int lexemesize;
-    NFASim->Simulation(line, LongestNFASize);
-        // LongestNFASize++;
-    //     lexemeBeginPtr++;
-    //     GetlongestNFAName(NFASim,LongestNFASize);
-    // }
-
-
-    // if(NFASim->GetNFAOBject()->GetNFAType() == NFAType::IF)
-    //     // NFASim->GetNFAOBject()->PrintNFA();
-        // std::cout <<line<< " IF: "<<LongestNFASize<<std::endl;
-    // }
-        
+    NFASim->Simulation(line, LongestNFASize);       
     return;
 
 }

@@ -11,6 +11,6 @@ int main(){
     std::string fileName;
     fileName = "source_program.cpp";
     lex.Analyze(fileName);
-
+    lex.PrintTokenList();
    return 0;
 }

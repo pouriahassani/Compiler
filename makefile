@@ -26,7 +26,7 @@ NFA_Simulation.o: NFA_Simulation.cpp
 	g++ -c -g NFA_Simulation.cpp
 
 RegularExpressionOperations.o: RegularExpressionOperations.cpp
-	g++ -c -g RegularExpressionOperations.cpp
+	g++ -c -g -O0 RegularExpressionOperations.cpp
 
 clean:
 	rm -rf *.o Compiler

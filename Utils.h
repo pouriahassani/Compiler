@@ -19,4 +19,5 @@ enum class StateType{
 StateType AssignStateType(int value);
 
 
+
 #endif

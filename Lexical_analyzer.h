@@ -34,6 +34,7 @@ public:
   void CreateNFAGraphs();
   void Analyze(std::string  fileName);
   void GetlongestNFAName(NFASimulation *NFASim, int& LongestNFASize);
+  void PrintTokenList()const;
 
 private:
   std::vector<std::pair<NFAType,ReturnTokenAttribute>>TokenList;
