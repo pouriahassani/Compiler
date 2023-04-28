@@ -1,5 +1,5 @@
 if(i>2)
-    x = 0
+    xlkj = 0
 else
 
 int c = 43.54

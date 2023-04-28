@@ -121,8 +121,6 @@ void NFASimulation::Simulation(std::string line,int& lexemeSize) {
         StateType temp = NFAObject->GetStates().at(k)->GetStateType();
        
         if (temp == StateType::ACCEPTING){
-          if(NFAObject->GetNFAType() == NFAType::IF)
-            std::cout << "count: "<< count << "lexemeSize: " << lexemeSize << std::endl;
             lexemeSize = count >= lexemeSize ? count : lexemeSize;
         }
         alreadyOn[newStack.top()] = false;

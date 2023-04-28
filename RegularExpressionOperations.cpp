@@ -126,7 +126,7 @@ NFA* RegularExpressionOperations::ConcatOperation(NFA leftNFA,NFA rightNFA){
                 newState->SetStateNumber(-1);
                 returnNFA->States[-1] = newState;
                 rightNFAStartId = -1;
-                newState->PrintState();
+                // newState->PrintState();
             }
         }
 
@@ -168,7 +168,7 @@ NFA* RegularExpressionOperations::ConcatOperation(NFA leftNFA,NFA rightNFA){
     }
     returnNFA->States[0]->SetStateType(StateType::START);
     returnNFA->States[1]->SetStateType(StateType::ACCEPTING);
-
+    // returnNFA->PrintNFA();
     return returnNFA;
 }
 

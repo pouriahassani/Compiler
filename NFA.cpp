@@ -1,4 +1,3 @@
-
 #include "NFA.h"
 #include "Exception.h"
 #include "Utils.h"
@@ -6,9 +5,11 @@
 #include <iostream>
 #include <sstream>
 
+// Constructor for State class
 State::State(int stateNumber, StateType stateType)
     : stateNumber(stateNumber), stateType(stateType){};
 
+// Copy Constructor for State class
 State::State(const State& stateObject) {
   this->stateNumber = stateObject.stateNumber;
   for (const auto &i : stateObject.GetnonEpsClosure()) {
@@ -21,26 +22,35 @@ State::State(const State& stateObject) {
   this->stateType = stateObject.stateType;
 }
 
+// Add epsilon edge to the current state
 void State::AddEpsEdge(int nextStateNumber) {
   EpsClosure.insert(nextStateNumber);
 }
 
+// Add non-epsilon edge to the current state
 void State::AddEdge(std::string edge, int nextStateNumber) {
   nonEpsClosure[edge].insert(nextStateNumber);
 }
 
+// Get the state number of the current state
 const int &State::GetStateNumber() const { return stateNumber; }
 
+// Get the state type of the current state
 const StateType &State::GetStateType() const { return stateType; }
 
+// Set the state type of the current state
 void State::SetStateType(StateType stateType) { this->stateType = stateType; }
 
+// Set the state number of the current state
 void State::SetStateNumber(int stateNumber) { this->stateNumber = stateNumber; }
 
+// Add a new state to the epsilon closure of the current state
 void State::setEpsClosure(int newEps) { EpsClosure.insert(newEps); }
 
+// Increment the state numbers of the current state and its epsilon closure
 void State::IncrementStateNumbers(int base) { stateNumber += base; }
 
+// Increment the state numbers of the epsilon closure of the current state
 void State::IncrementEpsClosureStateNumbers(int base) {
 
   std::set<int> tmpSet{EpsClosure};
@@ -50,6 +60,7 @@ void State::IncrementEpsClosureStateNumbers(int base) {
   }
 }
 
+// Increment the state numbers of the non-epsilon closure of the current state
 void State::IncrementNonEpsClosureStateNumbers(int base) {
   for (auto mapItr{nonEpsClosure.begin()}; mapItr != nonEpsClosure.end();
        mapItr++) {
@@ -61,7 +72,8 @@ void State::IncrementNonEpsClosureStateNumbers(int base) {
     }
   }
 }
-  // Updates all the epsilon closure of this state for a specific State number change
+
+// Update all the epsilon closures of the current state for a specific state number change
 void State::UpdateEpsFromOldStateNumToNew(int changedStateIdOld, int changedStateIdNew){
   if(EpsClosure.find(changedStateIdOld) != EpsClosure.end()){
     EpsClosure.erase(changedStateIdOld);
@@ -69,15 +81,12 @@ void State::UpdateEpsFromOldStateNumToNew(int changedStateIdOld, int changedStat
   }
 }
 
-  // Updates all the non epsilon closure of this state for a specific State number change
+// Update all the non-epsilon closures of the current state for a specific state number change
 void State::UpdateNonEpsFromOldStateNumToNew(int changedStateIdOld, int changedStateIdNew){
-        // std::cout << "StateNumber: "<<stateNumber<<" changedStateIdOld: " << changedStateIdOld <<  "changedStateIdNew: " << changedStateIdNew<< std::endl; 
-
-  for(auto& i : nonEpsClosure){
+   for(auto& i : nonEpsClosure){
     if(i.second.find(changedStateIdOld) != i.second.end()){
       i.second.erase(changedStateIdOld);
       i.second.insert(changedStateIdNew);
-      // std::cout << "changedStateIdOld: " << changedStateIdOld <<  "changedStateIdNew: " << changedStateIdNew<< std::endl; 
     }
   }
 }
