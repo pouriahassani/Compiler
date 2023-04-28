@@ -207,8 +207,7 @@ void Lexical_analyzer::CreateNFAGraphs(){
         NFASimulation* NFASim = new NFASimulation{NFAPtr};
         GetlongestNFAName(NFASim, LongestNFASize);
 
-        
-        NFAPtr->PrintNFAType();
+    
         if(LongestNFASize > 0){
             allValidNFAs.push_back({NFAPtr->GetNFAType(),LongestNFASize});
         }
@@ -257,7 +256,7 @@ void Lexical_analyzer::CreateNFAGraphs(){
 
 void Lexical_analyzer::GetlongestNFAName(NFASimulation *NFASim, int& LongestNFASize){
     std::string str{*lexemeBeginPtr};
-    NFASim->Simulation(line, LongestNFASize);       
+    NFASim->Simulation(line, LongestNFASize);  
     return;
 
 }
