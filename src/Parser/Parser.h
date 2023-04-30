@@ -5,7 +5,7 @@
 
 #include <iostream>
 #include <fstream>
-#include "Lexical_analyzer.h"
+#include "./../Lexical_Analyzer/Lexical_analyzer.h"
 
 class Parser{
     public:
