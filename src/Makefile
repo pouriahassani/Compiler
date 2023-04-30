@@ -14,7 +14,7 @@ all: $(TARGET)
 
 
 $(TARGET): $(OBJS)
-	$(CXX) $(CXXFLAGS) -o $@ $^
+	@$(CXX) $(CXXFLAGS) -o $@ $^
 
 clean:
 	rm -f $(TARGET)
