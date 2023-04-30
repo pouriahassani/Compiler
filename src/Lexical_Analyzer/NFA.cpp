@@ -138,7 +138,7 @@ NFA::NFA(NFA const &NFAObject) {
 }
 
 void NFA::SetNFAType(NFAType typeOfNFA) { this->typeOfNFA = typeOfNFA; }
-const NFAType NFA::GetNFAType() const { return typeOfNFA; }
+const NFAType& NFA::GetNFAType() const { return typeOfNFA; }
 
 NFA::NFA(std::string const &symbols_, bool isSingleSymbol) {
   std::string symbols = ltrim(rtrim(symbols_));

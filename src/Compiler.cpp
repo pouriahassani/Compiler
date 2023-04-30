@@ -6,10 +6,13 @@
 #include "NFA_Simulation.h"
 #include "RegularExpressionOperations.h"
 #include <string>
-int main(){
+int main(int argc, char **argv){
+    if(argc < 2){
+        std::cout << "Error: fileName to be compiled is not passed!" <<std::endl;
+        return 0;
+    }
+    std::string fileName{argv[1]};
     Lexical_analyzer lex;
-    std::string fileName;
-    fileName = "source_program.cpp";
     lex.Analyze(fileName);
     lex.PrintTokenList();
    return 0;

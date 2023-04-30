@@ -178,8 +178,16 @@ void Lexical_analyzer::CreateNFAGraphs(){
  }
 
  void Lexical_analyzer::Analyze(std::string fileName){
-    fstream fileDcrp;
-    fileDcrp.open(fileName);
+    std::ifstream fileDcrp(fileName);
+    try{
+        if(!fileDcrp)
+            throw std::runtime_error("Falied to open the source prgram file");
+    }
+    catch(const std::exception* E){
+        std::cerr << "Error: "<<E->what()<<std::endl;
+    return;
+    }
+
             std::string s;
     while(std::getline(fileDcrp,s)){
         std::stringstream SS{s};

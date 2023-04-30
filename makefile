@@ -1,32 +1,35 @@
-# Compile all the .cpp code needed for the compiler
+# CXX=g++
 
-all:Compiler
 
-Compiler:Compiler.o Lexical_analyzer.o Parser.o NFA.o Utils.o Exception.o NFA_Simulation.o RegularExpressionOperations.o
-	g++ -o Compiler Compiler.o Lexical_analyzer.o Parser.o NFA.o Utils.o Exception.o NFA_Simulation.o RegularExpressionOperations.o
-Compiler.o: Compiler.cpp
-	g++ -c Compiler.cpp
+# TARGET=Compiler
+# SRC_DIR=srs
+# OBJ_DIR=obj
+# OBJS=$(wildcard $(OBJ_DIR)/*.o)
 
-Lexical_analyzer.o: Lexical_analyzer.cpp
-	g++ -c -g Lexical_analyzer.cpp
+# all: SRSMAKE $(TARGET)
 
-Parser.o: Parser.cpp
-	g++ -c Parser.cpp
+# SRSMAKE:
+# 	cd $(SRC_DIR); make
 
-NFA.o: NFA.cpp	
-	g++ -c -g NFA.cpp
+# $(TARGET): OBJS
+# 	$(CXX) $? -o $@
+SRC_DIR := src
 
-Exception.o: Exception.cpp	
-	g++ -c Exception.cpp
+SUBDIRS := $(wildcard $(SRC_DIR)/*)
+SUBDIRS := $(filter-out $(wildcard $(SRC_DIR)/*.cpp),$(SUBDIRS))
+SUBDIRS := $(filter-out $(SRC_DIR)/Makefile,$(SUBDIRS))
+SUBDIRS += $(SRC_DIR)
+.PHONY: all $(SUBDIRS)
 
-Utils.o: Utils.cpp	
-	g++ -c Utils.cpp
+all: $(SUBDIRS) 
 
-NFA_Simulation.o: NFA_Simulation.cpp
-	g++ -c -g NFA_Simulation.cpp
 
-RegularExpressionOperations.o: RegularExpressionOperations.cpp
-	g++ -c -g -O0 RegularExpressionOperations.cpp
+$(SUBDIRS):
+	$(MAKE) -C $@
+
+.PHONY: clean
 
 clean:
-	rm -rf *.o Compiler
+	for dir in $(SUBDIRS); do \
+		$(MAKE) -C $$dir clean; \
+	done
