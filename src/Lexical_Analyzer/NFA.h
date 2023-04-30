@@ -67,7 +67,7 @@ public:
   void PrintNFA() const;
   int GetNumberOfStates()const;
   void IncrementStateNumbers(int base);
-  const NFAType GetNFAType() const;
+  const NFAType& GetNFAType() const;
   void SetNFAType(NFAType typeOfNFA);
   void PrintNFAType();
 
