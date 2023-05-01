@@ -1,6 +1,6 @@
 #include "NFA.h"
-#include "Exception.h"
-#include "Utils.h"
+#include "./../Utils/Exception.h"
+#include "./../Utils/Utils.h"
 #include <fstream>
 #include <iostream>
 #include <sstream>
