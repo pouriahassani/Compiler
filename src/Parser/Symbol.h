@@ -2,22 +2,18 @@
 #define SYMBOL_H
 #include <string>
 #include "./../Lexical_Analyzer/NFA.h"
-
-// The type of terminals used in Grammars. Each grammar will use a sunset of
-// these terminals
-
-
+#define TerminalType NFAType
 // class Symbol defines one symbol in one right handside
 // of a production. This symbol can be either a termial or a non-terminal or a
 // '.'
 
 class Symbol {
 public:
-  Symbol(NFAType symbolT);
+  Symbol(TerminalType symbolT);
   Symbol(std::string symbolNonT);
   Symbol(char symbolDot);
 
-  const NFAType& GetTerminal() const;
+  const TerminalType& GetTerminal() const;
   const std::string& GetNonTerminal() const;
   void SetSymbolType(int symbolType);
 
@@ -26,7 +22,7 @@ public:
   bool IsNonTerminal();
 
 private:
-  NFAType symbolT;
+  TerminalType symbolT;
   std::string symbolNonT;
   char symbolDot;
 
