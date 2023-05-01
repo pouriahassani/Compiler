@@ -1,7 +1,7 @@
 #ifndef NFA_H
 #define NFA_H
 
-#include "Utils.h"
+#include "./../Utils/Utils.h"
 #include <fstream>
 #include <iostream>
 #include <set>
