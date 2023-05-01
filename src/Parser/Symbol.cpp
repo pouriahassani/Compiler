@@ -1,6 +1,6 @@
 #include "Symbol.h"
 
-  Symbol::Symbol(NFAType symbolT) : symbolT(symbolT){
+  Symbol::Symbol(TerminalType symbolT) : symbolT(symbolT){
     SetSymbolType(0);
   }
   Symbol::Symbol(std::string symbolNonT) : symbolNonT(symbolNonT){
@@ -10,7 +10,7 @@
     SetSymbolType(2);
   }
 
-  const NFAType& Symbol::GetTerminal() const{
+  const TerminalType& Symbol::GetTerminal() const{
     return symbolT;
   }
   const std::string&  Symbol::GetNonTerminal() const{
