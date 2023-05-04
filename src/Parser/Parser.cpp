@@ -97,7 +97,9 @@ void Parser::CreateGrammar(){
             }
         }
         newGrammar->PrintGrammar();
+        grammarvec.push_back(newGrammar);
     }
+
     
     
 }
