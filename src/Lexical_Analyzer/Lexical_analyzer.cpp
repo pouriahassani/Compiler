@@ -5,6 +5,7 @@
 #include <iostream>
 #include <sstream>
 #include "NFA_Simulation.h"
+#include "./../Utils/Exception.h"
 // Lexical_analyzer class constructor
 Lexical_analyzer::Lexical_analyzer(){
     CreateNFAGraphs();

@@ -10,7 +10,7 @@ OBJS=$(wildcard $(OBJ_DIR)/*.o)
 
 all: Compiler
 
-Compiler: $(OBJS)
+Compiler: $(OBJS) Compiler.cpp
 	$(CXX) $(CXXFLAGS) -o $(TARGET) $^
 
 clean:

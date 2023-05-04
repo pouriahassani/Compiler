@@ -3,6 +3,9 @@
 #include <fstream>
 #include <sstream>
 #include <string>
+
+Parser::Parser(){};;
+
 void Parser::CreateGrammar(){
     TrimGrammarFile("GrammarDscr");
     std::ifstream grammarFileDscr;

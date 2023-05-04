@@ -5,6 +5,7 @@
 #include <fstream>
 #include "./Lexical_Analyzer/NFA_Simulation.h"
 #include "./Lexical_Analyzer/RegularExpressionOperations.h"
+
 #include <string>
 int main(int argc, char **argv){
     if(argc < 2){
@@ -15,7 +16,7 @@ int main(int argc, char **argv){
     Lexical_analyzer lex;
     lex.Analyze(fileName);
     lex.PrintTokenList();
-    // Parser parser;
-    // parser.
+    Parser parser;
+    parser.CreateGrammar();
    return 0;
 }
