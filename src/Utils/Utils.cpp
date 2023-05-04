@@ -49,7 +49,7 @@ void TrimGrammarFile(std::string inFileName){
     std::ofstream out;
     out.open("tmpFile",std::ios::out);
     if(!out){
-        std::cerr << "File tmpFile couldn't be opened" << std::endl;
+        std::cerr << "File tmpFile 1 couldn't be opened" << std::endl;
         exit(EXIT_FAILURE);
     }
 
@@ -57,15 +57,15 @@ void TrimGrammarFile(std::string inFileName){
         if(str == "")
             continue;
         str = ltrim(rtrim(str));
-        out << str;
+        out << str << std::endl;
     }
 
     in.close();
     out.close();
 
-    in.open("tmpfile");
+    in.open("tmpFile");
     if(!in){
-        std::cerr << "File tmpfile couldn't be opened" << std::endl;
+        std::cerr << "File tmpfile 2 couldn't be opened" << std::endl;
         exit(EXIT_FAILURE);
     }
 
@@ -76,7 +76,7 @@ void TrimGrammarFile(std::string inFileName){
     }
     
     while(std::getline(in , str)){
-        out << str;
+        out << str << std::endl;
     }
 
     in.close();

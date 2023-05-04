@@ -14,7 +14,7 @@
 # $(TARGET): OBJS
 # 	$(CXX) $? -o $@
 SRC_DIR := src
-
+export HOME_DIR := $(shell pwd)
 SUBDIRS := $(wildcard $(SRC_DIR)/*)
 SUBDIRS := $(filter-out $(wildcard $(SRC_DIR)/*.cpp),$(SUBDIRS))
 SUBDIRS := $(filter-out $(SRC_DIR)/Makefile,$(SUBDIRS))
@@ -25,7 +25,7 @@ all: $(SUBDIRS)
 
 
 $(SUBDIRS):
-	echo $(SUBDIRS)
+	echo $(HOME_DIR)
 	$(MAKE) -C $@
 
 .PHONY: clean

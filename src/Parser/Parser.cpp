@@ -7,9 +7,16 @@
 Parser::Parser(){};;
 
 void Parser::CreateGrammar(){
-    TrimGrammarFile("GrammarDscr");
+    char* homeDir = getenv("HOME_DIR");
+    if(homeDir == NULL){
+        std::cerr << *homeDir<<"couldn't get the home directory"<<std::endl;
+        exit(EXIT_FAILURE);
+    }
+    std::string GrammarDscr{homeDir};
+    GrammarDscr+="/GrammarDscr";
+    TrimGrammarFile(GrammarDscr);
     std::ifstream grammarFileDscr;
-    grammarFileDscr.open("GrammarDscr");
+    grammarFileDscr.open(GrammarDscr);
     std::string strLine;
     std::string word;
     std::stringstream ss;
@@ -39,33 +46,40 @@ void Parser::CreateGrammar(){
         ss >> word;
         Grammar* newGrammar = new Grammar{word};
         std::getline(grammarFileDscr,strLine);
+        ss.clear();
         ss.str(strLine);
         ss >> word;
-
+        
         try{
-            if(word != "Terminals")
+            if(word != "Terminals:")
             throw std::runtime_error{"The format of the input grammar file is not correct"};
         }
         catch(std::runtime_error& runtime_error){
-            std::cout << "Error: in line" << strLine << "\n" << runtime_error.what() << std::endl;
+            std::cout << "Error: in line " << strLine <<" \n " << runtime_error.what() << std::endl;
             continue;
         }
 
         while(ss >> word){
             newGrammar->AddValidTerminal(word);
         }
-
+        ss.clear();
         std::getline(grammarFileDscr,strLine);
+        ss.str(strLine);
+        ss >> word;
         try{
             if(word != "Productions:")
             throw std::runtime_error{"The format of the input grammar file is not correct"};
         }
         catch(std::runtime_error& runtime_error){
-            std::cout << "Error: in line" << strLine << "\n" << runtime_error.what() << std::endl;
+            std::cout << "Error: in line" << strLine <<" "<<word<<" \n" << runtime_error.what() << std::endl;
             continue;
         }
+        
         while(std::getline(grammarFileDscr,strLine)){
+            if(strLine == "End_Grammar")
+                break;
             std::string nonTerminalName;
+            ss.clear();
             ss.str(strLine);
             ss >> nonTerminalName;
             newGrammar->AddNonTerminal(nonTerminalName);
@@ -82,6 +96,7 @@ void Parser::CreateGrammar(){
                 }
             }
         }
+        newGrammar->PrintGrammar();
     }
     
     

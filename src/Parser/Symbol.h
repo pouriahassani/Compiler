@@ -16,7 +16,7 @@ public:
   const TerminalType& GetTerminal() const;
   const std::string& GetNonTerminal() const;
   void SetSymbolType(int symbolType);
-
+  void PrintSymbol();
   bool IsDot();
   bool IsTerminal();
   bool IsNonTerminal();

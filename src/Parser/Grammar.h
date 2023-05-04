@@ -22,6 +22,7 @@ public:
   void AddProduction(std::string str,Symbol newSymbol);
   void AddValidTerminal(std::string str);
   void AddNonTerminal(std::string str);
+  void PrintGrammar();
 private:
   std::map<std::string, std::vector<Symbol>> productions;
 

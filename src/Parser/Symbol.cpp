@@ -32,3 +32,12 @@
   bool  Symbol::IsNonTerminal(){
     return (symbolType == 1);
   }
+
+  void Symbol::PrintSymbol(){
+    if(symbolType == 0)
+      PrintNFAType(symbolT);
+    if(symbolType == 1)
+      std::cout << ' ' << symbolNonT << ' ';
+    if(symbolType == 2)
+      std::cout << ' . ' << std::endl;
+  }

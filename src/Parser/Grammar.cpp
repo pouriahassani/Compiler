@@ -75,3 +75,19 @@ void Grammar::AddNonTerminal(std::string str){
   std::vector<Symbol> newRightHandSide;
   productions[str] = newRightHandSide;
 }
+
+ void Grammar::PrintGrammar(){
+  std::cout << grammarName << std::endl;
+  std::cout << "Terminals: ";
+  for(auto i: validTerminalsMap){
+    if(i.second == true)
+      PrintNFAType(i.first);
+  }
+  std::cout << std::endl;
+  for(auto i : productions){
+    std::cout << i.first <<"->";
+    for(auto j: i.second)
+      j.PrintSymbol();
+    std::cout << std::endl;
+  }
+ }

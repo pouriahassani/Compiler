@@ -11,7 +11,7 @@ OBJS=$(wildcard $(OBJ_DIR)/*.o)
 all: Compiler
 
 Compiler: $(OBJS) Compiler.cpp
-	$(CXX) $(CXXFLAGS) -o $(TARGET) $^
+	$(CXX) $(CXXFLAGS) -o $(TARGET) $(OBJS) Compiler.cpp
 
 clean:
 	rm -f $(TARGET) $(OBJS)

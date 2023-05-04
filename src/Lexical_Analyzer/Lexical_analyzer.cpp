@@ -85,7 +85,6 @@ void Lexical_analyzer::CreateNFAGraphs(){
     numbers->SetNFAType(NFAType::NUMBER);
     NFAGraphs.push_back(numbers);
     
-
     // id token name NFA construction
     NFA* id;
     NFA* letter;
@@ -176,6 +175,17 @@ void Lexical_analyzer::CreateNFAGraphs(){
     
     greatorNFA->SetNFAType(NFAType::GT);
     NFAGraphs.push_back(greatorNFA);
+
+    // + token name NFA construction
+    s = std::string(1,'+');
+    NFA* PlusNFA = new NFA{s};
+    PlusNFA->SetNFAType(NFAType::PLUS);
+    NFAGraphs.push_back(PlusNFA);
+    // - token name NFA construction
+    s = std::string(1,'-');
+    NFA* MinesNFA = new NFA{s};
+    MinesNFA->SetNFAType(NFAType::MINES);
+    NFAGraphs.push_back(MinesNFA);
  }
 
  void Lexical_analyzer::Analyze(std::string fileName){
