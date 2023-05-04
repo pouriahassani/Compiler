@@ -15,7 +15,7 @@ class Parser{
         void CreateGrammar();
     private:
         Lexical_analyzer lexical_analyzer;   
-        std::vector <Grammar>grammarvec;    
+        std::vector<Grammar*>grammarvec;    
 
 };
 
