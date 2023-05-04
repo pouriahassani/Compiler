@@ -1,10 +1,10 @@
 #include <iostream>
-#include "Lexical_analyzer.h"
-#include "Parser.h"
-#include "NFA.h"
+#include "./Lexical_Analyzer/Lexical_analyzer.h"
+#include "./Parser/Parser.h"
+#include "./Lexical_Analyzer/NFA.h"
 #include <fstream>
-#include "NFA_Simulation.h"
-#include "RegularExpressionOperations.h"
+#include "./Lexical_Analyzer/NFA_Simulation.h"
+#include "./Lexical_Analyzer/RegularExpressionOperations.h"
 #include <string>
 int main(int argc, char **argv){
     if(argc < 2){

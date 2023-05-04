@@ -13,8 +13,12 @@ OBJS=$(wildcard $(OBJ_DIR)/*.o)
 all: $(TARGET)
 
 
-$(TARGET): $(OBJS)
+$(TARGET): $(OBJS) Compiler.o
+	echo "in the src Makefile"
 	@$(CXX) $(CXXFLAGS) -o $@ $^
+
+Compiler.o: Compiler.cpp 
+	$(CXX) $(CXXFLAGS)  $@ -c $^
 
 clean:
 	rm -f $(TARGET) $(OBJS)
