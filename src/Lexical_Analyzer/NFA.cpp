@@ -5,6 +5,7 @@
 #include <iostream>
 #include <sstream>
 
+int number_of_unique_tokens = 12;
 // Constructor for State class
 State::State(int stateNumber, StateType stateType)
     : stateNumber(stateNumber), stateType(stateType){};
@@ -214,33 +215,41 @@ void NFA::PrintNFAType() {
     std::cout << "SC" << std::endl;
   if (typeOfNFA == NFAType::WS)
     std::cout << "WS" << std::endl;
+  if (typeOfNFA == NFAType::PLUS)
+    std::cout << "PLUS" << std::endl;
+  if (typeOfNFA == NFAType::MINES)
+    std::cout << "MINES" << std::endl;
 }
 
 void PrintNFAType(NFAType typeOfNFA){
   if (typeOfNFA == NFAType::ID)
-    std::cout << "ID" << std::endl;
+    std::cout << " ID ";
   if (typeOfNFA == NFAType::NUMBER)
-    std::cout << "NUMBER" << std::endl;
+    std::cout << " NUMBER ";
   if (typeOfNFA == NFAType::ELSE)
-    std::cout << "ELSE" << std::endl;
+    std::cout << " ELSE ";
   if (typeOfNFA == NFAType::EQ)
-    std::cout << "EQ" << std::endl;
+    std::cout << " EQ ";
   if (typeOfNFA == NFAType::GT)
-    std::cout << "GT" << std::endl;
+    std::cout << " GT ";
   if (typeOfNFA == NFAType::IF)
-    std::cout << "IF" << std::endl;
+    std::cout << " IF ";
   if (typeOfNFA == NFAType::INT)
-    std::cout << "INT" << std::endl;
+    std::cout << " INT ";
   if (typeOfNFA == NFAType::LP)
-    std::cout << "LP" << std::endl;
+    std::cout << " LP ";
   if (typeOfNFA == NFAType::LT)
-    std::cout << "LT" << std::endl;
+    std::cout << " LT ";
   if (typeOfNFA == NFAType::RP)
-    std::cout << "RP" << std::endl;
+    std::cout << " RP ";
   if (typeOfNFA == NFAType::SC)
-    std::cout << "SC" << std::endl;
+    std::cout << " SC ";
   if (typeOfNFA == NFAType::WS)
-    std::cout << "WS" << std::endl;
+    std::cout << " WS ";
+  if (typeOfNFA == NFAType::PLUS)
+    std::cout << " PLUS ";
+  if (typeOfNFA == NFAType::MINES)
+    std::cout << " MINES ";
 }
 
 void NFA::PrintNFA() const {
@@ -266,3 +275,51 @@ void NFA::PrintNFA() const {
 
 const std::map<int,State *> &NFA::GetStates() const{ return States; }
 int NFA::GetNumberOfStates() const{ return numberOfStates; };
+
+
+// Convert the string seen in the input and find the corresponding NFAType
+NFAType StrToNFA(std::string str){
+  NFAType rtrnNFA{NFAType::NON};
+  if (str == "id")
+    rtrnNFA = NFAType::ID;
+
+  if (str == "numbers")
+    rtrnNFA = NFAType::NUMBER;
+
+  if (str == "else")
+    rtrnNFA = NFAType::ELSE;
+
+  if (str == "=")
+    rtrnNFA = NFAType::EQ;
+
+  if (str == ">")
+    rtrnNFA = NFAType::GT;
+
+  if (str == "if")
+    rtrnNFA = NFAType::IF;
+
+  if (str == "int")
+    rtrnNFA = NFAType::INT;
+
+  if (str == "(")
+    rtrnNFA = NFAType::LP;
+
+  if (str == "<")
+    rtrnNFA = NFAType::LT;
+
+  if (str == ")")
+    rtrnNFA = NFAType::RP;
+
+  if (str == "sc")
+    rtrnNFA = NFAType::SC;
+
+  if (str == "ws")
+    rtrnNFA = NFAType::WS;
+
+  if (str == "+")
+    rtrnNFA = NFAType::PLUS;
+  if (str == "-")
+    rtrnNFA = NFAType::MINES;
+
+  return rtrnNFA;
+}

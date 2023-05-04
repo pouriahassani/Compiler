@@ -7,3 +7,5 @@
   StateTypeException::StateTypeException() : std::runtime_error("Not a valid state"){};
 
   InvalidSyntax::InvalidSyntax() : std::runtime_error("Invalid syntax error"){};
+
+  InvalidTerminalName::InvalidTerminalName() : std::runtime_error("Invalid teminal name given in the grammar"){};

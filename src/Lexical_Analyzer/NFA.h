@@ -13,7 +13,10 @@
 // the NFA structure and define if a sring is matching with the expressed
 // regular expression with NFA object
 
-enum class NFAType { ID, NUMBER, IF, ELSE, INT, LP, RP, LT, GT, EQ, SC, WS };
+enum class NFAType { ID, NUMBER, IF, PLUS, MINES,ELSE, INT, LP, RP, LT, GT, EQ, SC, WS, NON };
+extern int number_of_unique_tokens;
+// Convert the string seen in the input and find the corresponding NFAType
+NFAType StrToNFA(std::string str);
 
 // Class State represents a state in the NFA
 // Each state object hold a a set of pointers to the epsilon closure states of

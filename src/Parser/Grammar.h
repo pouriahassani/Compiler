@@ -18,12 +18,13 @@ public:
   std::map<std::string, std::set<std::vector<Symbol>>> &GetProductions() const;
   std::map<TerminalType, bool> &GetValidTerminalsMap() const;
 
-  void SetStartSymbol();
-  void AddProduction();
-  void AddValidTerminal(const NFAType &terminal);
-
+  void SetStartSymbol(std::string str);
+  void AddProduction(std::string str,Symbol newSymbol);
+  void AddValidTerminal(std::string str);
+  void AddNonTerminal(std::string str);
+  void PrintGrammar();
 private:
-  std::map<std::string, std::set<std::vector<Symbol>>> productions;
+  std::map<std::string, std::vector<Symbol>> productions;
 
   // This map data structure keeps a bool value
   //  for each terminal that is used in the grammar
