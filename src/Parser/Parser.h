@@ -6,16 +6,18 @@
 #include <iostream>
 #include <fstream>
 #include "./../Lexical_Analyzer/Lexical_analyzer.h"
+#include "Grammar.h"
 
 class Parser{
     public:
         Parser();
-        void getNextToken();
+        void GetNextToken();
+        void CreateGrammar();
     private:
-        Lexical_analyzer lexical_analyzer;       
+        Lexical_analyzer lexical_analyzer;   
+        std::vector <Grammar>grammarvec;    
 
 };
-
 
 #endif
 

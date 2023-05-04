@@ -1,0 +1,8 @@
+Start_grammar
+Grammar_name: Expression
+Terminals: id numbers = + -
+Productions:
+S -> id = E
+E -> E + T | E - T | T
+T -> id | number | ( E )
+End_Grammar

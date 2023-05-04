@@ -266,3 +266,46 @@ void NFA::PrintNFA() const {
 
 const std::map<int,State *> &NFA::GetStates() const{ return States; }
 int NFA::GetNumberOfStates() const{ return numberOfStates; };
+
+
+// Convert the string seen in the input and find the corresponding NFAType
+NFAType StrToNFA(std::string str){
+  NFAType rtrnNFA{NFAType::NON};
+  if (str == "ID")
+    rtrnNFA = NFAType::ID;
+
+  if (str == "NUMBER")
+    rtrnNFA = NFAType::NUMBER;
+
+  if (str == "ELSE")
+    rtrnNFA = NFAType::ELSE;
+
+  if (str == "EQ")
+    rtrnNFA = NFAType::EQ;
+
+  if (str == "GT")
+    rtrnNFA = NFAType::GT;
+
+  if (str == "IF")
+    rtrnNFA = NFAType::IF;
+
+  if (str == "INT")
+    rtrnNFA = NFAType::INT;
+
+  if (str == "LP")
+    rtrnNFA = NFAType::LP;
+
+  if (str == "LT")
+    rtrnNFA = NFAType::LT;
+
+  if (str == "RP")
+    rtrnNFA = NFAType::RP;
+
+  if (str == "SC")
+    rtrnNFA = NFAType::SC;
+
+  if (str == "WS")
+    rtrnNFA = NFAType::WS;
+
+  return rtrnNFA;
+}

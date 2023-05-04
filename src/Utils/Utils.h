@@ -18,6 +18,10 @@ enum class StateType{
 
 StateType AssignStateType(int value);
 
+// This function is for removing the newline and prefix and postfix space of the line the 
+// inFileName file and rewrites the content of the inFileName 
+void TrimGrammarFile(std::string inFileName);
+
 
 
 #endif

@@ -1,5 +1,7 @@
 #include "Symbol.h"
 
+
+
   Symbol::Symbol(TerminalType symbolT) : symbolT(symbolT){
     SetSymbolType(0);
   }

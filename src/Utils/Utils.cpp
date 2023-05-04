@@ -37,3 +37,48 @@ StateType AssignStateType(int value){
     throw StateTypeException{};
 }
 
+void TrimGrammarFile(std::string inFileName){
+    std::string str;
+    std::ifstream in;
+    in.open(inFileName);
+    if(!in){
+    std::cerr << "File "<<inFileName<< " couldn't be opened" << std::endl;
+    exit(EXIT_FAILURE);
+    }
+
+    std::ofstream out;
+    out.open("tmpFile",std::ios::out);
+    if(!out){
+        std::cerr << "File tmpFile couldn't be opened" << std::endl;
+        exit(EXIT_FAILURE);
+    }
+
+    while(std::getline(in , str)){
+        if(str == "")
+            continue;
+        str = ltrim(rtrim(str));
+        out << str;
+    }
+
+    in.close();
+    out.close();
+
+    in.open("tmpfile");
+    if(!in){
+        std::cerr << "File tmpfile couldn't be opened" << std::endl;
+        exit(EXIT_FAILURE);
+    }
+
+    out.open(inFileName,std::ios::out);
+    if(!out){
+        std::cerr << "File "<<inFileName<< " couldn't be opened" << std::endl;
+        exit(EXIT_FAILURE);
+    }
+    
+    while(std::getline(in , str)){
+        out << str;
+    }
+
+    in.close();
+    out.close();
+}

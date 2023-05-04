@@ -17,5 +17,9 @@ public:
   InvalidSyntax();
 };
 
+class InvalidTerminalName : public std::runtime_error {
+public:
+  InvalidTerminalName();
+};
 
 #endif
