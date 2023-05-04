@@ -5,6 +5,7 @@
 #include <iostream>
 #include <sstream>
 
+int number_of_unique_tokens = 12;
 // Constructor for State class
 State::State(int stateNumber, StateType stateType)
     : stateNumber(stateNumber), stateType(stateType){};

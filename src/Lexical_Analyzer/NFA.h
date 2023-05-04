@@ -14,7 +14,7 @@
 // regular expression with NFA object
 
 enum class NFAType { ID, NUMBER, IF, ELSE, INT, LP, RP, LT, GT, EQ, SC, WS, NON };
-int number_of_unique_tokens = 12;
+extern int number_of_unique_tokens;
 // Convert the string seen in the input and find the corresponding NFAType
 NFAType StrToNFA(std::string str);
 
