@@ -25,7 +25,8 @@ all: $(SUBDIRS)
 
 
 $(SUBDIRS):
-	@$(MAKE) -C $@
+	echo $(SUBDIRS)
+	$(MAKE) -C $@
 
 .PHONY: clean
 

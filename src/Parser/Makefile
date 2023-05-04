@@ -14,7 +14,7 @@ all:$(OBJS)
 	
 
 $(OBJ_DIR)/%.o: $(SRC_DIR)/%.cpp
-	@$(CXX) $(CXXFLAGS) $? -o $@
+	$(CXX) $(CXXFLAGS) $? -o $@
 
 clean:
 	rm -f $(OBJS) 
