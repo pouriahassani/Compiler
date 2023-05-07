@@ -1,8 +1,10 @@
 Start_grammar
-Grammar_name: Expression
-Terminals: id numbers = + - ( )
+Grammar_name: Sample
+Terminals: = + - ( )
+NonTerminals: S A B C
 Productions:
-S -> id = E
-E -> E + T | E - T | T
-T -> id | number | ( E )
+S -> A B C | C - B | B +
+A -> ( + | B C
+B -> ) | eps
+C -> = | eps
 End_Grammar
