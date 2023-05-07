@@ -34,9 +34,6 @@ Grammar::Grammar(std::string grammarName) : grammarName(grammarName) {
   // validTerminalsMap[newNFA] = false;
 };
 
-
-
-
 void Grammar::CreateGrammar(std::ifstream grammarFileDscr) {
 
   std::string strline{""};
@@ -51,6 +48,7 @@ void Grammar::CreateGrammar(std::ifstream grammarFileDscr) {
 }
 
 void Grammar::SetStartSymbol(std::string str) { startSymbol = str; }
+
 const std::string &Grammar::GetStartSymbol() const { return startSymbol; }
 
 Symbol *Grammar::GetEps() const { return eps; }
@@ -59,6 +57,7 @@ const std::unordered_map<std::string, Symbol *>
 Grammar::GetNonTerminal() const {
   return nonTerminals;
 }
+
 const std::unordered_map<std::string, Symbol *> Grammar::GetTerminals() const {
   return terminals;
 }
@@ -97,13 +96,13 @@ Symbol *Grammar::AddNonTerminal(std::string str) {
 }
 /*
 For find the first of a symbol three rules are applied:
-1. if symbol is a terminal, the the first of the symbol is 
+1. if symbol is a terminal, the the first of the symbol is
 the symbol itself
 if the symbol is a non terminal do following:
-2. if A->B is a production, then first(B) is a subset of 
+2. if A->B is a production, then first(B) is a subset of
 first(A) except Epsilon
 3. if A->BC is a productoin, and Epsilon belong to first(B),
-first of C is a subset of first(A). Morover, is Epsilon is 
+first of C is a subset of first(A). Morover, is Epsilon is
 in first(C), Eplsilon is a member of first(A)
 */
 std::set<Symbol *> Grammar::FindFirst(Symbol *symbol) {
@@ -123,12 +122,10 @@ std::set<Symbol *> Grammar::FindFirst(Symbol *symbol) {
         (*j)->AddFirstOf(*j);
         symbol->AddFirstOf(*j);
         break;
-        // return symbol->GetFirstOf();
       } else {
         if (j + 1 == i.end()) {
           for (auto k : FindFirst(*j)) {
             symbol->AddFirstOf(k);
-            // return symbol->GetFirstOf();
           }
         } else {
           bool hasEps = false;
@@ -139,7 +136,6 @@ std::set<Symbol *> Grammar::FindFirst(Symbol *symbol) {
             }
 
             symbol->AddFirstOf(k);
-            // return symbol->GetFirstOf();
           }
           if (!hasEps)
             break;
@@ -150,19 +146,17 @@ std::set<Symbol *> Grammar::FindFirst(Symbol *symbol) {
   return symbol->GetFirstOf();
 }
 
-
-
 /*
 For find the follow of a symbol follwong rules are applied:
-1. if A->BC is a production, then first(C) is a subset of 
+1. if A->BC is a production, then first(C) is a subset of
 follow(B) except Epsilon
 2. if A->BCD is a productoin, and Epsilon belong to first(C),
-first of D is a subset of follow(B). Morover, is Epsilon is 
+first of D is a subset of follow(B). Morover, is Epsilon is
 in first(D) and first(C), follow(A) is a subset of follow(B)
 */
 std::set<Symbol *> Grammar::FindFollow(Symbol *symbol) {
-  symbol->PrintSymbol() ;
-  std::cout<<"\t";
+  symbol->PrintSymbol();
+  std::cout << "\t";
   for (auto i : productions) {
     for (auto j = i.second.begin(); j != i.second.end(); j++) {
       for (auto k = j->begin(); k != j->end(); k++) {
