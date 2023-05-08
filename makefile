@@ -19,13 +19,13 @@ SUBDIRS := $(wildcard $(SRC_DIR)/*)
 SUBDIRS := $(filter-out $(wildcard $(SRC_DIR)/*.cpp),$(SUBDIRS))
 SUBDIRS := $(filter-out $(SRC_DIR)/Makefile,$(SUBDIRS))
 SUBDIRS += $(SRC_DIR)
+
 .PHONY: all $(SUBDIRS)
 
 all: $(SUBDIRS) 
 
 
 $(SUBDIRS):
-	echo $(HOME_DIR)
 	$(MAKE) -C $@
 
 .PHONY: clean
